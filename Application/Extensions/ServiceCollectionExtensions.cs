@@ -20,6 +20,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
+using System.Net.Http;
 using System.Reflection;
 
 namespace devboost.dronedelivery.felipe.Extensions
@@ -29,7 +30,7 @@ namespace devboost.dronedelivery.felipe.Extensions
     /// </summary>
     public static class ServiceCollectionExtensions
     {
-        private const string PAYMENT_SETTINGS = "PaymentSettings";
+        private const string PAYMENT_SETTINGS = "PaymentSettingsData";
 
         /// <summary>
         /// Add services from project
@@ -50,7 +51,6 @@ namespace devboost.dronedelivery.felipe.Extensions
             services.AddScoped<IValidateDatabase, ValidateDatabse>();
             services.AddScoped<ICommandExecutor<DroneStatusResult>, CommandExecutor<DroneStatusResult>>();
             services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
-            services.AddScoped<IPagamentoServico, PagamentoCartaoServico>();
             services.AddScoped<IPagamentoServiceFactory, PagamentoServiceFactory>();
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             var pagamentoSettings = configuration.GetSection(PAYMENT_SETTINGS).Get<PaymentSettings>();

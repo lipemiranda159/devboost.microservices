@@ -5,6 +5,6 @@ namespace devboost.dronedelivery.felipe.Services.Interfaces
 {
     public interface IPagamentoServico
     {
-        Task<string> RequisitaPagamento(Pagamento pagamento);
+        Task<Pagamento> RequisitaPagamento(Pagamento pagamento);
     }
 }

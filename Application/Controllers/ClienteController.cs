@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Controllers
 {
-    [Authorize("Bearer")]
+    //[Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member

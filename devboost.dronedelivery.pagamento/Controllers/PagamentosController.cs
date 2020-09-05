@@ -94,8 +94,8 @@ namespace devboost.dronedelivery.pagamento.Controllers
         {
             try
             {
-                Pagamento newPagamento = await _pagamentoFacade.CriarPagamento(pagamento);
-                return CreatedAtAction("GetPagamento", new { id = newPagamento.Id }, newPagamento);
+                var newPagamento = await _pagamentoFacade.CriarPagamento(pagamento);
+                return Ok(newPagamento);
             }
             catch (Exception ex)
             {

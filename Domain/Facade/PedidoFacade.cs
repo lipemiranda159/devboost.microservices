@@ -83,12 +83,13 @@ namespace devboost.dronedelivery.felipe.Facade
         {
             if (pedido.EValido())
             {
-                var clientePedido = _clienteRepository.GetCliente(pedido.Cliente.Id);
+                var clientePedido = _clienteRepository.GetCliente(pedido.ClienteId);
                 pedido.Cliente = clientePedido;
                 pedido.DataHoraInclusao = DateTime.Now;
                 pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
                 var servicoPagamento = _pagamentoServiceFactory.GetPagamentoServico(pedido.Pagamento.TipoPagamento);
-                pedido.GatewayPagamentoId = await servicoPagamento.RequisitaPagamento(pedido.Pagamento);
+                var responseGateway = await servicoPagamento.RequisitaPagamento(pedido.Pagamento);
+                pedido.GatewayPagamentoId = responseGateway.Id.ToString();
 
                 await _pedidoRepository.SavePedidoAsync(pedido);
                 return pedido;

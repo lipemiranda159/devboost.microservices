@@ -9,6 +9,7 @@ namespace devboost.dronedelivery.felipe.Controllers
     /// <summary>
     /// Pagamento controller
     /// </summary>
+    //[Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PagamentoController : ControllerBase

@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System.Diagnostics.CodeAnalysis;
 
 namespace devboost.dronedelivery.felipe
@@ -43,7 +45,12 @@ namespace devboost.dronedelivery.felipe
             services.AddSwagger();
 
             services.AddCors();
-            services.AddControllers();
+            services.AddControllers()
+            .AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            });
+
 
         }
 
