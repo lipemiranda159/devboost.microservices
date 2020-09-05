@@ -24,5 +24,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\DTO\devboost.dronedelivery.felipe.DTO.csproj" />
+  </ItemGroup>
+
 
 </Project>

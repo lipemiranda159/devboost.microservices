@@ -1,12 +1,6 @@
 ﻿using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories;
-using devboost.dronedelivery.test.Setup;
-using Microsoft.EntityFrameworkCore;
 using NSubstitute;
-using NSubstitute.Core;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;

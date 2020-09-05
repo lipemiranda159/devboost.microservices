@@ -67,7 +67,7 @@ namespace devboost.dronedelivery.test.Drone
             Assert.True(statusDroneDto.Situacao);
             Assert.True(statusDroneDto.PedidoId == 5);
             Assert.True(statusDroneDto.ClienteId == 1);
-            Assert.True(statusDroneDto.Nome =="Cliente Teste");
+            Assert.True(statusDroneDto.Nome == "Cliente Teste");
             Assert.True(statusDroneDto.Latitude == 765764.98);
             Assert.True(statusDroneDto.Longitude == 235764.98);
 

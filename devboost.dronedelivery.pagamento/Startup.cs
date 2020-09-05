@@ -21,7 +21,7 @@ namespace devboost.dronedelivery.pagamento
         public void ConfigureServices(IServiceCollection services)
         {
             services.ConfigureCors();
-            services.ConfigureSqlContext(Configuration);           
+            services.ConfigureSqlContext(Configuration);
             services.ConfigureVersioning();
             services.AddMemoryCache();
             services.AddHttpContextAccessor();

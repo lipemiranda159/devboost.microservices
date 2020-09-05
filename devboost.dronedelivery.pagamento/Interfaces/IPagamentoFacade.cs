@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.pagamento.Models;
-using devboost.dronedelivery.pagamento.Models.DTO;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

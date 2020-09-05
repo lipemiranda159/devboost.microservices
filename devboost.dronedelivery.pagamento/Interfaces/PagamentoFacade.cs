@@ -1,11 +1,13 @@
-﻿using devboost.dronedelivery.pagamento.Models;
-using devboost.dronedelivery.pagamento.Models.DTO;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Enums;
+using devboost.dronedelivery.felipe.DTO.Extensions;
+using devboost.dronedelivery.felipe.DTO.Models;
+using devboost.dronedelivery.pagamento.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static devboost.dronedelivery.pagamento.Models.StatusPagamento;
 
 namespace devboost.dronedelivery.pagamento.Interfaces
 {
@@ -24,7 +26,7 @@ namespace devboost.dronedelivery.pagamento.Interfaces
             {
                 DadosPagamentos = pagamento.DadosPagamentos,
                 TipoPagamento = pagamento.TipoPagamento,
-                StatusPagamento = StatusPagamento.EStatusPagamento.EM_ANALISE,
+                StatusPagamento = EStatusPagamento.EM_ANALISE,
                 DataCriacao = DateTime.Now
             };
 
@@ -42,13 +44,13 @@ namespace devboost.dronedelivery.pagamento.Interfaces
 
         public async Task<IEnumerable<PagamentoStatusDto>> VerificarStatusPagamentos()
         {
-            var pagamentosResult = await _context.Pagamento.Where(w => w.StatusPagamento == StatusPagamento.EStatusPagamento.EM_ANALISE).ToListAsync();
+            var pagamentosResult = await _context.Pagamento.Where(w => w.StatusPagamento.EmAnalise()).ToListAsync();
 
             List<PagamentoStatusDto> pagamentos = new List<PagamentoStatusDto>();
 
             foreach (var pagamento in pagamentosResult)
             {
-                var status = (EStatusPagamento) RandomPagamento();
+                var status = (EStatusPagamento)RandomPagamento();
 
                 PagamentoStatusDto pagamentoStatusDto = new PagamentoStatusDto
                 {

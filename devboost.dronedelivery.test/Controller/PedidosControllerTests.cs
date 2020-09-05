@@ -1,5 +1,4 @@
 ﻿using devboost.dronedelivery.felipe.Controllers;
-using devboost.dronedelivery.felipe.DTO.Enums;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using NSubstitute;

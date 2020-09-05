@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using devboost.dronedelivery.felipe.DTO;
+﻿using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.Facade.Interface;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Controllers
 {
@@ -33,6 +30,6 @@ namespace devboost.dronedelivery.felipe.Controllers
         public async Task AtualizaLista(List<PagamentoStatusDto> listaPagamentos)
         {
             await _pagamentoFacade.ProcessaPagamentosAsync(listaPagamentos);
-        }    
+        }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace devboost.dronedelivery.felipe.DTO.Extensions
 {
@@ -9,7 +6,12 @@ namespace devboost.dronedelivery.felipe.DTO.Extensions
     {
         public static bool IsSuccess(this EStatusPagamento statusPagamento)
         {
-            return statusPagamento == (int)EStatusPagamento.SUCESSO;
+            return statusPagamento == EStatusPagamento.APROVADO;
+        }
+
+        public static bool EmAnalise(this EStatusPagamento statusPagamento)
+        {
+            return statusPagamento == EStatusPagamento.EM_ANALISE;
         }
     }
 }

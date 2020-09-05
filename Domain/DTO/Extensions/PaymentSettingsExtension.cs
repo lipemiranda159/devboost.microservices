@@ -1,8 +1,5 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace devboost.dronedelivery.felipe.DTO.Extensions
 {

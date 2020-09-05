@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using devboost.dronedelivery.felipe.DTO.Enums;
+using devboost.dronedelivery.felipe.DTO.Models;
+using System.Collections.Generic;
 
-namespace devboost.dronedelivery.pagamento.Models.DTO
+namespace devboost.dronedelivery.felipe.DTO
 {
     public class PagamentoCreateDto
     {

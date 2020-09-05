@@ -1,10 +1,7 @@
-﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Controllers

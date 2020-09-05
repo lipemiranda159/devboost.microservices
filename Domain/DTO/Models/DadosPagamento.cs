@@ -1,9 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace devboost.dronedelivery.felipe.DTO.Models
+﻿namespace devboost.dronedelivery.felipe.DTO.Models
 {
     public class DadosPagamento
     {

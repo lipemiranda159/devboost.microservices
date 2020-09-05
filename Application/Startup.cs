@@ -1,31 +1,15 @@
-using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.DTO.Constants;
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Repositories;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Extensions;
-using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.Facade.Factory;
-using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Security;
-using devboost.dronedelivery.felipe.Security.Extensions;
-using devboost.dronedelivery.felipe.Security.Interfaces;
-using devboost.dronedelivery.felipe.Services;
-using devboost.dronedelivery.felipe.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using System;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Reflection;
 
 namespace devboost.dronedelivery.felipe
 {

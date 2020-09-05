@@ -5,10 +5,7 @@ using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Facade
@@ -22,10 +19,10 @@ namespace devboost.dronedelivery.felipe.Facade
         private readonly IDroneRepository _droneRepository;
         private readonly IPagamentoServiceFactory _pagamentoServiceFactory;
         public PedidoFacade(
-            DataContext dataContext, 
-            IPedidoService pedidoFacade, 
-            IClienteRepository clienteRepository, 
-            IPedidoRepository pedidoRepository, 
+            DataContext dataContext,
+            IPedidoService pedidoFacade,
+            IClienteRepository clienteRepository,
+            IPedidoRepository pedidoRepository,
             IDroneRepository droneRepository,
             IPagamentoServiceFactory pagamentoServiceFactory)
         {

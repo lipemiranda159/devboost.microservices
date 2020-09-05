@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using devboost.dronedelivery.felipe.DTO.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace devboost.dronedelivery.pagamento.Models
 {
