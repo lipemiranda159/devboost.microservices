@@ -20,5 +20,10 @@ namespace devboost.dronedelivery.felipe.DTO.Models
         public Pagamento Pagamento { get; set; }
         public DateTime DataUltimaAlteracao { get; set; }
         public DateTime DataHoraFinalizacao { get; set; }
+
+        public bool EValido()
+        {
+            return Pagamento != null && Pagamento.ContemFormaDePagamento();
+        }
     }
 }

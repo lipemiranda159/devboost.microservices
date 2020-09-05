@@ -87,14 +87,17 @@ namespace devboost.dronedelivery.felipe.Facade
 
         public async Task<Pedido> CreatePedidoAsync(Pedido pedido)
         {
-            var clientePedido = _clienteRepository.GetCliente(pedido.Cliente.Id);
+            if (pedido.EValido())
+            {
+                var clientePedido = _clienteRepository.GetCliente(pedido.Cliente.Id);
+                pedido.Cliente = clientePedido;
+                pedido.DataHoraInclusao = DateTime.Now;
+                pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
+                await _pedidoRepository.SavePedidoAsync(pedido);
 
-            pedido.Cliente = clientePedido;
-            pedido.DataHoraInclusao = DateTime.Now;
-            pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
-            await _pedidoRepository.SavePedidoAsync(pedido);
-
-            return pedido;
+                return pedido;
+            }
+            else throw new Exception("Pedido inválido");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using devboost.dronedelivery.felipe.DTO.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +15,11 @@ namespace devboost.dronedelivery.felipe.DTO.Models
         public Pagamento()
         {
             DadosPagamentos = new List<DadosPagamento>();
+        }
+
+        public bool ContemFormaDePagamento()
+        {
+            return DadosPagamentos.Count > 0 && TipoPagamento != ETipoPagamento.INDEFINIDO;
         }
     }
 
