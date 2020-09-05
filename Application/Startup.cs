@@ -96,7 +96,7 @@ namespace devboost.dronedelivery.felipe
                 signingConfigurations, tokenConfigurations);
 
             services.AddDbContext<DataContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString(ProjectConsts.CONNECTION_STRING_CONFIG)), ServiceLifetime.Singleton);
+                    options.UseInMemoryDatabase("Delivery"), ServiceLifetime.Singleton);
             AddSwagger(services);
 
             services.AddCors();
