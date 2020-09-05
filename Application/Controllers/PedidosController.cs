@@ -17,16 +17,12 @@ namespace devboost.dronedelivery.felipe.Controllers
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         private readonly IPedidoFacade _pedidoFacade;
-        private readonly IPedidoRepository _pedidoRepository;
-        private readonly IClienteRepository _clienteRepository;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-        public PedidosController(IPedidoRepository pedidoRepository, IPedidoFacade pedidoFacade, IClienteRepository clienteRepository)
+        public PedidosController(IPedidoFacade pedidoFacade)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _pedidoFacade = pedidoFacade;
-            _pedidoRepository = pedidoRepository;
-            _clienteRepository = clienteRepository;
         }
 
         [HttpPost("assign-drone")]

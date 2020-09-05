@@ -23,7 +23,7 @@ namespace devboost.dronedelivery.test.Controller
         [Fact]
         public async Task TestAssignDrone()
         {
-            var pedidosController = new PedidosController(_pedidoRepository, _pedidoFacade, _clienteRepository);
+            var pedidosController = new PedidosController(_pedidoFacade);
             await pedidosController.AssignDrone();
             await _pedidoFacade.Received().AssignDroneAsync();
 
@@ -34,7 +34,7 @@ namespace devboost.dronedelivery.test.Controller
             _clienteRepository.GetCliente(Arg.Any<int>()).
                 Returns(SetupTests.GetCliente());
 
-            var pedidosController = new PedidosController(_pedidoRepository, _pedidoFacade, _clienteRepository);
+            var pedidosController = new PedidosController(_pedidoFacade);
             var pedido = await pedidosController.PostPedido(SetupTests.GetPedido());
             await _pedidoRepository.Received().SavePedidoAsync(Arg.Any<felipe.DTO.Models.Pedido>());
             Assert.True(pedido.Value.Situacao == (int)StatusPedido.AGUARDANDO);

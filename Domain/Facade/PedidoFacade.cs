@@ -74,11 +74,6 @@ namespace devboost.dronedelivery.felipe.Facade
             await _dataContext.SaveChangesAsync();
         }
 
-        private async Task<Pedido[]> PegaPedidosAsync()
-        {
-            return await _dataContext.Pedido.Where(FiltraPedidos()).ToArrayAsync().ConfigureAwait(false);
-        }
-
         private async Task AtualizaPedidoAsync(Pedido pedido)
         {
             pedido.Situacao = (int)StatusPedido.AGUARDANDO_ENVIO;
