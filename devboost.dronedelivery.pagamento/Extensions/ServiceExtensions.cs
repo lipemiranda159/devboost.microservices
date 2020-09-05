@@ -1,5 +1,5 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.Models;
+using devboost.dronedelivery.pagamento.EF;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;

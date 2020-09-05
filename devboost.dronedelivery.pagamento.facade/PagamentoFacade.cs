@@ -2,14 +2,15 @@
 using devboost.dronedelivery.felipe.DTO.Enums;
 using devboost.dronedelivery.felipe.DTO.Extensions;
 using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.Models;
+using devboost.dronedelivery.pagamento.EF;
+using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.pagamento.Interfaces
+namespace devboost.dronedelivery.pagamento.facade
 {
     public class PagamentoFacade : IPagamentoFacade
     {

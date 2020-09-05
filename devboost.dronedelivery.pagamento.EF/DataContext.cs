@@ -1,7 +1,7 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace devboost.dronedelivery.pagamento.Models
+namespace devboost.dronedelivery.pagamento.EF
 {
     public class DataContext : DbContext
     {
@@ -18,4 +18,5 @@ namespace devboost.dronedelivery.pagamento.Models
         public DbSet<Pagamento> Pagamento { get; set; }
 
     }
+
 }

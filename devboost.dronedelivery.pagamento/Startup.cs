@@ -1,5 +1,6 @@
 using devboost.dronedelivery.pagamento.Extensions;
-using devboost.dronedelivery.pagamento.Interfaces;
+using devboost.dronedelivery.pagamento.facade;
+using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;

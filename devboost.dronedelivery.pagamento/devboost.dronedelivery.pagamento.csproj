@@ -25,6 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\devboost.dronedelivery.pagamento.EF\devboost.dronedelivery.pagamento.EF.csproj" />
+    <ProjectReference Include="..\devboost.dronedelivery.pagamento.facade\devboost.dronedelivery.pagamento.facade.csproj" />
     <ProjectReference Include="..\Domain\DTO\devboost.dronedelivery.felipe.DTO.csproj" />
   </ItemGroup>
 
