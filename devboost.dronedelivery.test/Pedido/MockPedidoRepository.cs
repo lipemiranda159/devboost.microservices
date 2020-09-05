@@ -24,6 +24,11 @@ namespace devboost.dronedelivery.test.Pedido
             return _pedidos;
         }
 
+        public Task<felipe.DTO.Models.Pedido> PegaPedidoPendenteAsync(string GatewayId)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public async Task<int> SavePedidoAsync(felipe.DTO.Models.Pedido pedido)
         {
             _pedidos.Add(pedido);
