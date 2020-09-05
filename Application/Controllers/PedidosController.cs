@@ -43,14 +43,7 @@ namespace devboost.dronedelivery.felipe.Controllers
         public async Task<ActionResult<Pedido>> PostPedido(Pedido pedido)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
-            var clientePedido = _clienteRepository.GetCliente(pedido.Cliente.Id);
-
-            pedido.Cliente = clientePedido;
-            pedido.DataHoraInclusao = DateTime.Now;
-            pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
-            await _pedidoRepository.SavePedidoAsync(pedido);
-
-            return pedido;
+            return await _pedidoFacade.CreatePedidoAsync(pedido);
         }
 
     }

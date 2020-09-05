@@ -29,7 +29,7 @@ namespace devboost.dronedelivery.felipe.Facade
             _droneRepository = droneRepository;
 
         }
-        public async Task AssignDrone(IPedidoRepository _pedidoRepository)
+        public async Task AssignDroneAsync()
         {
             var pedidos = _pedidoRepository.ObterPedidos((int)StatusPedido.AGUARDANDO);
             if (pedidos?.Count > 0)
@@ -83,6 +83,18 @@ namespace devboost.dronedelivery.felipe.Facade
         private Expression<Func<Pedido, bool>> FiltraPedidos()
         {
             return p => p.Situacao == (int)StatusPedido.AGUARDANDO;
+        }
+
+        public async Task<Pedido> CreatePedidoAsync(Pedido pedido)
+        {
+            var clientePedido = _clienteRepository.GetCliente(pedido.Cliente.Id);
+
+            pedido.Cliente = clientePedido;
+            pedido.DataHoraInclusao = DateTime.Now;
+            pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
+            await _pedidoRepository.SavePedidoAsync(pedido);
+
+            return pedido;
         }
     }
 }
