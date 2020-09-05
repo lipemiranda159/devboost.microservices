@@ -82,11 +82,6 @@ namespace devboost.dronedelivery.felipe.Facade
             await _dataContext.SaveChangesAsync().ConfigureAwait(false);
         }
 
-        private Expression<Func<Pedido, bool>> FiltraPedidos()
-        {
-            return p => p.Situacao == (int)StatusPedido.AGUARDANDO;
-        }
-
         public async Task<Pedido> CreatePedidoAsync(Pedido pedido)
         {
             if (pedido.EValido())
