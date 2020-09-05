@@ -5,6 +5,7 @@ using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade;
+using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Security;
 using devboost.dronedelivery.felipe.Security.Extensions;
@@ -64,7 +65,8 @@ namespace devboost.dronedelivery.felipe
             services.AddScoped<IValidateDatabase, ValidateDatabse>();
             services.AddScoped<ICommandExecutor<DroneStatusResult>, CommandExecutor<DroneStatusResult>>();
             services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
-
+            services.AddScoped<IPagamentoServico, PagamentoCartaoServico>();
+            services.AddScoped<IPagamentoServiceFactory, PagamentoServiceFactory>();
             // Configurando o uso da classe de contexto para
             // acesso às tabelas do ASP.NET Identity Core
             services.AddDbContext<ApplicationDbContext>(options =>

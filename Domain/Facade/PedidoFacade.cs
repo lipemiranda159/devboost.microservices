@@ -2,6 +2,7 @@
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -19,15 +20,21 @@ namespace devboost.dronedelivery.felipe.Facade
         private readonly IClienteRepository _clienteRepository;
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IDroneRepository _droneRepository;
-
-        public PedidoFacade(DataContext dataContext, IPedidoService pedidoFacade, IClienteRepository clienteRepository, IPedidoRepository pedidoRepository, IDroneRepository droneRepository)
+        private readonly IPagamentoServiceFactory _pagamentoServiceFactory;
+        public PedidoFacade(
+            DataContext dataContext, 
+            IPedidoService pedidoFacade, 
+            IClienteRepository clienteRepository, 
+            IPedidoRepository pedidoRepository, 
+            IDroneRepository droneRepository,
+            IPagamentoServiceFactory pagamentoServiceFactory)
         {
             _dataContext = dataContext;
             _pedidoService = pedidoFacade;
             _clienteRepository = clienteRepository;
             _pedidoRepository = pedidoRepository;
             _droneRepository = droneRepository;
-
+            _pagamentoServiceFactory = pagamentoServiceFactory;
         }
         public async Task AssignDroneAsync()
         {
@@ -93,8 +100,10 @@ namespace devboost.dronedelivery.felipe.Facade
                 pedido.Cliente = clientePedido;
                 pedido.DataHoraInclusao = DateTime.Now;
                 pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
-                await _pedidoRepository.SavePedidoAsync(pedido);
+                var servicoPagamento = _pagamentoServiceFactory.GetPagamentoServico((ETipoPagamento)pedido.Pagamento.TipoPagamento);
+                pedido.GatewayPagamentoId = await servicoPagamento.RequisitaPagamento(pedido.Pagamento)
 
+                await _pedidoRepository.SavePedidoAsync(pedido);
                 return pedido;
             }
             else throw new Exception("Pedido inválido");

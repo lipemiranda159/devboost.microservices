@@ -1,12 +1,12 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using System;
 using System.Collections.Generic;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace devboost.dronedelivery.felipe.DTO.Models
 {
     public class Pagamento
     {
+        [Key]
         public int Id { get; set; }
 
         public List<DadosPagamento> DadosPagamentos { get; set; }
