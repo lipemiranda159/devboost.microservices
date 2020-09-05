@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>devboost.dronedelivery.felipe</name>
+    </assembly>
+    <members>
+        <member name="T:devboost.dronedelivery.felipe.Controllers.DronesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IDroneFacade)">
+            <summary>
+            
+            </summary>
+            <param name="droneFacade"></param>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.GetStatusDrone">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.PostDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)">
+            <summary>
+            
+            </summary>
+            <param name="drone"></param>
+            <returns></returns>
+        </member>
+        <member name="T:devboost.dronedelivery.felipe.Controllers.LoginController">
+            <summary>
+            Controller com operações referentes aos drones
+            </summary>
+        </member>
+    </members>
+</doc>
