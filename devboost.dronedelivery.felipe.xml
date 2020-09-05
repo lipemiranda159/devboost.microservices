@@ -60,6 +60,13 @@
             Add services from project
             </summary>
             <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add services from project
+            </summary>
+            <param name="services"></param>
         </member>
         <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.AddAuthServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>

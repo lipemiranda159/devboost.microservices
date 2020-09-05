@@ -1,14 +1,12 @@
 ﻿using devboost.dronedelivery.felipe.DTO;
 using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Extensions;
 using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.EF;
+using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.pagamento.facade
@@ -16,10 +14,12 @@ namespace devboost.dronedelivery.pagamento.facade
     public class PagamentoFacade : IPagamentoFacade
     {
         private readonly IPagamentoRepository _pagamentoRepository;
+        private readonly IPagamentoIntegration _pagamentoIntegration;
 
-        public PagamentoFacade(IPagamentoRepository pagamentoRepository)
+        public PagamentoFacade(IPagamentoRepository pagamentoRepository, IPagamentoIntegration pagamentoIntegration)
         {
             _pagamentoRepository = pagamentoRepository;
+            _pagamentoIntegration = pagamentoIntegration;
         }
 
         public async Task<Pagamento> CriarPagamento(PagamentoCreateDto pagamento)
@@ -38,9 +38,9 @@ namespace devboost.dronedelivery.pagamento.facade
             return newPagamento;
         }
 
-        private int RandomPagamento()
+        private EStatusPagamento RandomPagamento()
         {
-            return new Random().Next(1, 2);
+            return (EStatusPagamento) new Random().Next(1, 2);
         }
 
 
@@ -52,7 +52,7 @@ namespace devboost.dronedelivery.pagamento.facade
 
             foreach (var pagamento in pagamentosResult)
             {
-                var status = (EStatusPagamento)RandomPagamento();
+                var status = RandomPagamento();
 
                 PagamentoStatusDto pagamentoStatusDto = new PagamentoStatusDto
                 {
@@ -66,7 +66,10 @@ namespace devboost.dronedelivery.pagamento.facade
                 AtualizarStatusPagamento(status, pagamento);
             }
 
-            await _pagamentoRepository.SavePagamentoAsync();
+            if (await _pagamentoIntegration.ReportarResultadoAnalise(pagamentos))
+                await _pagamentoRepository.SavePagamentoAsync();
+            else
+                pagamentos = null;
 
             return pagamentos;
         }
@@ -76,5 +79,6 @@ namespace devboost.dronedelivery.pagamento.facade
             pagamento.StatusPagamento = eStatusPagamento;
             _pagamentoRepository.SetState(pagamento, EntityState.Modified);
         }
+       
     }
 }

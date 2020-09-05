@@ -39,6 +39,7 @@ namespace devboost.dronedelivery.felipe
         public void ConfigureServices(IServiceCollection services)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
+            services.ConfigureCors();
             services.AddScopedServices(Configuration);
             services.AddAuthServices(Configuration);
             services.AddDbService();
@@ -66,6 +67,9 @@ namespace devboost.dronedelivery.felipe
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
+            app.UseCors("CorsPolicy");
 
             // Criação de estruturas, usuários e permissões
             // na base do ASP.NET Identity Core (caso ainda não

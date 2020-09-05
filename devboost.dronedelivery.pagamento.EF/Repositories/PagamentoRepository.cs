@@ -2,10 +2,8 @@
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.pagamento.EF.Repositories
@@ -34,7 +32,7 @@ namespace devboost.dronedelivery.pagamento.EF.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public void SetState(Pagamento pagamento,EntityState entityState)
+        public void SetState(Pagamento pagamento, EntityState entityState)
         {
             _context.Entry(pagamento).State = EntityState.Modified;
         }

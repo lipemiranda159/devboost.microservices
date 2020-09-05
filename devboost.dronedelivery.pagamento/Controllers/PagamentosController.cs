@@ -39,6 +39,9 @@ namespace devboost.dronedelivery.pagamento.Controllers
             {
                 var consulta = await _pagamentoFacade.VerificarStatusPagamentos();
 
+                if (consulta == null)
+                    return BadRequest("Não foi possivel comunicar com a API de Delivery!");
+
                 return consulta.ToList();
             }
             catch (Exception ex)

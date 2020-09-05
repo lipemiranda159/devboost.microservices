@@ -23,8 +23,11 @@ namespace devboost.dronedelivery.felipe.Services
 
         public async Task<Pagamento> RequisitaPagamento(Pagamento pagamento)
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri(_urlBase);
+            using var client = new HttpClient
+            {
+                BaseAddress = new Uri(_urlBase)
+            };
+
             var request = JsonSerializer.Serialize(pagamento.ToPagamentoCreate());
             var httpContent = new StringContent(request, Encoding.UTF8, MEDIA_TYPE);
             var gatewayResponse = await client.PostAsync(ProjectConsts.PAGAMENTO_URI, httpContent);

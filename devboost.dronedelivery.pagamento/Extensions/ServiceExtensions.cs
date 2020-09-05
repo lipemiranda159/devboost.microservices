@@ -1,5 +1,8 @@
-﻿using devboost.dronedelivery.felipe.DTO.Models;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.pagamento.EF;
+using devboost.dronedelivery.pagamento.EF.Integration;
+using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using devboost.dronedelivery.pagamento.facade;
@@ -15,11 +18,13 @@ namespace devboost.dronedelivery.pagamento.Extensions
 {
     public static class ServiceExtensions
     {
-        public static void AddServices(this IServiceCollection services)
+        public static void AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             services.AddScoped<IPagamentoRepository, PagamentoRepository>();
-
+            services.AddScoped<IPagamentoIntegration, PagamentoIntegration>();
+            var deliverySettings = configuration.GetSection("DeliverySettingsData").Get<DeliverySettingsData>();
+            services.AddSingleton(deliverySettings);
         }
         public static void ConfigureCors(this IServiceCollection services) =>
           services.AddCors(options =>
@@ -30,7 +35,7 @@ namespace devboost.dronedelivery.pagamento.Extensions
                   .AllowAnyHeader());
           });
 
-        public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
+        public static void ConfigureSqlContext(this IServiceCollection services) =>
            services.AddDbContext<DataContext>(opts =>
                opts.UseInMemoryDatabase("pagamentos-db"));
 

@@ -32,10 +32,12 @@ namespace devboost.dronedelivery.felipe.Extensions
     {
         private const string PAYMENT_SETTINGS = "PaymentSettingsData";
 
+
         /// <summary>
         /// Add services from project
         /// </summary>
         /// <param name="services"></param>
+        /// <param name="configuration"></param>
         public static void AddScopedServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IDroneRepository, DroneRepository>();
@@ -57,6 +59,20 @@ namespace devboost.dronedelivery.felipe.Extensions
             services.AddSingleton(pagamentoSettings);
 
         }
+
+        /// <summary>
+        /// Add services from project
+        /// </summary>
+        /// <param name="services"></param>
+        public static void ConfigureCors(this IServiceCollection services) =>
+          services.AddCors(options =>
+          {
+              options.AddPolicy("CorsPolicy", builder =>
+                  builder.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader());
+          });
+
         /// <summary>
         /// 
         /// </summary>

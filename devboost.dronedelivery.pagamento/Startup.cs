@@ -1,6 +1,4 @@
 using devboost.dronedelivery.pagamento.Extensions;
-using devboost.dronedelivery.pagamento.facade;
-using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,12 +20,12 @@ namespace devboost.dronedelivery.pagamento
         public void ConfigureServices(IServiceCollection services)
         {
             services.ConfigureCors();
-            services.ConfigureSqlContext(Configuration);
+            services.ConfigureSqlContext();
             services.ConfigureVersioning();
             services.AddMemoryCache();
             services.AddHttpContextAccessor();
             services.AddAuthentication();
-            services.AddServices();
+            services.AddServices(Configuration);
 
             services.ConfigureSwagger();
 

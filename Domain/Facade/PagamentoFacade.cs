@@ -20,12 +20,16 @@ namespace devboost.dronedelivery.felipe.Facade
             foreach (var item in pagamentoStatus)
             {
                 var pedido = await _pedidoRepository.PegaPedidoPendenteAsync(item.IdPagamento.ToString());
+
                 if (item.Status.IsSuccess())
                 {
                     pedido.Situacao = (int)StatusPedido.AGUARDANDO;
-                    await _pedidoRepository.SavePedidoAsync(pedido);
+                    pedido.Pagamento.StatusPagamento = item.Status;
+                    _pedidoRepository.SetState(pedido, Microsoft.EntityFrameworkCore.EntityState.Modified);
                 }
             }
+
+            await _pedidoRepository.OnlySalveContext();
         }
     }
 }

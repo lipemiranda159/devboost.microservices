@@ -41,5 +41,16 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             _context.Pedido.Add(pedido);
             return await _context.SaveChangesAsync();
         }
+
+        public async Task<int> OnlySalveContext()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        public void SetState(Pedido pedido, EntityState entityState)
+        {
+            _context.Entry(pedido).State = entityState;
+        }
+
     }
 }
