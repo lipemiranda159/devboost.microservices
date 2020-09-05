@@ -11,13 +11,11 @@ namespace devboost.dronedelivery.test.Controller
     public class PedidosControllerTests
     {
         private readonly IPedidoFacade _pedidoFacade;
-        private readonly IPedidoRepository _pedidoRepository;
         private readonly IClienteRepository _clienteRepository;
 
         public PedidosControllerTests()
         {
             _pedidoFacade = Substitute.For<IPedidoFacade>();
-            _pedidoRepository = Substitute.For<IPedidoRepository>();
             _clienteRepository = Substitute.For<IClienteRepository>();
         }
         [Fact]
@@ -36,8 +34,7 @@ namespace devboost.dronedelivery.test.Controller
 
             var pedidosController = new PedidosController(_pedidoFacade);
             var pedido = await pedidosController.PostPedido(SetupTests.GetPedido());
-            await _pedidoRepository.Received().SavePedidoAsync(Arg.Any<felipe.DTO.Models.Pedido>());
-            Assert.True(pedido.Value.Situacao == (int)StatusPedido.AGUARDANDO);
+            await _pedidoFacade.Received().CreatePedidoAsync(Arg.Any<felipe.DTO.Models.Pedido>());
 
         }
 
