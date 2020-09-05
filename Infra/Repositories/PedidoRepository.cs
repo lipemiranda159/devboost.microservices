@@ -1,6 +1,7 @@
 ﻿using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -28,6 +29,11 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
                           select p;
 
             return pedidos.ToList();
+        }
+
+        public async Task<Pedido> PegaPedidoPendenteAsync(string GatewayId)
+        {
+            return await _context.Pedido.Where(p => p.GatewayPagamentoId == GatewayId).FirstOrDefaultAsync();
         }
 
         public async Task<int> SavePedidoAsync(Pedido pedido)

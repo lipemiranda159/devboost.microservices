@@ -2,12 +2,10 @@
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Facade
@@ -19,17 +17,23 @@ namespace devboost.dronedelivery.felipe.Facade
         private readonly IClienteRepository _clienteRepository;
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IDroneRepository _droneRepository;
-
-        public PedidoFacade(DataContext dataContext, IPedidoService pedidoFacade, IClienteRepository clienteRepository, IPedidoRepository pedidoRepository, IDroneRepository droneRepository)
+        private readonly IPagamentoServiceFactory _pagamentoServiceFactory;
+        public PedidoFacade(
+            DataContext dataContext,
+            IPedidoService pedidoFacade,
+            IClienteRepository clienteRepository,
+            IPedidoRepository pedidoRepository,
+            IDroneRepository droneRepository,
+            IPagamentoServiceFactory pagamentoServiceFactory)
         {
             _dataContext = dataContext;
             _pedidoService = pedidoFacade;
             _clienteRepository = clienteRepository;
             _pedidoRepository = pedidoRepository;
             _droneRepository = droneRepository;
-
+            _pagamentoServiceFactory = pagamentoServiceFactory;
         }
-        public async Task AssignDrone(IPedidoRepository _pedidoRepository)
+        public async Task AssignDroneAsync()
         {
             var pedidos = _pedidoRepository.ObterPedidos((int)StatusPedido.AGUARDANDO);
             if (pedidos?.Count > 0)
@@ -67,11 +71,6 @@ namespace devboost.dronedelivery.felipe.Facade
             await _dataContext.SaveChangesAsync();
         }
 
-        private async Task<Pedido[]> PegaPedidosAsync()
-        {
-            return await _dataContext.Pedido.Where(FiltraPedidos()).ToArrayAsync().ConfigureAwait(false);
-        }
-
         private async Task AtualizaPedidoAsync(Pedido pedido)
         {
             pedido.Situacao = (int)StatusPedido.AGUARDANDO_ENVIO;
@@ -80,9 +79,22 @@ namespace devboost.dronedelivery.felipe.Facade
             await _dataContext.SaveChangesAsync().ConfigureAwait(false);
         }
 
-        private Expression<Func<Pedido, bool>> FiltraPedidos()
+        public async Task<Pedido> CreatePedidoAsync(Pedido pedido)
         {
-            return p => p.Situacao == (int)StatusPedido.AGUARDANDO;
+            if (pedido.EValido())
+            {
+                var clientePedido = _clienteRepository.GetCliente(pedido.ClienteId);
+                pedido.Cliente = clientePedido;
+                pedido.DataHoraInclusao = DateTime.Now;
+                pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
+                var servicoPagamento = _pagamentoServiceFactory.GetPagamentoServico(pedido.Pagamento.TipoPagamento);
+                var responseGateway = await servicoPagamento.RequisitaPagamento(pedido.Pagamento);
+                pedido.GatewayPagamentoId = responseGateway.Id.ToString();
+
+                await _pedidoRepository.SavePedidoAsync(pedido);
+                return pedido;
+            }
+            else throw new Exception("Pedido inválido");
         }
     }
 }

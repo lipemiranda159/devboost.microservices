@@ -11,7 +11,7 @@ namespace devboost.dronedelivery.felipe.Controllers
     /// <summary>
     /// 
     /// </summary>
-    [Authorize("Bearer")]
+    //[Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class DronesController : ControllerBase
