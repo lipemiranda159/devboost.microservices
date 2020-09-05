@@ -25,7 +25,7 @@ namespace devboost.dronedelivery.test.Controller
         {
             var pedidosController = new PedidosController(_pedidoRepository, _pedidoFacade, _clienteRepository);
             await pedidosController.AssignDrone();
-            await _pedidoFacade.Received().AssignDrone(_pedidoRepository);
+            await _pedidoFacade.Received().AssignDroneAsync();
 
         }
         [Fact]

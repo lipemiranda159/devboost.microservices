@@ -6,6 +6,8 @@
         public const string PROJECT_NAME = "Delivery Drone";
         public const string CONNECTION_STRING_CONFIG = "grupo4devboostdronedeliveryContext";
         public const string PAGAMENTO_URI = "pagamento";
+        public const string API_VERSION = "v1";
+
 
     }
 }

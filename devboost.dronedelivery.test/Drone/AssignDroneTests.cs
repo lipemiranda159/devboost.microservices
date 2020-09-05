@@ -4,6 +4,7 @@ using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using devboost.dronedelivery.felipe.Facade;
+using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Services;
 using devboost.dronedelivery.felipe.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -23,6 +24,7 @@ namespace devboost.dronedelivery.test.Drone
         private readonly IDroneService _droneService;
         private readonly ICoordinateService _coordinateService;
         private readonly IPedidoDroneRepository _pedidoDroneRepository;
+        private readonly IPagamentoServiceFactory _pagamentoServiceFactory;
         public AssignDroneTests()
         {
             _dataContext = Substitute.For<DataContext>();
@@ -35,6 +37,7 @@ namespace devboost.dronedelivery.test.Drone
             _pedidoRepository = Substitute.For<IPedidoRepository>();
             _coordinateService = Substitute.For<ICoordinateService>();
             _pedidoDroneRepository = Substitute.For<IPedidoDroneRepository>();
+            _pagamentoServiceFactory = Substitute.For<IPagamentoServiceFactory>();
         }
 
         [Fact]
@@ -45,7 +48,8 @@ namespace devboost.dronedelivery.test.Drone
                 _pedidoService,
                 _clienteRepository,
                 _pedidoRepository,
-                _droneRepository);
+                _droneRepository,
+                _pagamentoServiceFactory);
 
             var pedidos = SetupTests.GetPedidosList();
             _pedidoRepository.ObterPedidos(Arg.Any<int>())
@@ -59,7 +63,7 @@ namespace devboost.dronedelivery.test.Drone
             _pedidoRepository.GetPedido(Arg.Any<int>())
                 .Returns(pedidos[0]);
 
-            await pedidoFacade.AssignDrone(_pedidoRepository);
+            await pedidoFacade.AssignDroneAsync();
 
 
             await _pedidoService.Received().DroneAtendePedido(Arg.Any<felipe.DTO.Models.Pedido>());
@@ -74,7 +78,8 @@ namespace devboost.dronedelivery.test.Drone
                 _pedidoService,
                 _clienteRepository,
                 _pedidoRepository,
-                _droneRepository);
+                _droneRepository,
+                _pagamentoServiceFactory);
 
             var pedidos = SetupTests.GetPedidosList();
             _pedidoRepository.ObterPedidos(Arg.Any<int>())
@@ -87,7 +92,7 @@ namespace devboost.dronedelivery.test.Drone
             _pedidoRepository.GetPedido(Arg.Any<int>())
                 .Returns(pedidos[0]);
 
-            await pedidoFacade.AssignDrone(_pedidoRepository);
+            await pedidoFacade.AssignDroneAsync();
 
 
             _dataContext.Pedido.DidNotReceive().Update(Arg.Any<felipe.DTO.Models.Pedido>());
@@ -100,7 +105,8 @@ namespace devboost.dronedelivery.test.Drone
                 _pedidoService,
                 _clienteRepository,
                 _pedidoRepository,
-                _droneRepository);
+                _droneRepository,
+                _pagamentoServiceFactory);
 
             _clienteRepository.GetCliente(Arg.Any<int>())
                 .Returns(SetupTests.GetCliente());
@@ -108,7 +114,7 @@ namespace devboost.dronedelivery.test.Drone
             _droneRepository.GetDrone(Arg.Any<int>())
                 .Returns(SetupTests.GetDrone());
 
-            await pedidoFacade.AssignDrone(_pedidoRepository);
+            await pedidoFacade.AssignDroneAsync();
 
 
             _dataContext.Pedido.DidNotReceive().Update(Arg.Any<felipe.DTO.Models.Pedido>());
