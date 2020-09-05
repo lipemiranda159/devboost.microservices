@@ -23,5 +23,7 @@ namespace devboost.dronedelivery.felipe.EF.Data
 
         public DbSet<PedidoDrone> PedidoDrones { get; set; }
 
+        public DbSet<Pagamento> Pagamentos { get; set; }
+        public DbSet<DadosPagamento> DadosPagamentos { get; set; }
     }
 }

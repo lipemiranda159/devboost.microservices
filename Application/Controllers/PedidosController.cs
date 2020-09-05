@@ -47,7 +47,7 @@ namespace devboost.dronedelivery.felipe.Controllers
 
             pedido.Cliente = clientePedido;
             pedido.DataHoraInclusao = DateTime.Now;
-            pedido.Situacao = (int)StatusPedido.AGUARDANDO;
+            pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
             await _pedidoRepository.SavePedidoAsync(pedido);
 
             return pedido;
