@@ -1,0 +1,3771 @@
+{
+  "devboost.dronedelivery.felipe.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Program.cs": {
+      "devboost.dronedelivery.felipe.Program": {
+        "System.Void devboost.dronedelivery.felipe.Program::Main(System.String[])": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.Extensions.Hosting.IHostBuilder devboost.dronedelivery.felipe.Program::CreateHostBuilder(System.String[])": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Startup.cs": {
+      "devboost.dronedelivery.felipe.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration devboost.dronedelivery.felipe.Startup::get_Configuration()": {
+          "Lines": {
+            "39": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "55": 0,
+            "56": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "80": 0,
+            "81": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Startup::AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext,Microsoft.AspNetCore.Identity.UserManager`1<devboost.dronedelivery.felipe.DTO.Models.ApplicationUser>,Microsoft.AspNetCore.Identity.RoleManager`1<Microsoft.AspNetCore.Identity.IdentityRole>)": {
+          "Lines": {
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "119": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "129": 0,
+            "131": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0
+          },
+          "Branches": [
+            {
+              "Line": 111,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 111,
+              "Offset": 9,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void devboost.dronedelivery.felipe.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829180535_initialcreate.cs": {
+      "devboost.dronedelivery.felipe.Migrations.initialcreate": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.initialcreate::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.initialcreate::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0,
+            "120": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829180535_initialcreate.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.initialcreate": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.initialcreate::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829193127_alteracao_cliente.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829193127_alteracao_cliente.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829194935_alteracao_cliente2.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente2": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente2::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente2::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829194935_alteracao_cliente2.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente2": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente2::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "164": 0,
+            "165": 0,
+            "166": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0,
+            "171": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829195443_alteracao_cliente3.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente3": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente3::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente3::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829195443_alteracao_cliente3.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente3": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente3::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829230640_alteracao_pedido_drone.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_pedido_drone": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_pedido_drone::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_pedido_drone::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200829230640_alteracao_pedido_drone.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_pedido_drone": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_pedido_drone::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200830012958_alteracao_cliente_com_user_senha.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "13": 0,
+            "15": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200830012958_alteracao_cliente_com_user_senha.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "159": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200830013730_alteracao_cliente_com_user_senha2.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha2": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha2::Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha2::Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\20200830013730_alteracao_cliente_com_user_senha2.Designer.cs": {
+      "devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha2": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.alteracao_cliente_com_user_senha2::BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "17": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "138": 0,
+            "139": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "163": 0,
+            "165": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Migrations\\DataContextModelSnapshot.cs": {
+      "devboost.dronedelivery.felipe.Migrations.DataContextModelSnapshot": {
+        "System.Void devboost.dronedelivery.felipe.Migrations.DataContextModelSnapshot::BuildModel(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "137": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0,
+            "157": 0,
+            "158": 0,
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "163": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Controllers\\ClienteController.cs": {
+      "devboost.dronedelivery.felipe.Controllers.ClienteController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.IEnumerable`1<devboost.dronedelivery.felipe.DTO.Models.Cliente>> devboost.dronedelivery.felipe.Controllers.ClienteController::Get()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Controllers.ClienteController::.ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository)": {
+          "Lines": {
+            "19": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Controllers.ClienteController/<Post>d__3": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.ClienteController/<Post>d__3::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Controllers\\DronesController.cs": {
+      "devboost.dronedelivery.felipe.Controllers.DronesController": {
+        "Microsoft.AspNetCore.Mvc.ActionResult`1<System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.StatusDroneDto>> devboost.dronedelivery.felipe.Controllers.DronesController::GetStatusDrone()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Controllers.DronesController::.ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IDroneRepository,devboost.dronedelivery.felipe.Facade.Interface.IDroneFacade)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Controllers.DronesController/<PostDrone>d__4": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.DronesController/<PostDrone>d__4::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Controllers\\LoginController.cs": {
+      "devboost.dronedelivery.felipe.Controllers.LoginController": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.LoginController::.ctor()": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Controllers.LoginController/<Post>d__1": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.LoginController/<Post>d__1::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 136,
+              "EndOffset": 138,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 136,
+              "EndOffset": 159,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Application\\Controllers\\PedidosController.cs": {
+      "devboost.dronedelivery.felipe.Controllers.PedidosController": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.PedidosController::.ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IPedidoRepository,devboost.dronedelivery.felipe.Facade.Interface.IPedidoFacade,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Controllers.PedidosController/<AssignDrone>d__4": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.PedidosController/<AssignDrone>d__4::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Controllers.PedidosController/<PostPedido>d__5": {
+        "System.Void devboost.dronedelivery.felipe.Controllers.PedidosController/<PostPedido>d__5::MoveNext()": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "devboost.dronedelivery.felipe.DTO.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\DroneDTO.cs": {
+      "devboost.dronedelivery.felipe.DTO.DroneDto": {
+        "devboost.dronedelivery.felipe.DTO.DroneStatusDto devboost.dronedelivery.felipe.DTO.DroneDto::get_DroneStatus()": {
+          "Lines": {
+            "10": 7
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.DroneDto::get_Distancia()": {
+          "Lines": {
+            "12": 5
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.DTO.DroneDto::.ctor(devboost.dronedelivery.felipe.DTO.DroneStatusDto,System.Double)": {
+          "Lines": {
+            "5": 3,
+            "6": 3,
+            "7": 3,
+            "8": 3,
+            "9": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\DroneStatusDTO.cs": {
+      "devboost.dronedelivery.felipe.DTO.DroneStatusDto": {
+        "devboost.dronedelivery.felipe.DTO.Models.Drone devboost.dronedelivery.felipe.DTO.DroneStatusDto::get_Drone()": {
+          "Lines": {
+            "17": 13
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.DroneStatusDto::get_SomaPeso()": {
+          "Lines": {
+            "19": 10
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.DroneStatusDto::get_SomaDistancia()": {
+          "Lines": {
+            "20": 10
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.DTO.DroneStatusDto::.ctor()": {
+          "Lines": {
+            "7": 8,
+            "8": 8,
+            "10": 8
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.DTO.DroneStatusDto::.ctor(devboost.dronedelivery.felipe.DTO.Models.Drone)": {
+          "Lines": {
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Point.cs": {
+      "devboost.dronedelivery.felipe.DTO.Point": {
+        "System.Double devboost.dronedelivery.felipe.DTO.Point::get_Latitude()": {
+          "Lines": {
+            "20": 12
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.Point::get_Longitude()": {
+          "Lines": {
+            "21": 12
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.DTO.Point::.ctor(System.Double,System.Double)": {
+          "Lines": {
+            "8": 7,
+            "9": 7,
+            "10": 7,
+            "11": 7,
+            "13": 7
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.DTO.Point::.ctor()": {
+          "Lines": {
+            "15": 2,
+            "16": 2,
+            "17": 2,
+            "18": 2,
+            "19": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\StatusDroneDTO.cs": {
+      "devboost.dronedelivery.felipe.DTO.StatusDroneDto": {
+        "System.Int32 devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_DroneId()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_Situacao()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_PedidoId()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_ClienteId()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_Nome()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_Latitude()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.StatusDroneDto::get_Longitude()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\Cliente.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.Cliente": {
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Cliente::get_Id()": {
+          "Lines": {
+            "9": 42
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Cliente::get_Nome()": {
+          "Lines": {
+            "10": 37
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.Models.Cliente::get_Latitude()": {
+          "Lines": {
+            "11": 45
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.Models.Cliente::get_Longitude()": {
+          "Lines": {
+            "12": 45
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Cliente::get_UserId()": {
+          "Lines": {
+            "14": 17
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Cliente::get_Password()": {
+          "Lines": {
+            "15": 39
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\Drone.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.Drone": {
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Drone::get_Id()": {
+          "Lines": {
+            "8": 19
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Drone::get_Capacidade()": {
+          "Lines": {
+            "10": 17
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Drone::get_Velocidade()": {
+          "Lines": {
+            "12": 19
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Drone::get_Autonomia()": {
+          "Lines": {
+            "14": 18
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Drone::get_Carga()": {
+          "Lines": {
+            "16": 0
+          },
+          "Branches": []
+        },
+        "System.Single devboost.dronedelivery.felipe.DTO.Models.Drone::get_Perfomance()": {
+          "Lines": {
+            "18": 19
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\Pedido.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.Pedido": {
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Pedido::get_Id()": {
+          "Lines": {
+            "10": 5
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Pedido::get_ClienteId()": {
+          "Lines": {
+            "12": 12
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Cliente devboost.dronedelivery.felipe.DTO.Models.Pedido::get_Cliente()": {
+          "Lines": {
+            "13": 29
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Pedido::get_Peso()": {
+          "Lines": {
+            "15": 12
+          },
+          "Branches": []
+        },
+        "System.DateTime devboost.dronedelivery.felipe.DTO.Models.Pedido::get_DataHoraInclusao()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.Pedido::get_Situacao()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime devboost.dronedelivery.felipe.DTO.Models.Pedido::get_DataUltimaAlteracao()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.DateTime devboost.dronedelivery.felipe.DTO.Models.Pedido::get_DataHoraFinalizacao()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\PedidoDrone.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.PedidoDrone": {
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_Id()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_DroneId()": {
+          "Lines": {
+            "11": 4
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Drone devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_Drone()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_PedidoId()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Pedido devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_Pedido()": {
+          "Lines": {
+            "17": 4
+          },
+          "Branches": []
+        },
+        "System.Double devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_Distancia()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_StatusEnvio()": {
+          "Lines": {
+            "21": 8
+          },
+          "Branches": []
+        },
+        "System.DateTime devboost.dronedelivery.felipe.DTO.Models.PedidoDrone::get_DataHoraFinalizacao()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\Token.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.Token": {
+        "System.Boolean devboost.dronedelivery.felipe.DTO.Models.Token::get_Authenticated()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Token::get_Created()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Token::get_Expiration()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Token::get_AccessToken()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.Token::get_Message()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\TokenConfigurations.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations": {
+        "System.String devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations::get_Audience()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations::get_Issuer()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations::get_Seconds()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations::get_Teste()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Models\\User.cs": {
+      "devboost.dronedelivery.felipe.DTO.Models.User": {
+        "System.String devboost.dronedelivery.felipe.DTO.Models.User::get_UserID()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.DTO.Models.User::get_Password()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Extensions\\ClienteExtensions.cs": {
+      "devboost.dronedelivery.felipe.DTO.Extensions.ClienteExtensions": {
+        "System.Boolean devboost.dronedelivery.felipe.DTO.Extensions.ClienteExtensions::HasClient(devboost.dronedelivery.felipe.DTO.Models.Cliente)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 12,
+              "Offset": 2,
+              "EndOffset": 20,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Extensions\\DroneExtensions.cs": {
+      "devboost.dronedelivery.felipe.DTO.Extensions.DroneExtensions": {
+        "System.DateTime devboost.dronedelivery.felipe.DTO.Extensions.DroneExtensions::ToTempoGasto(devboost.dronedelivery.felipe.DTO.Models.Drone,System.Double)": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\DTO\\Extensions\\PedidoExtensions.cs": {
+      "devboost.dronedelivery.felipe.DTO.Extensions.PedidoExtensions": {
+        "devboost.dronedelivery.felipe.DTO.Point devboost.dronedelivery.felipe.DTO.Extensions.PedidoExtensions::GetPoint(devboost.dronedelivery.felipe.DTO.Models.Pedido)": {
+          "Lines": {
+            "8": 6,
+            "9": 6,
+            "10": 6
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "devboost.dronedelivery.felipe.EF.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\DbContextFactory.cs": {
+      "devboost.dronedelivery.felipe.EF.DbContextFactory": {
+        "devboost.dronedelivery.felipe.EF.Data.DataContext devboost.dronedelivery.felipe.EF.DbContextFactory::CreateDbContext(System.String[])": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "20": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Repositories\\ClienteRepository.cs": {
+      "devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository": {
+        "devboost.dronedelivery.felipe.DTO.Models.Cliente devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository::GetCliente(System.Int32)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<devboost.dronedelivery.felipe.DTO.Models.Cliente> devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository::GetClientes()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository/<SaveCliente>d__4": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.ClienteRepository/<SaveCliente>d__4::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Repositories\\DroneRepository.cs": {
+      "devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult": {
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Id()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Capacidade()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Velocidade()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Autonomia()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Carga()": {
+          "Lines": {
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Single devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_Perfomance()": {
+          "Lines": {
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_SomaPeso()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 devboost.dronedelivery.felipe.EF.Repositories.DroneStatusResult::get_SomaDistancia()": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.EF.Repositories.DroneRepository": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::SaveDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)": {
+          "Lines": {
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Drone devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::RetornaDrone()": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.StatusDroneDto> devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::GetDroneStatusAsync()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.DroneStatusDto devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::RetornaDroneStatus(System.Int32)": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "88": 0,
+            "90": 0,
+            "91": 0
+          },
+          "Branches": [
+            {
+              "Line": 73,
+              "Offset": 63,
+              "EndOffset": 68,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 73,
+              "Offset": 63,
+              "EndOffset": 222,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::GetSelectPedidos(System.Int32,devboost.dronedelivery.felipe.DTO.Enums.StatusEnvio)": {
+          "Lines": {
+            "94": 0,
+            "95": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "112": 0,
+            "113": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::GetStatusSqlCommand()": {
+          "Lines": {
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "126": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "131": 0,
+            "132": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "137": 0,
+            "138": 0
+          },
+          "Branches": []
+        },
+        "System.String devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::GetSqlCommand(System.Int32)": {
+          "Lines": {
+            "141": 0,
+            "142": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "148": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "154": 0,
+            "155": 0
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Drone devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::GetDrone(System.Int32)": {
+          "Lines": {
+            "158": 0,
+            "159": 0,
+            "160": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.DroneRepository::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Repositories\\PedidoDroneRepository.cs": {
+      "devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository": {
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.Models.PedidoDrone> devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository::RetornaPedidosEmAberto()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 45,
+              "EndOffset": 50,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 266,
+              "EndOffset": 64,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 40,
+              "Offset": 266,
+              "EndOffset": 271,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 45,
+              "EndOffset": 289,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Linq.Expressions.Expression`1<System.Func`2<devboost.dronedelivery.felipe.DTO.Models.PedidoDrone,System.Boolean>> devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository::FiltroPedidosEmAberto()": {
+          "Lines": {
+            "66": 0,
+            "67": 0,
+            "68": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.Models.PedidoDrone> devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository::RetornaPedidosParaFecharAsync()": {
+          "Lines": {
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IPedidoRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IDroneRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository/<UpdatePedidoDrone>d__6": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository/<UpdatePedidoDrone>d__6::MoveNext()": {
+          "Lines": {
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository/<UpdatePedido>d__8": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.PedidoDroneRepository/<UpdatePedido>d__8::MoveNext()": {
+          "Lines": {
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Repositories\\PedidoRepository.cs": {
+      "devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository": {
+        "devboost.dronedelivery.felipe.DTO.Models.Pedido devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository::GetPedido(System.Int32)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.Models.Pedido> devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository::ObterPedidos(System.Int32)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository/<SavePedidoAsync>d__4": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.PedidoRepository/<SavePedidoAsync>d__4::MoveNext()": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Repositories\\RepositoryBase.cs": {
+      "devboost.dronedelivery.felipe.EF.Repositories.RepositoryBase": {
+        "System.Void devboost.dronedelivery.felipe.EF.Repositories.RepositoryBase::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Data\\ApplicationDbContext.cs": {
+      "devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext": {
+        "System.Void devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext>)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Infra\\Data\\DataContext.cs": {
+      "devboost.dronedelivery.felipe.EF.Data.DataContext": {
+        "Microsoft.EntityFrameworkCore.DbSet`1<devboost.dronedelivery.felipe.DTO.Models.Pedido> devboost.dronedelivery.felipe.EF.Data.DataContext::get_Pedido()": {
+          "Lines": {
+            "20": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<devboost.dronedelivery.felipe.DTO.Models.Cliente> devboost.dronedelivery.felipe.EF.Data.DataContext::get_Cliente()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<devboost.dronedelivery.felipe.DTO.Models.Drone> devboost.dronedelivery.felipe.EF.Data.DataContext::get_Drone()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.DbSet`1<devboost.dronedelivery.felipe.DTO.Models.PedidoDrone> devboost.dronedelivery.felipe.EF.Data.DataContext::get_PedidoDrones()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Data.DataContext::OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Data.DataContext::.ctor()": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "13": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.EF.Data.DataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<devboost.dronedelivery.felipe.EF.Data.DataContext>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "devboost.dronedelivery.felipe.Facade.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\Facade\\ClienteFacade.cs": {
+      "devboost.dronedelivery.felipe.Facade.ClienteFacade": {
+        "System.String devboost.dronedelivery.felipe.Facade.ClienteFacade::NomeCliente()": {
+          "Lines": {
+            "9": 0,
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\Facade\\DroneFacade.cs": {
+      "devboost.dronedelivery.felipe.Facade.DroneFacade": {
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.StatusDroneDto> devboost.dronedelivery.felipe.Facade.DroneFacade::GetDroneStatusAsync()": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        },
+        "devboost.dronedelivery.felipe.DTO.Models.Drone devboost.dronedelivery.felipe.Facade.DroneFacade::SaveDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)": {
+          "Lines": {
+            "27": 1,
+            "28": 1,
+            "30": 1,
+            "32": 1,
+            "33": 1
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Facade.DroneFacade::.ctor(devboost.dronedelivery.felipe.Services.Interfaces.IDroneService,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IDroneRepository)": {
+          "Lines": {
+            "16": 1,
+            "17": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Domain\\Facade\\PedidoFacade.cs": {
+      "devboost.dronedelivery.felipe.Facade.PedidoFacade": {
+        "System.Linq.Expressions.Expression`1<System.Func`2<devboost.dronedelivery.felipe.DTO.Models.Pedido,System.Boolean>> devboost.dronedelivery.felipe.Facade.PedidoFacade::FiltraPedidos()": {
+          "Lines": {
+            "84": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Facade.PedidoFacade::.ctor(devboost.dronedelivery.felipe.EF.Data.DataContext,devboost.dronedelivery.felipe.Services.Interfaces.IPedidoService,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IPedidoRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IDroneRepository)": {
+          "Lines": {
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "31": 3
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Facade.PedidoFacade/<AssignDrone>d__6": {
+        "System.Void devboost.dronedelivery.felipe.Facade.PedidoFacade/<AssignDrone>d__6::MoveNext()": {
+          "Lines": {
+            "33": 3,
+            "34": 3,
+            "35": 3,
+            "36": 2,
+            "37": 10,
+            "38": 2,
+            "39": 2,
+            "40": 2,
+            "41": 2,
+            "42": 2,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 2,
+            "48": 2,
+            "49": 3
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 41,
+              "EndOffset": 43,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 41,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 2
+            },
+            {
+              "Line": 35,
+              "Offset": 57,
+              "EndOffset": 62,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 37,
+              "Offset": 606,
+              "EndOffset": 122,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 2
+            },
+            {
+              "Line": 42,
+              "Offset": 340,
+              "EndOffset": 345,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 42,
+              "Offset": 340,
+              "EndOffset": 573,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 2
+            },
+            {
+              "Line": 37,
+              "Offset": 606,
+              "EndOffset": 611,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 2
+            },
+            {
+              "Line": 35,
+              "Offset": 57,
+              "EndOffset": 649,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            }
+          ]
+        }
+      },
+      "devboost.dronedelivery.felipe.Facade.PedidoFacade/<AdicionarPedidoDrone>d__7": {
+        "System.Void devboost.dronedelivery.felipe.Facade.PedidoFacade/<AdicionarPedidoDrone>d__7::MoveNext()": {
+          "Lines": {
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "56": 1,
+            "57": 1,
+            "58": 1,
+            "59": 1,
+            "60": 1,
+            "61": 1,
+            "62": 1,
+            "63": 1,
+            "64": 1,
+            "66": 1,
+            "67": 1,
+            "68": 1
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Facade.PedidoFacade/<PegaPedidosAsync>d__8": {
+        "System.Void devboost.dronedelivery.felipe.Facade.PedidoFacade/<PegaPedidosAsync>d__8::MoveNext()": {
+          "Lines": {
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Facade.PedidoFacade/<AtualizaPedidoAsync>d__9": {
+        "System.Void devboost.dronedelivery.felipe.Facade.PedidoFacade/<AtualizaPedidoAsync>d__9::MoveNext()": {
+          "Lines": {
+            "76": 1,
+            "77": 1,
+            "78": 1,
+            "79": 1,
+            "80": 1,
+            "81": 1
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "devboost.dronedelivery.felipe.Security.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Security\\AccessManager.cs": {
+      "devboost.dronedelivery.felipe.Security.AccessManager": {
+        "devboost.dronedelivery.felipe.DTO.Models.Token devboost.dronedelivery.felipe.Security.AccessManager::GenerateToken(devboost.dronedelivery.felipe.DTO.Models.Cliente)": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Security.AccessManager::.ctor(devboost.dronedelivery.felipe.Security.SigningConfigurations,devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations,devboost.dronedelivery.felipe.Security.Interfaces.ILoginValidator)": {
+          "Lines": {
+            "19": 1,
+            "20": 1,
+            "21": 1,
+            "22": 1,
+            "23": 1,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Security.AccessManager/<ValidateCredentials>d__4": {
+        "System.Void devboost.dronedelivery.felipe.Security.AccessManager/<ValidateCredentials>d__4::MoveNext()": {
+          "Lines": {
+            "30": 1,
+            "31": 1,
+            "32": 1,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1,
+            "40": 1,
+            "41": 1,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "46": 1,
+            "47": 1
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 60,
+              "EndOffset": 65,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 221,
+              "EndOffset": 226,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 381,
+              "EndOffset": 386,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 1
+            },
+            {
+              "Line": 38,
+              "Offset": 381,
+              "EndOffset": 523,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 35,
+              "Offset": 221,
+              "EndOffset": 524,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            },
+            {
+              "Line": 32,
+              "Offset": 60,
+              "EndOffset": 532,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Security\\IdentityInitializer.cs": {
+      "devboost.dronedelivery.felipe.Security.IdentityInitializer": {
+        "System.Void devboost.dronedelivery.felipe.Security.IdentityInitializer::Initialize()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 19,
+              "EndOffset": 24,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 92,
+              "EndOffset": 94,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 92,
+              "EndOffset": 106,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 51,
+              "EndOffset": 107,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 19,
+              "EndOffset": 212,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void devboost.dronedelivery.felipe.Security.IdentityInitializer::CreateUser(devboost.dronedelivery.felipe.DTO.Models.ApplicationUser,System.String,System.String)": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0
+          },
+          "Branches": [
+            {
+              "Line": 61,
+              "Offset": 28,
+              "EndOffset": 30,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 56,
+              "EndOffset": 58,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 56,
+              "EndOffset": 69,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 72,
+              "EndOffset": 74,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 72,
+              "EndOffset": 95,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 28,
+              "EndOffset": 96,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void devboost.dronedelivery.felipe.Security.IdentityInitializer::.ctor(devboost.dronedelivery.felipe.EF.Data.ApplicationDbContext,Microsoft.AspNetCore.Identity.UserManager`1<devboost.dronedelivery.felipe.DTO.Models.ApplicationUser>,Microsoft.AspNetCore.Identity.RoleManager`1<Microsoft.AspNetCore.Identity.IdentityRole>)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Security\\LoginValidator.cs": {
+      "devboost.dronedelivery.felipe.Security.LoginValidator": {
+        "System.Void devboost.dronedelivery.felipe.Security.LoginValidator::.ctor(Microsoft.AspNetCore.Identity.SignInManager`1<devboost.dronedelivery.felipe.DTO.Models.ApplicationUser>,Microsoft.AspNetCore.Identity.UserManager`1<devboost.dronedelivery.felipe.DTO.Models.ApplicationUser>)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Security.LoginValidator/<CheckPasswordUserAsnc>d__4": {
+        "System.Void devboost.dronedelivery.felipe.Security.LoginValidator/<CheckPasswordUserAsnc>d__4::MoveNext()": {
+          "Lines": {
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Security.LoginValidator/<GetUserById>d__5": {
+        "System.Void devboost.dronedelivery.felipe.Security.LoginValidator/<GetUserById>d__5::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Security.LoginValidator/<ValidateRoleAsnc>d__6": {
+        "System.Void devboost.dronedelivery.felipe.Security.LoginValidator/<ValidateRoleAsnc>d__6::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Security\\SigningConfigurations.cs": {
+      "devboost.dronedelivery.felipe.Security.SigningConfigurations": {
+        "Microsoft.IdentityModel.Tokens.SecurityKey devboost.dronedelivery.felipe.Security.SigningConfigurations::get_Key()": {
+          "Lines": {
+            "8": 1
+          },
+          "Branches": []
+        },
+        "Microsoft.IdentityModel.Tokens.SigningCredentials devboost.dronedelivery.felipe.Security.SigningConfigurations::get_SigningCredentials()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Security.SigningConfigurations::.ctor()": {
+          "Lines": {
+            "11": 1,
+            "12": 1,
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "18": 1,
+            "19": 1,
+            "20": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Security\\Extensions\\JwtSecurityExtension.cs": {
+      "devboost.dronedelivery.felipe.Security.Extensions.JwtSecurityExtension": {
+        "Microsoft.Extensions.DependencyInjection.IServiceCollection devboost.dronedelivery.felipe.Security.Extensions.JwtSecurityExtension::AddJwtSecurity(Microsoft.Extensions.DependencyInjection.IServiceCollection,devboost.dronedelivery.felipe.Security.SigningConfigurations,devboost.dronedelivery.felipe.DTO.Models.TokenConfigurations)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "devboost.dronedelivery.felipe.Services.dll": {
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Services\\CoordinatorService.cs": {
+      "devboost.dronedelivery.felipe.Services.CoordinateService": {
+        "System.Double devboost.dronedelivery.felipe.Services.CoordinateService::GetKmDistance(devboost.dronedelivery.felipe.DTO.Point,devboost.dronedelivery.felipe.DTO.Point)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Services\\DroneService.cs": {
+      "devboost.dronedelivery.felipe.Services.DroneService": {
+        "System.Collections.Generic.List`1<devboost.dronedelivery.felipe.DTO.StatusDroneDto> devboost.dronedelivery.felipe.Services.DroneService::GetDroneStatusAsync()": {
+          "Lines": {
+            "70": 3,
+            "71": 3,
+            "72": 3
+          },
+          "Branches": []
+        },
+        "System.Boolean devboost.dronedelivery.felipe.Services.DroneService::ConsegueCarregar(devboost.dronedelivery.felipe.DTO.DroneStatusDto,System.Double,System.Double,devboost.dronedelivery.felipe.DTO.Models.Pedido)": {
+          "Lines": {
+            "92": 1,
+            "93": 1,
+            "94": 1,
+            "95": 1,
+            "96": 1
+          },
+          "Branches": [
+            {
+              "Line": 93,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 93,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 93,
+              "Offset": 2,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 12,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Boolean devboost.dronedelivery.felipe.Services.DroneService::ValidaPeso(devboost.dronedelivery.felipe.DTO.DroneStatusDto,devboost.dronedelivery.felipe.DTO.Models.Pedido)": {
+          "Lines": {
+            "99": 1,
+            "100": 1,
+            "101": 1
+          },
+          "Branches": []
+        },
+        "System.Boolean devboost.dronedelivery.felipe.Services.DroneService::ValidaDistancia(devboost.dronedelivery.felipe.DTO.DroneStatusDto,System.Double,System.Double)": {
+          "Lines": {
+            "104": 1,
+            "105": 1,
+            "106": 1
+          },
+          "Branches": []
+        },
+        "System.Void devboost.dronedelivery.felipe.Services.DroneService::.ctor(devboost.dronedelivery.felipe.Services.Interfaces.ICoordinateService,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IPedidoDroneRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IDroneRepository,devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IPedidoRepository)": {
+          "Lines": {
+            "20": 4,
+            "21": 4,
+            "22": 4,
+            "23": 4,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "27": 4,
+            "28": 4,
+            "29": 4
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Services.DroneService/<>c__DisplayClass5_0": {
+        "<>f__AnonymousType0`2<System.Double,System.Int32> devboost.dronedelivery.felipe.Services.DroneService/<>c__DisplayClass5_0::<GetAvailiableDroneAsync>b__0(devboost.dronedelivery.felipe.DTO.Models.PedidoDrone)": {
+          "Lines": {
+            "34": 3,
+            "35": 3,
+            "36": 3,
+            "37": 3,
+            "38": 5
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Services.DroneService/<GetAvailiableDroneAsync>d__5": {
+        "System.Void devboost.dronedelivery.felipe.Services.DroneService/<GetAvailiableDroneAsync>d__5::MoveNext()": {
+          "Lines": {
+            "32": 1,
+            "33": 1,
+            "41": 1,
+            "42": 1,
+            "44": 4,
+            "45": 1,
+            "46": 1,
+            "48": 1,
+            "49": 1,
+            "50": 1,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 1
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 170,
+              "EndOffset": 175,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 44,
+              "Offset": 510,
+              "EndOffset": 210,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 308,
+              "EndOffset": 310,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 48,
+              "Offset": 308,
+              "EndOffset": 323,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 510,
+              "EndOffset": 515,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 170,
+              "EndOffset": 556,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "devboost.dronedelivery.felipe.Services.DroneService/<FinalizaPedidosAsync>d__7": {
+        "System.Void devboost.dronedelivery.felipe.Services.DroneService/<FinalizaPedidosAsync>d__7::MoveNext()": {
+          "Lines": {
+            "75": 1,
+            "76": 1,
+            "78": 1,
+            "79": 1,
+            "80": 7,
+            "81": 2,
+            "82": 2,
+            "83": 2,
+            "84": 2,
+            "85": 1,
+            "86": 1
+          },
+          "Branches": [
+            {
+              "Line": 78,
+              "Offset": 53,
+              "EndOffset": 58,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 80,
+              "Offset": 252,
+              "EndOffset": 90,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 2
+            },
+            {
+              "Line": 80,
+              "Offset": 252,
+              "EndOffset": 257,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 78,
+              "Offset": 53,
+              "EndOffset": 295,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "D:\\Pessoais\\devboost.dronedelivery_v3\\Services\\Services\\PedidoService.cs": {
+      "devboost.dronedelivery.felipe.Services.PedidoService": {
+        "System.Void devboost.dronedelivery.felipe.Services.PedidoService::.ctor(devboost.dronedelivery.felipe.Services.Interfaces.IDroneService,devboost.dronedelivery.felipe.Services.Interfaces.ICoordinateService)": {
+          "Lines": {
+            "13": 1,
+            "14": 1,
+            "15": 1,
+            "16": 1,
+            "17": 1
+          },
+          "Branches": []
+        }
+      },
+      "devboost.dronedelivery.felipe.Services.PedidoService/<DroneAtendePedido>d__3": {
+        "System.Void devboost.dronedelivery.felipe.Services.PedidoService/<DroneAtendePedido>d__3::MoveNext()": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "23": 1,
+            "25": 1,
+            "27": 1,
+            "28": 0,
+            "30": 1,
+            "32": 1
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 223,
+              "EndOffset": 225,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 223,
+              "EndOffset": 229,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}
