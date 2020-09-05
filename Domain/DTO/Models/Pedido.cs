@@ -18,7 +18,14 @@ namespace devboost.dronedelivery.felipe.DTO.Models
 
         public int Situacao { get; set; }
         public Pagamento Pagamento { get; set; }
+        public int PagamentoId { get; set; }
+        public string GatewayPagamentoId { get; set; }
         public DateTime DataUltimaAlteracao { get; set; }
         public DateTime DataHoraFinalizacao { get; set; }
+
+        public bool EValido()
+        {
+            return Pagamento != null && Pagamento.ContemFormaDePagamento();
+        }
     }
 }

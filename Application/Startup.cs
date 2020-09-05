@@ -4,7 +4,9 @@ using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using devboost.dronedelivery.felipe.Extensions;
 using devboost.dronedelivery.felipe.Facade;
+using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Security;
 using devboost.dronedelivery.felipe.Security.Extensions;
@@ -33,8 +35,8 @@ namespace devboost.dronedelivery.felipe
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     {
         private const string SWAGGERFILE_PATH = "./swagger/v1/swagger.json";
-        private const string API_VERSION = "v1";
         private const string LOCALHOST = "http://localhost:80";
+
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         public Startup(IConfiguration configuration)
@@ -51,71 +53,15 @@ namespace devboost.dronedelivery.felipe
         public void ConfigureServices(IServiceCollection services)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
-            services.AddScoped<IDroneRepository, DroneRepository>();
-            services.AddScoped<IPedidoDroneRepository, PedidoDroneRepository>();
-            services.AddScoped<IClienteRepository, ClienteRepository>();
-            services.AddScoped<IPedidoRepository, PedidoRepository>();
-            services.AddScoped<IPedidoService, PedidoService>();
-            services.AddScoped<IDroneService, DroneService>();
-            services.AddScoped<ICoordinateService, CoordinateService>();
-            services.AddScoped<IPedidoFacade, PedidoFacade>();
-            services.AddScoped<IDroneFacade, DroneFacade>();
-            services.AddScoped<ILoginValidator, LoginValidator>();
-            services.AddScoped<IValidateDatabase, ValidateDatabse>();
-            services.AddScoped<ICommandExecutor<DroneStatusResult>, CommandExecutor<DroneStatusResult>>();
-            services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
-
-            // Configurando o uso da classe de contexto para
-            // acesso às tabelas do ASP.NET Identity Core
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("InMemoryDatabase"));
-
-            // Ativando a utilização do ASP.NET Identity, a fim de
-            // permitir a recuperação de seus objetos via injeção de
-            // dependências
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
-
-            // Configurando a dependência para a classe de validação
-            // de credenciais e geração de tokens
-            services.AddScoped<AccessManager>();
-
-            var signingConfigurations = new SigningConfigurations();
-            services.AddSingleton(signingConfigurations);
-
-            var tokenConfigurations = new TokenConfigurations();
-            new ConfigureFromConfigurationOptions<TokenConfigurations>(
-                Configuration.GetSection("TokenConfigurations"))
-                    .Configure(tokenConfigurations);
-            services.AddSingleton(tokenConfigurations);
-
-            // Aciona a extensão que irá configurar o uso de
-            // autenticação e autorização via tokens
-            services.AddJwtSecurity(
-                signingConfigurations, tokenConfigurations);
-
-            services.AddDbContext<DataContext>(options =>
-                    options.UseInMemoryDatabase("Delivery"), ServiceLifetime.Singleton);
-            AddSwagger(services);
+            services.AddScopedServices(Configuration);
+            services.AddAuthServices(Configuration);
+            services.AddDbService();
+            services.AddSwagger();
 
             services.AddCors();
             services.AddControllers();
 
         }
-
-        private void AddSwagger(IServiceCollection services)
-        {
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc(API_VERSION, new OpenApiInfo { Title = ProjectConsts.PROJECT_NAME, Version = API_VERSION });
-                var xmlFile = Assembly.GetExecutingAssembly().GetName().Name + ProjectConsts.XML_EXTENSION;
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xmlPath);
-            });
-        }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -142,7 +88,7 @@ namespace devboost.dronedelivery.felipe
                .UseSwaggerUI(c =>
                {
                    c.RoutePrefix = string.Empty;
-                   c.SwaggerEndpoint(SWAGGERFILE_PATH, ProjectConsts.PROJECT_NAME + API_VERSION);
+                   c.SwaggerEndpoint(SWAGGERFILE_PATH, ProjectConsts.PROJECT_NAME + ProjectConsts.API_VERSION);
                });
 
             app.UseRouting();

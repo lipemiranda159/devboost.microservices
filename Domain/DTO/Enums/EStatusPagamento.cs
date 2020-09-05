@@ -4,9 +4,9 @@ using System.Text;
 
 namespace devboost.dronedelivery.felipe.DTO.Enums
 {
-    public enum ETipoPagamento
+    public enum EStatusPagamento
     {
-        CARTAO,
-        INDEFINIDO
+        SUCESSO,
+        FALHA
     }
 }

@@ -9,5 +9,6 @@ namespace devboost.dronedelivery.felipe.EF.Repositories.Interfaces
         Task<int> SavePedidoAsync(Pedido pedido);
         Pedido GetPedido(int id);
         List<Pedido> ObterPedidos(int situacao);
+        Task<Pedido> PegaPedidoPendenteAsync(string GatewayId);
     }
 }
