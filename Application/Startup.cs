@@ -53,7 +53,7 @@ namespace devboost.dronedelivery.felipe
         public void ConfigureServices(IServiceCollection services)
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
-            services.AddScopedServices();
+            services.AddScopedServices(Configuration);
             services.AddAuthServices(Configuration);
             services.AddDbService();
             services.AddSwagger();
