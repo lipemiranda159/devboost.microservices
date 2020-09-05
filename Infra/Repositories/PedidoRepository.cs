@@ -31,7 +31,7 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             return pedidos.ToList();
         }
 
-        public async Task<Pedido> PegaPedidoPendente(string GatewayId)
+        public async Task<Pedido> PegaPedidoPendenteAsync(string GatewayId)
         {
             return await _context.Pedido.Where(p => p.GatewayPagamentoId == GatewayId).FirstOrDefaultAsync();
         }

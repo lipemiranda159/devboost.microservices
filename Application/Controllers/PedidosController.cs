@@ -34,7 +34,7 @@ namespace devboost.dronedelivery.felipe.Controllers
         public async Task<ActionResult> AssignDrone()
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
-            await _pedidoFacade.AssignDrone(_pedidoRepository);
+            await _pedidoFacade.AssignDroneAsync();
             return Ok();
         }
 

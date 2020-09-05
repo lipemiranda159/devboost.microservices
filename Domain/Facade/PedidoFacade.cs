@@ -100,8 +100,8 @@ namespace devboost.dronedelivery.felipe.Facade
                 pedido.Cliente = clientePedido;
                 pedido.DataHoraInclusao = DateTime.Now;
                 pedido.Situacao = (int)StatusPedido.AGUARDANDO_PAGAMENTO;
-                var servicoPagamento = _pagamentoServiceFactory.GetPagamentoServico((ETipoPagamento)pedido.Pagamento.TipoPagamento);
-                pedido.GatewayPagamentoId = await servicoPagamento.RequisitaPagamento(pedido.Pagamento)
+                var servicoPagamento = _pagamentoServiceFactory.GetPagamentoServico(pedido.Pagamento.TipoPagamento);
+                pedido.GatewayPagamentoId = await servicoPagamento.RequisitaPagamento(pedido.Pagamento);
 
                 await _pedidoRepository.SavePedidoAsync(pedido);
                 return pedido;

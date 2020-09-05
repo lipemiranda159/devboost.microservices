@@ -67,6 +67,7 @@ namespace devboost.dronedelivery.felipe
             services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
             services.AddScoped<IPagamentoServico, PagamentoCartaoServico>();
             services.AddScoped<IPagamentoServiceFactory, PagamentoServiceFactory>();
+            services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             // Configurando o uso da classe de contexto para
             // acesso às tabelas do ASP.NET Identity Core
             services.AddDbContext<ApplicationDbContext>(options =>

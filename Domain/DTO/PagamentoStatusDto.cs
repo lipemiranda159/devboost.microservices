@@ -1,4 +1,5 @@
-﻿using System;
+﻿using devboost.dronedelivery.felipe.DTO.Enums;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
