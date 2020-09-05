@@ -27,7 +27,7 @@ namespace devboost.dronedelivery.pagamento
             services.AddMemoryCache();
             services.AddHttpContextAccessor();
             services.AddAuthentication();
-            services.AddScoped<IPagamentoFacade, PagamentoFacade>();
+            services.AddServices();
 
             services.ConfigureSwagger();
 

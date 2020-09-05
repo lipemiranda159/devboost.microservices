@@ -29,7 +29,8 @@ namespace devboost.dronedelivery.pagamento.facade
                 DadosPagamentos = pagamento.DadosPagamentos,
                 TipoPagamento = pagamento.TipoPagamento,
                 StatusPagamento = EStatusPagamento.EM_ANALISE,
-                DataCriacao = DateTime.Now
+                DataCriacao = DateTime.Now,
+                Descricao = pagamento.Descricao
             };
 
             await _pagamentoRepository.AddPagamentoAsync(newPagamento);
