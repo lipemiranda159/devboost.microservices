@@ -29,7 +29,7 @@ namespace devboost.dronedelivery.test.Controller
             _loginValidator.GetUserById(Arg.Any<string>()).Returns(new ApplicationUser());
             _loginValidator.ValidateRoleAsync(Arg.Any<ApplicationUser>(), Arg.Any<string>()).Returns(true);
             var loginController = new LoginController(_accessManager);
-            var token = await loginController.Post(SetupTests.GetCliente()) as Token;
+            var token = await loginController.Post(SetupTests.GetLogin()) as Token;
 
             Assert.True(!string.IsNullOrEmpty(token.AccessToken));
             Assert.True(!string.IsNullOrEmpty(token.Message));
@@ -47,7 +47,7 @@ namespace devboost.dronedelivery.test.Controller
             _loginValidator.GetUserById(Arg.Any<string>()).Returns(new ApplicationUser());
             _loginValidator.ValidateRoleAsync(Arg.Any<ApplicationUser>(), Arg.Any<string>()).Returns(false);
             var loginController = new LoginController(_accessManager);
-            var token = await loginController.Post(SetupTests.GetCliente()) as Token;
+            var token = await loginController.Post(SetupTests.GetLogin()) as Token;
             Assert.True(token == null);
 
         }

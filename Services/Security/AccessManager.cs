@@ -1,4 +1,5 @@
-﻿using devboost.dronedelivery.felipe.DTO.Extensions;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Extensions;
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.Security.Interfaces;
 using Microsoft.IdentityModel.Tokens;
@@ -25,7 +26,7 @@ namespace devboost.dronedelivery.felipe.Security
             _loginValidator = loginValidator;
         }
 
-        public async Task<bool> ValidateCredentials(Cliente user)
+        public async Task<bool> ValidateCredentials(LoginDTO user)
         {
             bool credenciaisValidas = false;
             if (user.HasClient())
@@ -45,7 +46,7 @@ namespace devboost.dronedelivery.felipe.Security
             return credenciaisValidas;
         }
 
-        public Token GenerateToken(Cliente user)
+        public Token GenerateToken(LoginDTO user)
         {
             ClaimsIdentity identity = new ClaimsIdentity(
                 new GenericIdentity(user.UserId, "Login"),

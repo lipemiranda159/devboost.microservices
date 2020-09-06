@@ -52,7 +52,7 @@ namespace devboost.dronedelivery.felipe.Controllers
         ///         "carga": 100,
         ///     }
         /// </remarks>
-        /// <returns>O novo drono</returns>
+        /// <returns>O novo drone</returns>
         [ProducesResponseType(typeof(Drone), StatusCodes.Status200OK)]
         [HttpPost]
         public async Task<ActionResult<Drone>> PostDrone(Drone drone)

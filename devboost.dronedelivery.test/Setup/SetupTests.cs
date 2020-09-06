@@ -67,6 +67,16 @@ namespace devboost.dronedelivery.test
             };
         }
 
+        public static LoginDTO GetLogin()
+        {
+            return new LoginDTO()
+            {
+                Password = "teste",
+                UserId = "teste"
+
+            };
+        }
+
         public static felipe.DTO.Models.Cliente GetCliente()
         {
             return new felipe.DTO.Models.Cliente()

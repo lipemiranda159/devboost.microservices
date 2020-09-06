@@ -8,7 +8,7 @@ namespace devboost.dronedelivery.test.DTO.Extensions
         [Fact]
         public void ClienteHasUserTest()
         {
-            var cliente = SetupTests.GetCliente();
+            var cliente = SetupTests.GetLogin();
             Assert.True(cliente.HasClient());
         }
     }

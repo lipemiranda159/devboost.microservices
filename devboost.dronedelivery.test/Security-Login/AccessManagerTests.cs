@@ -56,7 +56,7 @@ namespace devboost.dronedelivery.test.Security_Login
             _loginValidator.GetUserById(Arg.Any<string>()).Returns(new ApplicationUser());
             _loginValidator.CheckPasswordUserAsync(Arg.Any<ApplicationUser>(), Arg.Any<string>()).Returns(true);
             _loginValidator.ValidateRoleAsync(Arg.Any<ApplicationUser>(), Arg.Any<string>()).Returns(true);
-            var valid = await accessManager.ValidateCredentials(SetupTests.GetCliente());
+            var valid = await accessManager.ValidateCredentials(SetupTests.GetLogin());
             Assert.True(valid);
         }
 
@@ -68,7 +68,7 @@ namespace devboost.dronedelivery.test.Security_Login
             _tokenConfigurations.Seconds = 90;
 
             var accessManager = new AccessManager(_signingConfigurations, _tokenConfigurations, _loginValidator);
-            var token = accessManager.GenerateToken(SetupTests.GetCliente());
+            var token = accessManager.GenerateToken(SetupTests.GetLogin());
 
             Assert.True(token.Authenticated);
             Assert.IsType<string>(token.AccessToken);

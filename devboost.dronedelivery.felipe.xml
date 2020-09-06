@@ -74,12 +74,33 @@
                      "carga": 100,
                  }
              </remarks>
-             <returns>O novo drono</returns>
+             <returns>O novo drone</returns>
         </member>
         <member name="T:devboost.dronedelivery.felipe.Controllers.LoginController">
             <summary>
             Controller com operações referentes aos drones
             </summary>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.LoginController.#ctor(devboost.dronedelivery.felipe.Security.AccessManager)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="accessManager"></param>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.LoginController.Post(devboost.dronedelivery.felipe.DTO.LoginDTO)">
+             <summary>
+             Login do usuário
+             </summary>
+             <param name="usuario"></param>
+            <remarks>
+            Exemplo:
+            
+                 POST /api/login
+                 {
+                     "userId": "teste",
+                     "password": "teste",
+                 }
+             </remarks>
         </member>
         <member name="T:devboost.dronedelivery.felipe.Controllers.PagamentoController">
             <summary>
@@ -88,7 +109,7 @@
         </member>
         <member name="M:devboost.dronedelivery.felipe.Controllers.PagamentoController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IPagamentoFacade)">
             <summary>
-            
+            Constructor
             </summary>
             <param name="pagamentoFacade"></param>
         </member>
@@ -97,6 +118,17 @@
             Controller para recebimento de status de pagamento
             </summary>
             <param name="listaPagamentos"></param>
+            <remarks>
+            Exemplo:
+            Post /api/pagamento
+            [
+                {
+                    "IdPagamento" : 1,
+                    "Status": 1,
+                    "Descricao":"ok"
+                }
+            ]
+            </remarks>
         </member>
         <member name="T:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions">
             <summary>

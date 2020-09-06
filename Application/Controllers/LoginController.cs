@@ -1,4 +1,5 @@
-﻿using devboost.dronedelivery.felipe.DTO.Models;
+﻿using devboost.dronedelivery.felipe.DTO;
+using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.Security;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,31 +16,40 @@ namespace devboost.dronedelivery.felipe.Controllers
     public class LoginController
     {
         private readonly AccessManager _accessManager;
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="accessManager"></param>
         public LoginController(AccessManager accessManager)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
         {
             _accessManager = accessManager;
         }
-
+        /// <summary>
+        /// Login do usuário
+        /// </summary>
+        /// <param name="usuario"></param>
+        ///<remarks>
+        ///Exemplo:
+        ///
+        ///     POST /api/login
+        ///     {
+        ///         "userId": "teste",
+        ///         "password": "teste",
+        ///     }
+        /// </remarks>
         [AllowAnonymous]
         [HttpPost]
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-        public async Task<object> Post([FromBody] Cliente usuario)
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+        public async Task<object> Post([FromBody] LoginDTO usuario)
         {
             if (await _accessManager.ValidateCredentials(usuario))
             {
                 return _accessManager.GenerateToken(usuario);
             }
-            else
+            return new
             {
-                return new
-                {
-                    Authenticated = false,
-                    Message = "Falha ao autenticar"
-                };
-            }
+                Authenticated = false,
+                Message = "Falha ao autenticar"
+            };
         }
 
 
