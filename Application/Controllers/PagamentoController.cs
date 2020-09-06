@@ -16,7 +16,7 @@ namespace devboost.dronedelivery.felipe.Controllers
     {
         private readonly IPagamentoFacade _pagamentoFacade;
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
         /// <param name="pagamentoFacade"></param>
         public PagamentoController(IPagamentoFacade pagamentoFacade)
@@ -27,6 +27,17 @@ namespace devboost.dronedelivery.felipe.Controllers
         /// Controller para recebimento de status de pagamento
         /// </summary>
         /// <param name="listaPagamentos"></param>
+        /// <remarks>
+        /// Exemplo:
+        /// Post /api/pagamento
+        /// [
+        ///     {
+        ///         "IdPagamento" : 1,
+        ///         "Status": 1,
+        ///         "Descricao":"ok"
+        ///     }
+        /// ]
+        /// </remarks>
         [HttpPost]
         public async Task AtualizaLista(List<PagamentoStatusDto> listaPagamentos)
         {
