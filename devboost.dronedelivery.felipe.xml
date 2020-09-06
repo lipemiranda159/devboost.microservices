@@ -4,6 +4,43 @@
         <name>devboost.dronedelivery.felipe</name>
     </assembly>
     <members>
+        <member name="T:devboost.dronedelivery.felipe.Controllers.ClienteController">
+            <summary>
+            Controller com ações referentes aos clientes
+            </summary>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.#ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="clienteRepository"></param>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.Get">
+            <summary>
+            Retorna lista de clientes cadastrados no banco
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.Post(devboost.dronedelivery.felipe.DTO.Models.Cliente)">
+             <summary>
+             Cria um novo cliente
+             </summary>
+             <param name="cliente">Modelo cliente</param>
+             <remarks>
+            Exemplo:
+            
+                 POST /
+                 {
+                  "nome": "Joao",
+                  "latitude": -23.5631043,
+                  "longitude": -46.6565712,
+                  "userId": "joao",
+                  "password": "1234"
+                 }
+            
+             </remarks>        
+             <returns>O novo cliente</returns>
+        </member>
         <member name="T:devboost.dronedelivery.felipe.Controllers.DronesController">
             <summary>
             
