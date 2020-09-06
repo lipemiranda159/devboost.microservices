@@ -1,8 +1,5 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.Services;
+﻿using devboost.dronedelivery.felipe.Services;
 using devboost.dronedelivery.felipe.Services.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace devboost.dronedelivery.felipe.Facade.Factory

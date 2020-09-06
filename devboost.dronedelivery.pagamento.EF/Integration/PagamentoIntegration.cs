@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Constants;
-using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
+﻿using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;

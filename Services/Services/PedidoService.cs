@@ -1,7 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Extensions;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.Services.Interfaces;
+﻿using devboost.dronedelivery.felipe.Services.Interfaces;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Services

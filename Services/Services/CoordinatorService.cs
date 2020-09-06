@@ -1,5 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.Services.Interfaces;
+﻿using devboost.dronedelivery.felipe.Services.Interfaces;
 using Geolocation;
 
 namespace devboost.dronedelivery.felipe.Services

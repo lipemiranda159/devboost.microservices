@@ -1,7 +1,5 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Data;
+﻿using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using NSubstitute;
 using System.Threading.Tasks;
 using Xunit;

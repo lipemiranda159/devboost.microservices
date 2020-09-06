@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>devboost.dronedelivery.felipe</name>
+        <name>devboost.dronedelivery</name>
     </assembly>
     <members>
-        <member name="T:devboost.dronedelivery.felipe.Controllers.ClienteController">
+        <member name="T:devboost.dronedelivery.Controllers.ClienteController">
             <summary>
             Controller com ações referentes aos clientes
             </summary>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.#ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository)">
+        <member name="M:devboost.dronedelivery.Controllers.ClienteController.#ctor(devboost.dronedelivery.felipe.EF.Repositories.Interfaces.IClienteRepository)">
             <summary>
             Constructor
             </summary>
             <param name="clienteRepository"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.Get">
+        <member name="M:devboost.dronedelivery.Controllers.ClienteController.Get">
             <summary>
             Retorna lista de clientes cadastrados no banco
             </summary>
             <returns>Uma lista de clientes</returns>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.Post(devboost.dronedelivery.felipe.DTO.Models.Cliente)">
+        <member name="M:devboost.dronedelivery.Controllers.ClienteController.Post(devboost.dronedelivery.felipe.DTO.Models.Cliente)">
              <summary>
              Cria um novo cliente
              </summary>
@@ -41,24 +41,24 @@
              </remarks>        
              <returns>O novo cliente</returns>
         </member>
-        <member name="T:devboost.dronedelivery.felipe.Controllers.DronesController">
+        <member name="T:devboost.dronedelivery.Controllers.DronesController">
             <summary>
             Controller com ações referentes aos drones
             </summary>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IDroneFacade)">
+        <member name="M:devboost.dronedelivery.Controllers.DronesController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IDroneFacade)">
             <summary>
             Constructor
             </summary>
             <param name="droneFacade"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.GetStatusDrone">
+        <member name="M:devboost.dronedelivery.Controllers.DronesController.GetStatusDrone">
             <summary>
             Retorna status dos drones
             </summary>
             <returns></returns>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.PostDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)">
+        <member name="M:devboost.dronedelivery.Controllers.DronesController.PostDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)">
              <summary>
              Adiciona um novo drone
              </summary>
@@ -76,18 +76,18 @@
              </remarks>
              <returns>O novo drone</returns>
         </member>
-        <member name="T:devboost.dronedelivery.felipe.Controllers.LoginController">
+        <member name="T:devboost.dronedelivery.Controllers.LoginController">
             <summary>
             Controller com operações referentes aos drones
             </summary>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.LoginController.#ctor(devboost.dronedelivery.felipe.Security.AccessManager)">
+        <member name="M:devboost.dronedelivery.Controllers.LoginController.#ctor(devboost.dronedelivery.felipe.Security.AccessManager)">
             <summary>
             Constructor
             </summary>
             <param name="accessManager"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.LoginController.Post(devboost.dronedelivery.felipe.DTO.LoginDTO)">
+        <member name="M:devboost.dronedelivery.Controllers.LoginController.Post(devboost.dronedelivery.felipe.DTO.LoginDTO)">
              <summary>
              Login do usuário
              </summary>
@@ -102,18 +102,18 @@
                  }
              </remarks>
         </member>
-        <member name="T:devboost.dronedelivery.felipe.Controllers.PagamentoController">
+        <member name="T:devboost.dronedelivery.Controllers.PagamentoController">
             <summary>
             Pagamento controller
             </summary>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.PagamentoController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IPagamentoFacade)">
+        <member name="M:devboost.dronedelivery.Controllers.PagamentoController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IPagamentoFacade)">
             <summary>
             Constructor
             </summary>
             <param name="pagamentoFacade"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Controllers.PagamentoController.AtualizaLista(System.Collections.Generic.List{devboost.dronedelivery.felipe.DTO.PagamentoStatusDto})">
+        <member name="M:devboost.dronedelivery.Controllers.PagamentoController.AtualizaLista(System.Collections.Generic.List{devboost.dronedelivery.felipe.DTO.PagamentoStatusDto})">
             <summary>
             Controller para recebimento de status de pagamento
             </summary>
@@ -130,38 +130,38 @@
             ]
             </remarks>
         </member>
-        <member name="T:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions">
+        <member name="T:devboost.dronedelivery.Extensions.ServiceCollectionExtensions">
             <summary>
             Service Collection extensions
             </summary>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.AddScopedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:devboost.dronedelivery.Extensions.ServiceCollectionExtensions.AddScopedServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             Add services from project
             </summary>
             <param name="services"></param>
             <param name="configuration"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:devboost.dronedelivery.Extensions.ServiceCollectionExtensions.ConfigureCors(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Add services from project
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.AddAuthServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+        <member name="M:devboost.dronedelivery.Extensions.ServiceCollectionExtensions.AddAuthServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
             
             </summary>
             <param name="services"></param>
             <param name="configuration"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.AddDbService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:devboost.dronedelivery.Extensions.ServiceCollectionExtensions.AddDbService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:devboost.dronedelivery.felipe.Extensions.ServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:devboost.dronedelivery.Extensions.ServiceCollectionExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             
             </summary>

@@ -1,8 +1,5 @@
-﻿using devboost.dronedelivery.felipe.DTO.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.pagamento.EF.Repositories.Interfaces

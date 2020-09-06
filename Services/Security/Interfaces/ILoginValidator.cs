@@ -1,5 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Models;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Security.Interfaces
 {

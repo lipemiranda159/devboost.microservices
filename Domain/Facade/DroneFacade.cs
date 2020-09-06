@@ -1,7 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.Facade.Interface;
+﻿using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;

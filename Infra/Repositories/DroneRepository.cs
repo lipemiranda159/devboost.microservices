@@ -1,8 +1,8 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
+﻿using devboost.dronedelivery.domain.core.Interfaces;
+using devboost.dronedelivery.felipe.domain.core;
+using devboost.dronedelivery.felipe.domain.core.Enums;
+using devboost.dronedelivery.felipe.domain.core.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,31 +11,23 @@ using System.Threading.Tasks;
 namespace devboost.dronedelivery.felipe.EF.Repositories
 {
 
-    public class DroneRepository : IDroneRepository
+    public class DroneRepository : RepositoryBase<Drone>, IDroneRepository
     {
-        private readonly DataContext _context;
         private readonly ICommandExecutor<DroneStatusResult> _droneStatusExecutor;
         private readonly ICommandExecutor<StatusDroneDto> _statusDroneExecutor;
 
 
-        public DroneRepository(DataContext context,
-            ICommandExecutor<StatusDroneDto> statusDroneExecutor,
+        public DroneRepository(ICommandExecutor<StatusDroneDto> statusDroneExecutor,
             ICommandExecutor<DroneStatusResult> droneStatusExecutor)
         {
-            _context = context;
             _droneStatusExecutor = droneStatusExecutor;
             _statusDroneExecutor = statusDroneExecutor;
         }
 
-        public async Task SaveDroneAsync(Drone drone)
-        {
-            _context.Drone.Add(drone);
-            await _context.SaveChangesAsync();
-        }
 
         public Drone RetornaDrone()
         {
-            return _context.Drone.FirstOrDefault();
+            return Context.Drone.FirstOrDefault();
         }
 
         public List<StatusDroneDto> GetDroneStatusAsync()
@@ -131,11 +123,6 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             stringBuilder.AppendLine("GROUP BY D.Id, D.Autonomia, D.Capacidade, D.Carga, D.Perfomance, D.Velocidade");
 
             return stringBuilder.ToString();
-        }
-
-        public Drone GetDrone(int id)
-        {
-            return _context.Find<Drone>(id);
         }
     }
 }

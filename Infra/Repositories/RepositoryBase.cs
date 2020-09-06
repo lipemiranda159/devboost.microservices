@@ -1,22 +1,54 @@
-﻿using devboost.dronedelivery.felipe.DTO.Constants;
+﻿using devboost.dronedelivery.domain.core.Interfaces;
 using devboost.dronedelivery.felipe.EF.Data;
-using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.EF.Repositories
 {
-    public abstract class RepositoryBase
+    public class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
-        protected readonly DataContext _context;
-        protected readonly string _connectionString;
+        protected DataContext Context = new DataContext();
 
-        protected RepositoryBase(DataContext context,
-            IConfiguration configuration)
+        public async Task<TEntity> AddAsync(TEntity obj)
         {
-            _context = context;
-            _connectionString = configuration.GetConnectionString(ProjectConsts.CONNECTION_STRING_CONFIG);
-
+            Context.Set<TEntity>().Add(obj);
+            await Context.SaveChangesAsync();
+            return obj;
         }
 
+        public async Task<TEntity> GetByIdAsync(int id)
+        {
+            return await Context.Set<TEntity>().FindAsync(id);
+        }
 
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        {
+            return await Context.Set<TEntity>().ToListAsync();
+        }
+
+        public async Task<TEntity> UpdateAsync(TEntity obj)
+        {
+            Context.Entry(obj).State = EntityState.Modified;
+            await Context.SaveChangesAsync();
+            return obj;
+        }
+
+        public async Task RemoveAsync(TEntity obj)
+        {
+            Context.Set<TEntity>().Remove(obj);
+            await Context.SaveChangesAsync();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task SaveAsync()
+        {
+            await Context.SaveChangesAsync();
+        }
     }
 }

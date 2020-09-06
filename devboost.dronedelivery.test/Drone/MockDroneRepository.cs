@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -58,7 +56,7 @@ namespace devboost.dronedelivery.test.Drone
 
         public async Task SaveDroneAsync(felipe.DTO.Models.Drone drone)
         {
-            
+
         }
     }
 }

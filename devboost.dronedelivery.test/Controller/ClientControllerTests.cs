@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.Controllers;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using NSubstitute;
+﻿using NSubstitute;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;

@@ -1,7 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+﻿using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.Facade.Factory;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;

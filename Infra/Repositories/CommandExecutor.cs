@@ -1,10 +1,11 @@
 ﻿using Dapper;
-using devboost.dronedelivery.felipe.DTO.Constants;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+using devboost.dronedelivery.domain.core.Interfaces;
+using devboost.dronedelivery.felipe.domain.core;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.EF.Repositories
 {
@@ -24,6 +25,14 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             using (SqlConnection conexao = new SqlConnection(_connectionString))
             {
                 return conexao.Query<T>(command);
+            }
+        }
+
+        public async Task ExecuteCommandAsync(string command)
+        {
+            using (SqlConnection conexao = new SqlConnection(_connectionString))
+            {
+                await conexao.ExecuteAsync(command);
             }
         }
     }

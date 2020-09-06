@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using System;
+﻿using System;
 using Xunit;
 
 namespace devboost.dronedelivery.test.Pedido

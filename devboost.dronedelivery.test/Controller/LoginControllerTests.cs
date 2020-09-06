@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.Controllers;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.Security;
+﻿using devboost.dronedelivery.felipe.Security;
 using devboost.dronedelivery.felipe.Security.Interfaces;
 using NSubstitute;
 using System.Threading.Tasks;

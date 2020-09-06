@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Models;
+﻿using devboost.dronedelivery.felipe.domain.core.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace devboost.dronedelivery.felipe.EF.Data

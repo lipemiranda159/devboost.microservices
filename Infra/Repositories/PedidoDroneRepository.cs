@@ -1,10 +1,10 @@
 ﻿using Dapper;
-using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Extensions;
-using devboost.dronedelivery.felipe.DTO.Models;
+using devboost.dronedelivery.domain.core.Interfaces;
+using devboost.dronedelivery.felipe.domain.core;
+using devboost.dronedelivery.felipe.domain.core.Enums;
+using devboost.dronedelivery.felipe.domain.core.Extensions;
+using devboost.dronedelivery.felipe.domain.core.Models;
 using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,34 +16,37 @@ using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.EF.Repositories
 {
-    public class PedidoDroneRepository : RepositoryBase, IPedidoDroneRepository
+    public class PedidoDroneRepository : RepositoryBase<PedidoDrone>, IPedidoDroneRepository
     {
         private readonly IPedidoRepository _pedidoRepository;
         private readonly IDroneRepository _droneRepository;
         private readonly IClienteRepository _clienteRepository;
-
-        public PedidoDroneRepository(DataContext context, IPedidoRepository pedidoRepository, IDroneRepository droneRepository, IClienteRepository clienteRepository, IConfiguration configuration) : base(context, configuration)
+        private readonly ICommandExecutor<PedidoDrone> _commandExecutor;
+        public PedidoDroneRepository(IPedidoRepository pedidoRepository, 
+            IDroneRepository droneRepository, 
+            IClienteRepository clienteRepository,
+            ICommandExecutor<PedidoDrone> commandExecutor)
         {
             _pedidoRepository = pedidoRepository;
             _droneRepository = droneRepository;
             _clienteRepository = clienteRepository;
+            _commandExecutor = commandExecutor;
         }
 
-        public List<PedidoDrone> RetornaPedidosEmAberto()
+        public async Task<List<PedidoDrone>> RetornaPedidosEmAbertoAsync()
         {
             List<PedidoDrone> pedidoDrones = new List<PedidoDrone>();
 
-            var busca = _context.PedidoDrones.Where(FiltroPedidosEmAberto()).ToList();
+            var busca = Context.PedidoDrones.Where(FiltroPedidosEmAberto()).ToList();
 
             if (busca.Count > 0)
             {
                 foreach (var b in busca)
                 {
-                    var pedido = _pedidoRepository.GetPedido(b.PedidoId);
-                    var cliente = _clienteRepository.GetCliente(pedido.ClienteId);
-                    pedido.Cliente = cliente;
+                    var pedido = await _pedidoRepository.GetByIdAsync(b.PedidoId);
+                    pedido.Cliente = await _clienteRepository.GetByIdAsync(pedido.ClienteId);
 
-                    PedidoDrone pedidoDrone = new PedidoDrone
+                    var pedidoDrone = new PedidoDrone
                     {
                         Id = b.Id,
                         DataHoraFinalizacao = b.DataHoraFinalizacao,
@@ -52,7 +55,7 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
                         Distancia = b.Distancia,
                         StatusEnvio = b.StatusEnvio,
                         Pedido = pedido,
-                        Drone = _droneRepository.GetDrone(b.DroneId),
+                        Drone = await _droneRepository.GetByIdAsync(b.DroneId),
                     };
 
                     pedidoDrones.Add(pedidoDrone);
@@ -67,32 +70,26 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             return p => p.StatusEnvio == (int)StatusEnvio.AGUARDANDO;
         }
 
-        public async Task UpdatePedidoDrone(DroneStatusDto drone, double distancia)
+        public async Task UpdatePedidoDroneAsync(DroneStatusDto drone, double distancia)
         {
-            using SqlConnection conexao = new SqlConnection(_connectionString);
 
             var sql = "UPDATE dbo.PedidoDrones" +
                 $" SET StatusEnvio ={(int)StatusEnvio.EM_TRANSITO}," +
                 $"DataHoraFinalizacao = '{drone.Drone.ToTempoGasto(distancia)}'" +
                 $" WHERE DroneId = {drone.Drone.Id}";
+            await _commandExecutor.ExecuteCommandAsync(sql);
 
-            await conexao.ExecuteAsync(sql);
         }
 
-        public List<PedidoDrone> RetornaPedidosParaFecharAsync()
+        public async Task<List<PedidoDrone>> RetornaPedidosParaFecharAsync()
         {
-            return _context
+            return await Context
                 .PedidoDrones
                 .Where(p =>
                     p.StatusEnvio == (int)StatusEnvio.EM_TRANSITO &&
                     p.DataHoraFinalizacao <= DateTime.Now)
-                .ToList();
+                .ToListAsync();
         }
 
-        public async Task<int> UpdatePedido(PedidoDrone pedido)
-        {
-            _context.PedidoDrones.Update(pedido);
-            return await _context.SaveChangesAsync();
-        }
     }
 }

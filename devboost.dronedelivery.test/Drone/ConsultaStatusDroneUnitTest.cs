@@ -1,8 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.Services;
-using devboost.dronedelivery.felipe.Services.Interfaces;
-using Xunit;
+﻿using Xunit;
 
 namespace devboost.dronedelivery.test.Drone
 {

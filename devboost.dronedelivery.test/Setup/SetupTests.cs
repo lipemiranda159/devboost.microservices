@@ -1,7 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace devboost.dronedelivery.test

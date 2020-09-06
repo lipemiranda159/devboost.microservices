@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-
-namespace devboost.dronedelivery.felipe.Services.Interfaces
+﻿namespace devboost.dronedelivery.felipe.Services.Interfaces
 {
     public interface ICoordinateService
     {

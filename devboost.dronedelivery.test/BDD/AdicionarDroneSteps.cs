@@ -1,8 +1,4 @@
-﻿using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.Facade.Interface;
-using devboost.dronedelivery.felipe.Services.Interfaces;
-using devboost.dronedelivery.test.Drone;
+﻿using devboost.dronedelivery.test.Drone;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using Xunit;

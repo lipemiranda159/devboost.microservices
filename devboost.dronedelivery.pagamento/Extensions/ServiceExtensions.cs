@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.EF;
+﻿using devboost.dronedelivery.pagamento.EF;
 using devboost.dronedelivery.pagamento.EF.Integration;
 using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories;

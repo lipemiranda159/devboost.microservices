@@ -1,6 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.EF;
+﻿using devboost.dronedelivery.pagamento.EF;
 using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

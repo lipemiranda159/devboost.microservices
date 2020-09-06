@@ -1,9 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Constants;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Extensions;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.Services.Interfaces;
+﻿using devboost.dronedelivery.felipe.Services.Interfaces;
 using System;
 using System.Net.Http;
 using System.Text;
@@ -34,7 +29,7 @@ namespace devboost.dronedelivery.felipe.Services
             if (gatewayResponse.IsSuccessStatusCode)
             {
                 var response = await gatewayResponse.Content.ReadAsStringAsync();
-                return JSONHelper.DeserializeJsonToObject<Pagamento>(response); 
+                return JSONHelper.DeserializeJsonToObject<Pagamento>(response);
             }
             else throw new Exception("Falha no pagamento");
         }

@@ -1,12 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
-using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.Facade.Factory;
-using devboost.dronedelivery.felipe.Services;
-using devboost.dronedelivery.felipe.Services.Interfaces;
+﻿using devboost.dronedelivery.felipe.EF.Data;
 using Microsoft.EntityFrameworkCore;
 using NSubstitute;
 using System.Threading.Tasks;
