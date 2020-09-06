@@ -19,7 +19,7 @@
             <summary>
             Retorna lista de clientes cadastrados no banco
             </summary>
-            <returns></returns>
+            <returns>Uma lista de clientes</returns>
         </member>
         <member name="M:devboost.dronedelivery.felipe.Controllers.ClienteController.Post(devboost.dronedelivery.felipe.DTO.Models.Cliente)">
              <summary>
@@ -29,7 +29,7 @@
              <remarks>
             Exemplo:
             
-                 POST /
+                 POST /api/cliente
                  {
                   "nome": "Joao",
                   "latitude": -23.5631043,
@@ -43,27 +43,38 @@
         </member>
         <member name="T:devboost.dronedelivery.felipe.Controllers.DronesController">
             <summary>
-            
+            Controller com ações referentes aos drones
             </summary>
         </member>
         <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.#ctor(devboost.dronedelivery.felipe.Facade.Interface.IDroneFacade)">
             <summary>
-            
+            Constructor
             </summary>
             <param name="droneFacade"></param>
         </member>
         <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.GetStatusDrone">
             <summary>
-            
+            Retorna status dos drones
             </summary>
             <returns></returns>
         </member>
         <member name="M:devboost.dronedelivery.felipe.Controllers.DronesController.PostDrone(devboost.dronedelivery.felipe.DTO.Models.Drone)">
-            <summary>
+             <summary>
+             Adiciona um novo drone
+             </summary>
+             <param name="drone"></param>
+            <remarks>
+            Exemplo:
             
-            </summary>
-            <param name="drone"></param>
-            <returns></returns>
+                 POST /api/drone
+                 {
+                     "capacidade": 100,
+                     "velocidade": 100,
+                     "autonomia": 100,
+                     "carga": 100,
+                 }
+             </remarks>
+             <returns>O novo drono</returns>
         </member>
         <member name="T:devboost.dronedelivery.felipe.Controllers.LoginController">
             <summary>

@@ -2,6 +2,7 @@
 using devboost.dronedelivery.felipe.DTO.Models;
 using devboost.dronedelivery.felipe.Facade.Interface;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace devboost.dronedelivery.felipe.Controllers
 {
     /// <summary>
-    /// 
+    /// Controller com ações referentes aos drones
     /// </summary>
     //[Authorize("Bearer")]
     [Route("api/[controller]")]
@@ -19,7 +20,7 @@ namespace devboost.dronedelivery.felipe.Controllers
         private readonly IDroneFacade _droneFacade;
 
         /// <summary>
-        /// 
+        /// Constructor
         /// </summary>
         /// <param name="droneFacade"></param>
         public DronesController(IDroneFacade droneFacade)
@@ -27,24 +28,36 @@ namespace devboost.dronedelivery.felipe.Controllers
             _droneFacade = droneFacade;
         }
         /// <summary>
-        /// 
+        /// Retorna status dos drones
         /// </summary>
         /// <returns></returns>
         [HttpGet("GetStatusDrone")]
         [AllowAnonymous]
         public ActionResult<List<StatusDroneDto>> GetStatusDrone()
         {
-            return Ok(_droneFacade.GetDroneStatusAsync());
+            return Ok(_droneFacade.GetDroneStatus());
         }
         /// <summary>
-        /// 
+        /// Adiciona um novo drone
         /// </summary>
         /// <param name="drone"></param>
-        /// <returns></returns>
+        ///<remarks>
+        ///Exemplo:
+        ///
+        ///     POST /api/drone
+        ///     {
+        ///         "capacidade": 100,
+        ///         "velocidade": 100,
+        ///         "autonomia": 100,
+        ///         "carga": 100,
+        ///     }
+        /// </remarks>
+        /// <returns>O novo drono</returns>
+        [ProducesResponseType(typeof(Drone), StatusCodes.Status200OK)]
         [HttpPost]
         public async Task<ActionResult<Drone>> PostDrone(Drone drone)
         {
-            return _droneFacade.SaveDrone(drone);
+            return await _droneFacade.SaveDroneAsync(drone);
         }
     }
 }

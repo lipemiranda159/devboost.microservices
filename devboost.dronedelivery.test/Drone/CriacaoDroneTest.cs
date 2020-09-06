@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 
@@ -18,16 +19,16 @@ namespace devboost.dronedelivery.test
     public class CriacaoDroneTest
     {
         [Fact]
-        public void CriarDrone()
+        public async Task CriarDrone()
         {
             IDroneService _droneService = null;
             IDroneRepository _droneRepository = new MockDroneRepository();
 
-            DroneFacade droneFacade = new DroneFacade(_droneService, _droneRepository);
+            var droneFacade = new DroneFacade(_droneService, _droneRepository);
 
 
-            devboost.dronedelivery.felipe.DTO.Models.Drone drone = new devboost.dronedelivery.felipe.DTO.Models.Drone { Autonomia = 120, Velocidade = 80 };
-            droneFacade.SaveDrone(drone);
+            var drone = new felipe.DTO.Models.Drone { Autonomia = 120, Velocidade = 80 };
+            await droneFacade.SaveDroneAsync(drone);
 
             Assert.True(drone.Perfomance == 160);
         }

@@ -18,10 +18,10 @@ namespace devboost.dronedelivery.test.Controller
         [Fact]
         public void TestGetStatusDrone()
         {
-            _droneFacade.GetDroneStatusAsync().Returns(SetupTests.GetDroneStatus());
+            _droneFacade.GetDroneStatus().Returns(SetupTests.GetDroneStatus());
             var droneController = new DronesController(_droneFacade);
             droneController.GetStatusDrone();
-            _droneFacade.Received().GetDroneStatusAsync();
+            _droneFacade.Received().GetDroneStatus();
 
         }
 
@@ -30,7 +30,7 @@ namespace devboost.dronedelivery.test.Controller
         {
             var droneController = new DronesController(_droneFacade);
             await droneController.PostDrone(SetupTests.GetDrone());
-            _droneFacade.Received().SaveDrone(Arg.Any<felipe.DTO.Models.Drone>());
+            await _droneFacade.Received().SaveDroneAsync(Arg.Any<felipe.DTO.Models.Drone>());
         }
     }
 }

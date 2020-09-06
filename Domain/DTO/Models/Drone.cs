@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace devboost.dronedelivery.felipe.DTO.Models
 {
-    public class Drone
+    public class Drone : IEquatable<Drone>
     {
         [Key]
         public int Id { get; set; }
@@ -17,15 +18,16 @@ namespace devboost.dronedelivery.felipe.DTO.Models
 
         public float Perfomance { get; set; }
 
-        public override bool Equals(object obj)
+        public bool Equals(Drone other)
         {
-            return Id == ((Drone)obj).Id
-            && Capacidade == ((Drone)obj).Capacidade
-            && Velocidade == ((Drone)obj).Velocidade
-            && Autonomia == ((Drone)obj).Autonomia
-            && Carga == ((Drone)obj).Carga
-            && Perfomance == ((Drone)obj).Perfomance;
-
+            return Id == other.Id
+            && Capacidade == other.Capacidade
+            && Velocidade == other.Velocidade
+            && Autonomia == other.Autonomia
+            && Carga == other.Carga
+            && Perfomance == other.Perfomance;
         }
+
+
     }
 }

@@ -2,6 +2,7 @@
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.test.Drone
 {
@@ -29,7 +30,7 @@ namespace devboost.dronedelivery.test.Drone
 
             statusDroneDtos.Add(statusDroneDto);
 
-            StatusDroneDto statusDroneDto2 = new StatusDroneDto
+            var statusDroneDto2 = new StatusDroneDto
             {
                 ClienteId = 1,
                 DroneId = 1,
@@ -55,8 +56,9 @@ namespace devboost.dronedelivery.test.Drone
             throw new NotImplementedException();
         }
 
-        public void SaveDrone(felipe.DTO.Models.Drone drone)
+        public async Task SaveDroneAsync(felipe.DTO.Models.Drone drone)
         {
+            
         }
     }
 }

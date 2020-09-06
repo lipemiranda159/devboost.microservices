@@ -3,6 +3,7 @@ using devboost.dronedelivery.felipe.EF.Data;
 using devboost.dronedelivery.felipe.EF.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using NSubstitute;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace devboost.dronedelivery.test.Repositories
@@ -50,11 +51,11 @@ namespace devboost.dronedelivery.test.Repositories
         }
 
         [Fact]
-        public void SaveDrone()
+        public async Task SaveDrone()
         {
-            _droneRepository.SaveDrone(SetupTests.GetDrone());
+            await _droneRepository.SaveDroneAsync(SetupTests.GetDrone());
             _context.Received().Drone.Add(Arg.Any<felipe.DTO.Models.Drone>());
-            _context.Received().SaveChangesAsync();
+            await _context.Received().SaveChangesAsync();
 
         }
 

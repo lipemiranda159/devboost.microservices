@@ -6,6 +6,7 @@ using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.EF.Repositories
 {
@@ -26,10 +27,10 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
             _statusDroneExecutor = statusDroneExecutor;
         }
 
-        public void SaveDrone(Drone drone)
+        public async Task SaveDroneAsync(Drone drone)
         {
             _context.Drone.Add(drone);
-            _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
         }
 
         public Drone RetornaDrone()

@@ -5,6 +5,7 @@ using devboost.dronedelivery.felipe.Facade.Interface;
 using devboost.dronedelivery.felipe.Services.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.felipe.Facade
 {
@@ -17,16 +18,16 @@ namespace devboost.dronedelivery.felipe.Facade
             _droneService = droneService;
             _droneRepository = droneRepository;
         }
-        public List<StatusDroneDto> GetDroneStatusAsync()
+        public List<StatusDroneDto> GetDroneStatus()
         {
             return _droneService.GetDroneStatusAsync().ToList();
         }
 
-        public Drone SaveDrone(Drone drone)
+        public async Task<Drone> SaveDroneAsync(Drone drone)
         {
             drone.Perfomance = (drone.Autonomia / 60.0f) * drone.Velocidade;
 
-            _droneRepository.SaveDrone(drone);
+            await _droneRepository.SaveDroneAsync(drone);
 
             return drone;
         }
