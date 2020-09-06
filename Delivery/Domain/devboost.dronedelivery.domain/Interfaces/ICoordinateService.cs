@@ -1,4 +1,6 @@
-﻿namespace devboost.dronedelivery.felipe.Services.Interfaces
+﻿using devboost.dronedelivery.felipe.domain.core;
+
+namespace devboost.dronedelivery.domain.Interfaces
 {
     public interface ICoordinateService
     {

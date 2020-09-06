@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using devboost.dronedelivery.felipe.domain.core;
+using devboost.dronedelivery.felipe.domain.core.Models;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.Services.Interfaces
+namespace devboost.dronedelivery.domain.Interfaces
 {
     public interface IDroneService
     {
