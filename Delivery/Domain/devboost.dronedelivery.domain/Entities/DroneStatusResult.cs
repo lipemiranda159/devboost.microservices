@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace devboost.dronedelivery.domain.Entities
+﻿namespace devboost.dronedelivery.domain.Entities
 {
     public class DroneStatusResult
     {

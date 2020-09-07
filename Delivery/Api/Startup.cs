@@ -1,4 +1,8 @@
+using devboost.dronedelivery.domain.core;
 using devboost.dronedelivery.Extensions;
+using devboost.dronedelivery.felipe.Security;
+using devboost.dronedelivery.Infra.Data;
+using devboost.dronedelivery.security.domain.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
