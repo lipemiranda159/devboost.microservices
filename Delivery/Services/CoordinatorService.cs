@@ -2,7 +2,7 @@
 using devboost.dronedelivery.domain.Interfaces;
 using Geolocation;
 
-namespace devboost.dronedelivery.felipe.Services
+namespace devboost.dronedelivery.Services
 {
     public class CoordinateService : ICoordinateService
     {

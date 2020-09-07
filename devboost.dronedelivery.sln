@@ -56,7 +56,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{05
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.test", "Delivery\Tests\devboost.dronedelivery.test\devboost.dronedelivery.test.csproj", "{7C5773A4-1D95-481C-BF43-CD4FC2FFDE6D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.felipe.Services", "Delivery\Services\devboost.dronedelivery.felipe.Services.csproj", "{85ACA550-33EB-4F49-9C10-AE07C1693A81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.Services", "Delivery\Services\devboost.dronedelivery.Services.csproj", "{85ACA550-33EB-4F49-9C10-AE07C1693A81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "devboost.dronedelivery.security.domain", "Infra\Security\Domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain.csproj", "{AA157F81-CEA5-4848-9359-64E9CDFB8BC0}"
 EndProject

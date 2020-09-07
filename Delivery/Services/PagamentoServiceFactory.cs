@@ -3,7 +3,7 @@ using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.Interfaces;
 using System;
 
-namespace devboost.dronedelivery.felipe.Services
+namespace devboost.dronedelivery.Services
 {
     public class PagamentoServiceFactory : IPagamentoServiceFactory
     {

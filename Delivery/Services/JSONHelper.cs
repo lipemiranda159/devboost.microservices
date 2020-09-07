@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace devboost.dronedelivery.felipe.Services
+namespace devboost.dronedelivery.Services
 {
     public static class JSONHelper
     {

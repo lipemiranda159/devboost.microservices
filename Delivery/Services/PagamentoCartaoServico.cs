@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.Services
+namespace devboost.dronedelivery.Services
 {
     public class PagamentoCartaoServico : IPagamentoServico
     {

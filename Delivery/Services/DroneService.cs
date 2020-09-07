@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.felipe.Services
+namespace devboost.dronedelivery.Services
 {
     public class DroneService : IDroneService
     {
