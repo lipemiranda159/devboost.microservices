@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,9 +31,10 @@ namespace devboost.dronedelivery.Api.Controllers
         /// <returns>Uma lista de clientes</returns>
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Cliente>), StatusCodes.Status200OK)]
-        public ActionResult<IEnumerable<Cliente>> Get()
+        public async Task<ActionResult<IEnumerable<Cliente>>> Get()
         {
-            return _clienteRepository.GetClientes().ToList();
+            var clientes = await _clienteRepository.GetAllAsync();
+            return clientes.ToList();
         }
         /// <summary>
         /// Cria um novo cliente
@@ -55,7 +58,7 @@ namespace devboost.dronedelivery.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Cliente>> Post(Cliente cliente)
         {
-            await _clienteRepository.SaveCliente(cliente);
+            await _clienteRepository.AddAsync(cliente);
             return cliente;
         }
 

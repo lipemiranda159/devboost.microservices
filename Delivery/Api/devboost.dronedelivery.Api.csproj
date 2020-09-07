@@ -29,5 +29,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\devboost.dronedelivery.domain\devboost.dronedelivery.domain.csproj" />
+  </ItemGroup>
+
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
 
-namespace devboost.dronedelivery.felipe.Security
+namespace devboost.dronedelivery.felipe.Security.Entities
 {
     public class SigningConfigurations
     {

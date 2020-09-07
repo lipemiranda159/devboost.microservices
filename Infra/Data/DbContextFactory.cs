@@ -1,4 +1,9 @@
 ﻿using devboost.dronedelivery.Infra.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
 
 namespace devboost.dronedelivery.felipe.EF
 {

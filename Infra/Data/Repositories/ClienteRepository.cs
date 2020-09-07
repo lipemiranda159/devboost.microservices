@@ -1,4 +1,10 @@
-﻿namespace devboost.dronedelivery.felipe.EF.Repositories
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class ClienteRepository : RepositoryBase<Cliente>, IClienteRepository
     {

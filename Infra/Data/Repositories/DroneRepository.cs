@@ -1,4 +1,14 @@
-﻿namespace devboost.dronedelivery.felipe.EF.Repositories
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
 
     public class DroneRepository : RepositoryBase<Drone>, IDroneRepository
@@ -20,7 +30,7 @@
             return Context.Drone.FirstOrDefault();
         }
 
-        public List<StatusDroneDto> GetDroneStatusAsync()
+        public List<StatusDroneDto> GetDroneStatus()
         {
             return _statusDroneExecutor.ExcecuteCommand(GetStatusSqlCommand()).ToList();
         }

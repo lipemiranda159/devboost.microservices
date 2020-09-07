@@ -1,4 +1,4 @@
-﻿namespace devboost.dronedelivery.felipe.DTO.Models
+﻿namespace devboost.dronedelivery.felipe.Security.Entities
 {
     public class User
     {

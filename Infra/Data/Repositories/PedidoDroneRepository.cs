@@ -1,4 +1,17 @@
-﻿namespace devboost.dronedelivery.felipe.EF.Repositories
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.core.Extensions;
+using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
+
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class PedidoDroneRepository : RepositoryBase<PedidoDrone>, IPedidoDroneRepository
     {

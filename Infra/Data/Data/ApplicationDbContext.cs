@@ -1,4 +1,9 @@
-﻿namespace devboost.dronedelivery.Infra.Data
+﻿using devboost.dronedelivery.security.domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using System.Diagnostics.CodeAnalysis;
+
+namespace devboost.dronedelivery.Infra.Data
 {
     [ExcludeFromCodeCoverage]
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

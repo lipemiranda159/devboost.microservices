@@ -1,4 +1,13 @@
-﻿namespace devboost.dronedelivery.felipe.EF.Repositories
+﻿using Dapper;
+using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.Interfaces;
+using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks;
+
+namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     [ExcludeFromCodeCoverage]
     public class CommandExecutor<T> : ICommandExecutor<T> where T : class
