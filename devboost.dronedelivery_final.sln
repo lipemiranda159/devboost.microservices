@@ -50,10 +50,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.paga
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "devboost.dronedelivery.pagamento.EF", "devboost.dronedelivery.pagamento.EF\devboost.dronedelivery.pagamento.EF.csproj", "{41EDBF86-C1FB-4163-A9C5-C3532C20356B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EE0E4620-4123-444C-9B30-B8546297D432}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "devboost.Dronedelivery.Pagamento.Test", "devboost.Dronedelivery.Pagamento.Test\devboost.Dronedelivery.Pagamento.Test.csproj", "{6676711E-E97B-4A88-A691-6DBBCFD7CDB4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,10 +96,6 @@ Global
 		{41EDBF86-C1FB-4163-A9C5-C3532C20356B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41EDBF86-C1FB-4163-A9C5-C3532C20356B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41EDBF86-C1FB-4163-A9C5-C3532C20356B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6676711E-E97B-4A88-A691-6DBBCFD7CDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6676711E-E97B-4A88-A691-6DBBCFD7CDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6676711E-E97B-4A88-A691-6DBBCFD7CDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6676711E-E97B-4A88-A691-6DBBCFD7CDB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,8 +119,6 @@ Global
 		{72881685-C61D-42A7-88C9-30C332A8F3AC} = {3265AEA1-E943-4040-ADA2-1796F79A3ECB}
 		{18FF9C26-D90A-4D13-B79F-2CF8FDF641DF} = {72881685-C61D-42A7-88C9-30C332A8F3AC}
 		{41EDBF86-C1FB-4163-A9C5-C3532C20356B} = {2B6AD256-5F2C-48F0-B56A-D3E7A83E3EB5}
-		{EE0E4620-4123-444C-9B30-B8546297D432} = {3265AEA1-E943-4040-ADA2-1796F79A3ECB}
-		{6676711E-E97B-4A88-A691-6DBBCFD7CDB4} = {EE0E4620-4123-444C-9B30-B8546297D432}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {168806EA-05B7-43A8-8761-1649249B39DE}
