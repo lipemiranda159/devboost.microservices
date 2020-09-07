@@ -1,6 +1,7 @@
 ﻿using devboost.dronedelivery.felipe.Security;
 using devboost.dronedelivery.felipe.Security.Entities;
 using devboost.dronedelivery.security.domain.Entites;
+using devboost.dronedelivery.security.domain.Entities;
 using devboost.dronedelivery.security.domain.Extensions;
 using devboost.dronedelivery.security.domain.Interfaces;
 using Microsoft.IdentityModel.Tokens;

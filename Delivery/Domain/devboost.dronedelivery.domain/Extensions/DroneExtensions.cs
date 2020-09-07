@@ -2,7 +2,7 @@
 using devboost.dronedelivery.domain.core.Entities;
 using System;
 
-namespace devboost.dronedelivery.domain.DTO.Extensions
+namespace devboost.dronedelivery.domain.Extensions
 {
     public static class DroneExtensions
     {

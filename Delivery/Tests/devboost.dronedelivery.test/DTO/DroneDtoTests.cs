@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using devboost.dronedelivery.domain.Entities;
+using Xunit;
 
 namespace devboost.dronedelivery.test.DTO
 {

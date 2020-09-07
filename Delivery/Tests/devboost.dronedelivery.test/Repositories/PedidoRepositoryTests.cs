@@ -1,4 +1,7 @@
-﻿using devboost.dronedelivery.felipe.EF.Repositories;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.felipe.EF.Repositories;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace devboost.dronedelivery.test.Repositories
@@ -14,10 +17,10 @@ namespace devboost.dronedelivery.test.Repositories
         }
 
         [Fact]
-        public void GetPedidoTest()
+        public async Task GetPedidoTest()
         {
 
-            var pedido = GetRepository().GetPedido(1);
+            var pedido = await GetRepository().GetByIdAsync(1);
             Assert.True(pedido != null);
         }
         [Fact]
@@ -27,10 +30,12 @@ namespace devboost.dronedelivery.test.Repositories
             Assert.True(pedido != null);
         }
         [Fact]
-        public void SavePedidosTest()
+        public async Task SavePedidosTest()
         {
             var pedidoTests = SetupTests.GetPedido();
-            var pedido = GetRepository().SavePedidoAsync(pedidoTests);
+            var repository = GetRepository();
+            await repository.AddAsync(pedidoTests);
+            var pedido = await repository.UpdateAsync(pedidoTests);
             Assert.True(pedido != null);
         }
 

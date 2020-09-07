@@ -1,5 +1,7 @@
-﻿using devboost.dronedelivery.felipe.EF.Data;
+﻿using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using Microsoft.EntityFrameworkCore;
 using NSubstitute;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,46 +11,43 @@ namespace devboost.dronedelivery.test.Repositories
 {
     public class ClienteRepositoryTests
     {
-        private readonly DataContext _context;
-        public ClienteRepositoryTests()
-        {
-            _context = Substitute.For<DataContext>();
-            var dbSet = Substitute.For<Microsoft.EntityFrameworkCore.DbSet<Cliente>, IQueryable<Cliente>>();
-            _context.Cliente = dbSet;
-        }
 
         [Fact]
         public async Task TestSaveClient()
         {
-            var clienteRepository = new ClienteRepository(_context);
-            await clienteRepository.SaveCliente(SetupTests.GetCliente());
-            _context.Received().Cliente.Add(Arg.Any<Cliente>());
-            await _context.Received().SaveChangesAsync();
+            var context = ContextProvider<Cliente>.GetContext(null);
+            var clienteRepository = new ClienteRepository(context);
+            await clienteRepository.AddAsync(SetupTests.GetCliente(1));
+            await context.SaveChangesAsync();
         }
 
 
         [Fact]
-        public void GetCliente()
+        public async Task GetCliente()
         {
 
-            var cliente = SetupTests.GetCliente();
-            var clienteRepository = new ClienteRepository(_context);
+            var cliente = SetupTests.GetCliente(2);
+            var context = ContextProvider<Cliente>.GetContext(null);
+            var clienteRepository = new ClienteRepository(context);
+            await clienteRepository.AddAsync(cliente);
+            var result = await clienteRepository.GetByIdAsync(cliente.Id);
 
-            var result = clienteRepository.GetCliente(cliente.Id);
-
-            _context.Received().Find<Cliente>(cliente.Id);
+            Assert.True(cliente.Equals(result));
 
         }
 
         [Fact]
-        public void GetClientes()
+        public async Task GetClientes()
         {
 
-            var clienteRepository = new ClienteRepository(_context);
+            var context = ContextProvider<Cliente>.GetContext(null);
+            var clienteRepository = new ClienteRepository(context);
+            var cliente = SetupTests.GetCliente(3);
+            await clienteRepository.AddAsync(cliente);
 
-            var clientes = clienteRepository.GetClientes();
+            var clientes = await clienteRepository.GetAllAsync();
 
-            _context.Received().Cliente.AsQueryable<Cliente>();
+            Assert.True(clientes.Any());
 
         }
 

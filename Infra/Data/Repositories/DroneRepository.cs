@@ -4,6 +4,7 @@ using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.Entities;
 using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,8 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
         private readonly ICommandExecutor<StatusDroneDto> _statusDroneExecutor;
 
 
-        public DroneRepository(ICommandExecutor<StatusDroneDto> statusDroneExecutor,
-            ICommandExecutor<DroneStatusResult> droneStatusExecutor)
+        public DroneRepository(DataContext context, ICommandExecutor<StatusDroneDto> statusDroneExecutor,
+            ICommandExecutor<DroneStatusResult> droneStatusExecutor) : base(context)
         {
             _droneStatusExecutor = droneStatusExecutor;
             _statusDroneExecutor = statusDroneExecutor;

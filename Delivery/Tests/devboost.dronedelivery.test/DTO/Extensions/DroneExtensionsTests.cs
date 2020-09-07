@@ -1,7 +1,8 @@
 ﻿using System;
 using Xunit;
+using devboost.dronedelivery.domain.Extensions;
 
-namespace devboost.dronedelivery.test.DTO.Extensions
+namespace devboost.dronedelivery.test
 {
     public class DroneExtensionsTests
     {

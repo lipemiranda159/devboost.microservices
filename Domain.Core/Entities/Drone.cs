@@ -30,14 +30,12 @@ namespace devboost.dronedelivery.domain.core.Entities
 
         public Drone()
         {
-
         }
 
         public Drone(int autonomia, int velocidade)
         {
             Velocidade = velocidade;
             Autonomia = autonomia;
-            Perfomance = (Autonomia / 60.0f) * Velocidade;
 
         }
 
@@ -47,6 +45,10 @@ namespace devboost.dronedelivery.domain.core.Entities
             Velocidade = velocidade;
             Autonomia = autonomia;
             Carga = carga;
+        }
+
+        public void SetPerformance()
+        {
             Perfomance = (Autonomia / 60.0f) * Velocidade;
         }
     }

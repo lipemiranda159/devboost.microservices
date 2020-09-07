@@ -1,5 +1,6 @@
 ﻿using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,10 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class ClienteRepository : RepositoryBase<Cliente>, IClienteRepository
     {
+        public ClienteRepository(DataContext context) : base(context)
+        {
+        }
+
         public IEnumerable<Cliente> GetClientes()
         {
             var cliente = new Cliente

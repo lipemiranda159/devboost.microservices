@@ -1,6 +1,9 @@
-﻿using devboost.dronedelivery.domain.Entites;
-using devboost.dronedelivery.domain.Interfaces;
-using devboost.dronedelivery.felipe.Services;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using devboost.dronedelivery.Services;
+using NSubstitute;
 using Xunit;
 
 namespace devboost.dronedelivery.test
@@ -10,17 +13,17 @@ namespace devboost.dronedelivery.test
         [Fact]
         public void ConsultarStatusDrone()
         {
-            ICoordinateService coordinateService = new CoordinateService();
+            var coordinateService = new CoordinateService();
             IPedidoDroneRepository pedidoDroneRepository = null;
-            IDroneRepository droneRepository = new MockDroneRepository();
-
+            var context = Substitute.For<DataContext>();
+            var droneRepository = new MockDroneRepository(context);
             IPedidoRepository pedidoRepository = null;
 
-            IDroneService droneService = new DroneService(coordinateService, pedidoDroneRepository, droneRepository, pedidoRepository);
+            var droneService = new DroneService(coordinateService, pedidoDroneRepository, droneRepository, pedidoRepository);
 
-            droneService.GetDroneStatusAsync();
+            var droneStatus = droneService.GetDroneStatus();
 
-            Assert.Equal<int>(2, droneService.GetDroneStatusAsync().Count);
+            Assert.Equal<int>(2, droneStatus.Count);
         }
 
         [Fact]

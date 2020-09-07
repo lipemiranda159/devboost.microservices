@@ -1,6 +1,8 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
-using devboost.dronedelivery.domain.core.Models;
-using devboost.dronedelivery.domain.Entites;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.security.domain.Entites;
 using System;
 using System.Collections.Generic;
 
@@ -47,7 +49,6 @@ namespace devboost.dronedelivery.test
                 Cliente = new Cliente()
                 {
                     Nome = "Felipe",
-                    Id = 1,
                     Latitude = -19.9539424,
                     Longitude = -43.9750544,
                     Password = "",
@@ -77,12 +78,11 @@ namespace devboost.dronedelivery.test
             };
         }
 
-        public static Cliente GetCliente()
+        public static Cliente GetCliente(int id = 1)
         {
             return new Cliente()
             {
                 Nome = "Felipe",
-                Id = 1,
                 Latitude = -19.9539424,
                 Longitude = -43.9750544,
                 Password = "",
@@ -132,11 +132,11 @@ namespace devboost.dronedelivery.test
             return statusDroneDtos;
         }
 
-        public static List<Drone> GetDrones()
+        public static List<Drone> GetDrones(int id = 0)
         {
             return new List<Drone>()
             {
-                GetDrone()
+                GetDrone(id)
             };
         }
 
@@ -180,17 +180,19 @@ namespace devboost.dronedelivery.test
                 GetStatusDroneDto()
             };
         }
-        public static Drone GetDrone()
+        public static Drone GetDrone(int id = 0)
         {
-            return new Drone()
+            var drone = new Drone()
             {
-                Id = 1,
                 Autonomia = 100,
                 Capacidade = 100,
                 Carga = 100,
                 Perfomance = (100 / 60.0f) * 100,
                 Velocidade = 100
             };
+            if (id != 0)
+                drone.Id = id;
+            return drone;
         }
 
         public static DroneDto GetDroneDto()

@@ -4,6 +4,7 @@ using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.core.Extensions;
 using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,15 +20,17 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
         private readonly IDroneRepository _droneRepository;
         private readonly IClienteRepository _clienteRepository;
         private readonly ICommandExecutor<PedidoDrone> _commandExecutor;
-        public PedidoDroneRepository(IPedidoRepository pedidoRepository,
+
+        public PedidoDroneRepository(DataContext context, IPedidoRepository pedidoRepository,
             IDroneRepository droneRepository,
             IClienteRepository clienteRepository,
-            ICommandExecutor<PedidoDrone> commandExecutor)
+            ICommandExecutor<PedidoDrone> commandExecutor) : base(context)
         {
             _pedidoRepository = pedidoRepository;
             _droneRepository = droneRepository;
             _clienteRepository = clienteRepository;
             _commandExecutor = commandExecutor;
+
         }
 
         public async Task<List<PedidoDrone>> RetornaPedidosEmAbertoAsync()

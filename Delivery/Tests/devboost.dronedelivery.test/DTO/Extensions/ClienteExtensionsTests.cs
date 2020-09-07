@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using devboost.dronedelivery.security.domain.Extensions;
+using Xunit;
 
 namespace devboost.dronedelivery.test.DTO.Extensions
 {

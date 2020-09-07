@@ -64,7 +64,7 @@ namespace devboost.dronedelivery.felipe.Facade
                 StatusEnvio = (int)StatusEnvio.AGUARDANDO
             };
 
-            await _pedidoDroneRepository.UpdateAsync(pedidoDrone);
+            await _pedidoDroneRepository.AddAsync(pedidoDrone);
         }
 
         private async Task AtualizaPedidoAsync(Pedido pedido)

@@ -1,9 +1,10 @@
 ﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.domain.core.Enums;
-using devboost.dronedelivery.domain.core.Models;
 using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.Services;
+using devboost.dronedelivery.Services;
 using NSubstitute;
 using System.Threading.Tasks;
 using Xunit;

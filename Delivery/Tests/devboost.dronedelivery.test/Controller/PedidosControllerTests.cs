@@ -1,4 +1,8 @@
-﻿using NSubstitute;
+﻿using devboost.dronedelivery.Api.Controllers;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using NSubstitute;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -25,7 +29,7 @@ namespace devboost.dronedelivery.test.Controller
         [Fact]
         public async Task TestPostPedido()
         {
-            _clienteRepository.GetCliente(Arg.Any<int>()).
+            _clienteRepository.GetByIdAsync(Arg.Any<int>()).
                 Returns(SetupTests.GetCliente());
 
             var pedidosController = new PedidosController(_pedidoFacade);

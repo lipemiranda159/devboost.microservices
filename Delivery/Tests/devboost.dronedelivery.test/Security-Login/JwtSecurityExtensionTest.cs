@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using devboost.dronedelivery.felipe.Security;
+using devboost.dronedelivery.felipe.Security.Extensions;
+using devboost.dronedelivery.security.domain.Entities;
+using devboost.dronedelivery.security.domain.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;

@@ -1,11 +1,15 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
-using devboost.dronedelivery.domain.core.Models;
-using devboost.dronedelivery.domain.Entites;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.felipe.Services;
+using devboost.dronedelivery.Infra.Data;
+using devboost.dronedelivery.Services;
+using devboost.dronedelivery.test.Repositories;
 using Microsoft.EntityFrameworkCore.Internal;
 using Moq;
+using NSubstitute;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,12 +23,13 @@ namespace devboost.dronedelivery.test
         public async Task CriarDrone()
         {
             IDroneService _droneService = null;
-            IDroneRepository _droneRepository = new MockDroneRepository();
+            var context = ContextProvider<Drone>.GetContext(SetupTests.GetDrones());
+            IDroneRepository _droneRepository = new MockDroneRepository(context);
 
             var droneFacade = new DroneFacade(_droneService, _droneRepository);
 
 
-            var drone = new Drone { Autonomia = 120, Velocidade = 80 };
+            var drone = new Drone(120,80);
             await droneFacade.SaveDroneAsync(drone);
 
             Assert.True(drone.Perfomance == 160);
@@ -67,14 +72,14 @@ namespace devboost.dronedelivery.test
 
             List<PedidoDrone> listPedidoDrones = new List<PedidoDrone> { pedidoUm, pedidoDois };
 
-            var _pedidoDroneRepository = new Mock<IPedidoDroneRepository>();
-            _pedidoDroneRepository.Setup(_ => _.RetornaPedidosParaFecharAsync().Result).Returns(listPedidoDrones);
+            var _pedidoDroneRepository = Substitute.For<IPedidoDroneRepository>();
+            _pedidoDroneRepository.RetornaPedidosParaFecharAsync().Returns(listPedidoDrones);
 
             ICoordinateService _coordinateService = null;
             IDroneRepository _droneRepository = null;
             IPedidoRepository _pedidoRepository = null;
 
-            var droneService = new DroneService(_coordinateService, _pedidoDroneRepository.Object, _droneRepository, _pedidoRepository);
+            var droneService = new DroneService(_coordinateService, _pedidoDroneRepository, _droneRepository, _pedidoRepository);
 
             droneService.FinalizaPedidosAsync().Wait();
 
@@ -93,7 +98,7 @@ namespace devboost.dronedelivery.test
             var listSdd = new List<StatusDroneDto> { sddUm, sddDois };
 
             var _droneRepository = new Mock<IDroneRepository>();
-            _droneRepository.Setup(_ => _.GetDroneStatusAsync()).Returns(listSdd);
+            _droneRepository.Setup(_ => _.GetDroneStatus()).Returns(listSdd);
 
             ICoordinateService _coordinateService = null;
             IPedidoDroneRepository _pedidoDroneRepository = null;
@@ -101,7 +106,7 @@ namespace devboost.dronedelivery.test
 
             var droneService = new DroneService(_coordinateService, _pedidoDroneRepository, _droneRepository.Object, _pedidoRepository);
 
-            var result = droneService.GetDroneStatusAsync();
+            var result = droneService.GetDroneStatus();
 
             Assert.True(result.Count() == 2, "A quantidade de registros retornados não esperada");
         }

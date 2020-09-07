@@ -1,6 +1,12 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
-using devboost.dronedelivery.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using devboost.dronedelivery.test.Repositories;
+using NSubstitute;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -11,14 +17,13 @@ namespace devboost.dronedelivery.test
         [Fact]
         public async Task CriarPedido()
         {
-            IPedidoRepository _pedidoRepository = new MockPedidoRepository();
+            var context = ContextProvider<Pedido>.GetContext(null);
+            IPedidoRepository _pedidoRepository = new PedidoRepository(context);
 
             const string clientePassword = "12543GTFrd@65";
-            const int pedidoId = 1;
 
             var cliente = new Cliente
             {
-                Id = pedidoId,
                 Latitude = -23.5880684,
                 Longitude = -46.6564195,
                 Nome = "João Silva Antunes",
@@ -28,7 +33,6 @@ namespace devboost.dronedelivery.test
 
             var pedido = new Pedido
             {
-                Id = 1,
                 Peso = 100,
                 Situacao = (int)StatusPedido.AGUARDANDO,
                 DataHoraInclusao = DateTime.Now,
@@ -36,11 +40,9 @@ namespace devboost.dronedelivery.test
                 Cliente = cliente
             };
 
-            await _pedidoRepository.UpdateAsync(pedido);
-
-            Assert.Single(_pedidoRepository.ObterPedidos(pedidoId));
-            var pedidoResponse = await _pedidoRepository.GetByIdAsync(pedidoId);
-            Assert.Equal(pedidoResponse.Cliente.Password, clientePassword);
+            await _pedidoRepository.AddAsync(pedido);
+            var pedidos = await _pedidoRepository.GetAllAsync();
+            Assert.True(pedidos.Count() > 0);
         }
     }
 }

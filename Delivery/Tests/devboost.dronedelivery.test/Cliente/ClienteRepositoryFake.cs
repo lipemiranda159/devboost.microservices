@@ -1,5 +1,7 @@
-﻿using devboost.dronedelivery.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,7 +12,7 @@ namespace devboost.dronedelivery.test
 
         private readonly List<Cliente> _clientes;
 
-        public ClienteRepositoryFake()
+        public ClienteRepositoryFake(DataContext context) : base(context)
         {
             _clientes = new List<Cliente>()
             {

@@ -1,8 +1,8 @@
 ﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Entites;
-using devboost.dronedelivery.domain.core.Models;
+using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using System;
 using System.Collections.Generic;
 
@@ -10,12 +10,15 @@ namespace devboost.dronedelivery.test
 {
     public class MockDroneRepository : RepositoryBase<Drone>, IDroneRepository
     {
+        public MockDroneRepository(DataContext context) : base(context)
+        {
+        }
 
-        public List<StatusDroneDto> GetDroneStatusAsync()
+        public List<StatusDroneDto> GetDroneStatus()
         {
             List<StatusDroneDto> statusDroneDtos = new List<StatusDroneDto>();
 
-            StatusDroneDto statusDroneDto = new StatusDroneDto
+            var statusDroneDto = new StatusDroneDto
             {
                 ClienteId = 1,
                 DroneId = 1,

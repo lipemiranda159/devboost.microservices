@@ -23,7 +23,8 @@ namespace devboost.dronedelivery.felipe.Facade
 
         public async Task<Drone> SaveDroneAsync(Drone drone)
         {
-            await _droneRepository.UpdateAsync(drone);
+            drone.SetPerformance();
+            await _droneRepository.AddAsync(drone);
 
             return drone;
         }

@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using devboost.dronedelivery.felipe.Security;
+using devboost.dronedelivery.security.domain.Entities;
+using devboost.dronedelivery.security.domain.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NSubstitute;

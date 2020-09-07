@@ -1,5 +1,6 @@
 ﻿using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
 {
     public class PedidoRepository : RepositoryBase<Pedido>, IPedidoRepository
     {
+        public PedidoRepository(DataContext context) : base(context)
+        {
+        }
+
         public List<Pedido> ObterPedidos(int situacao)
         {
             var pedidos = from p in Context.Pedido.ToList()

@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.Security.Entities;
+﻿using devboost.dronedelivery.security.domain.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;

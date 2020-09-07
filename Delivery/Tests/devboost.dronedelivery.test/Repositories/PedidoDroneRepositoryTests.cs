@@ -1,7 +1,11 @@
-﻿using devboost.dronedelivery.felipe.EF.Data;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories;
-using Microsoft.Extensions.Configuration;
+using devboost.dronedelivery.Infra.Data;
 using NSubstitute;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace devboost.dronedelivery.test.Repositories
@@ -13,37 +17,37 @@ namespace devboost.dronedelivery.test.Repositories
         private readonly IClienteRepository _clienteRepository;
         private readonly PedidoDroneRepository _pedidoDroneRepository;
         private readonly DataContext _dataContext;
-        private readonly IConfiguration _configuration;
+        private readonly ICommandExecutor<PedidoDrone> _commandExecutor;
 
         public PedidoDroneRepositoryTests()
         {
-            var data = SetupTests.GetPedidoDrones(felipe.DTO.Enums.StatusEnvio.AGUARDANDO);
+            var data = SetupTests.GetPedidoDrones(StatusEnvio.AGUARDANDO);
             _dataContext = ContextProvider<PedidoDrone>.GetContext(data);
-            _configuration = Substitute.For<IConfiguration>();
+            _commandExecutor = Substitute.For<ICommandExecutor<PedidoDrone>>();
             _pedidoRepository = Substitute.For<IPedidoRepository>();
             _droneRepository = Substitute.For<IDroneRepository>();
             _clienteRepository = Substitute.For<IClienteRepository>();
             _pedidoDroneRepository = new PedidoDroneRepository(_dataContext, _pedidoRepository,
-                _droneRepository, _clienteRepository, _configuration);
+                _droneRepository, _clienteRepository, _commandExecutor);
         }
 
         [Fact]
-        public void RetornaPedidosEmAbertoTest()
+        public async Task RetornaPedidosEmAbertoTest()
         {
-            _pedidoRepository.GetPedido(Arg.Any<int>()).Returns(SetupTests.GetPedido());
-            _clienteRepository.GetCliente(Arg.Any<int>()).Returns(SetupTests.GetCliente());
+            _pedidoRepository.GetByIdAsync(Arg.Any<int>()).Returns(SetupTests.GetPedido());
+            _clienteRepository.GetByIdAsync(Arg.Any<int>()).Returns(SetupTests.GetCliente());
 
-            var pedidos = _pedidoDroneRepository.RetornaPedidosEmAberto();
+            var pedidos = await _pedidoDroneRepository.RetornaPedidosEmAbertoAsync();
             Assert.True(pedidos.Count > 0);
         }
 
         [Fact]
-        public void RetornaPedidosParaFecharAsync()
+        public async Task RetornaPedidosParaFecharAsync()
         {
-            _pedidoRepository.GetPedido(Arg.Any<int>()).Returns(SetupTests.GetPedido());
-            _clienteRepository.GetCliente(Arg.Any<int>()).Returns(SetupTests.GetCliente());
+            _pedidoRepository.GetByIdAsync(Arg.Any<int>()).Returns(SetupTests.GetPedido());
+            _clienteRepository.GetByIdAsync(Arg.Any<int>()).Returns(SetupTests.GetCliente());
 
-            var pedidos = _pedidoDroneRepository.RetornaPedidosParaFecharAsync();
+            var pedidos = await _pedidoDroneRepository.RetornaPedidosParaFecharAsync();
             Assert.True(pedidos.Count == 0);
         }
 

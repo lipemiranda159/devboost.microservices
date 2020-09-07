@@ -1,5 +1,7 @@
-﻿using devboost.dronedelivery.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -10,9 +12,10 @@ namespace devboost.dronedelivery.test
     {
         private readonly List<Pedido> _pedidos;
 
-        public MockPedidoRepository()
+        public MockPedidoRepository(DataContext context) : base(context)
         {
             _pedidos = new List<Pedido>();
+
         }
 
         public List<Pedido> ObterPedidos(int situacao)

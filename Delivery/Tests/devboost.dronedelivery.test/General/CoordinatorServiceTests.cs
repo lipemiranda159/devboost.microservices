@@ -1,4 +1,7 @@
-﻿using Xunit;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Extensions;
+using devboost.dronedelivery.Services;
+using Xunit;
 
 namespace devboost.dronedelivery.test.General
 {
@@ -9,7 +12,7 @@ namespace devboost.dronedelivery.test.General
         {
             var coordinatiorService = new CoordinateService();
             var pedido = SetupTests.GetPedido();
-            var distance = coordinatiorService.GetKmDistance(pedido.GetPoint(), new felipe.DTO.Point());
+            var distance = coordinatiorService.GetKmDistance(pedido.GetPoint(), new Point());
             Assert.True(distance == 489.8);
         }
     }

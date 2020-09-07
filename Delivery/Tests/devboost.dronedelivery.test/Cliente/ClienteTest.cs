@@ -1,4 +1,8 @@
-﻿using devboost.dronedelivery.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using devboost.dronedelivery.test.Repositories;
+using NSubstitute;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,11 +12,12 @@ namespace devboost.dronedelivery.test
 {
     public class ClienteTest
     {
-        IClienteRepository _repository;
-
+        private readonly IClienteRepository _repository;
+        private readonly DataContext _context;
         public ClienteTest()
         {
-            _repository = new ClienteRepositoryFake();
+            _context = ContextProvider<Cliente>.GetContext(SetupTests.GetClientes());
+            _repository = new ClienteRepositoryFake(_context);
         }
 
         [Fact]
@@ -60,20 +65,14 @@ namespace devboost.dronedelivery.test
         }
 
         [Fact]
-        public void Save()
+        public async Task Save()
         {
 
-            var cliente = new Cliente()
-            {
-                Latitude = 23.5741381,
-                Longitude = 46.6610177,
-                Nome = "Silvio",
-                Password = "AdminAPIDrone06!"
-            };
+            var cliente = SetupTests.GetCliente(2);
+            cliente = await _repository.AddAsync(cliente);
+            var result = await _repository.UpdateAsync(cliente);
 
-            var result = _repository.UpdateAsync(cliente);
-
-            Assert.Equal(Task.CompletedTask, result);
+            Assert.True(cliente.Equals(result));
 
         }
 

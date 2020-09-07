@@ -1,4 +1,7 @@
-﻿using NSubstitute;
+﻿using devboost.dronedelivery.Api.Controllers;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
+using NSubstitute;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -15,11 +18,11 @@ namespace devboost.dronedelivery.test.Controller
         }
 
         [Fact]
-        public void TestGetClientes()
+        public async Task TestGetClientes()
         {
             var clientController = new ClienteController(_clienteRepository);
-            _clienteRepository.GetClientes().Returns(SetupTests.GetClientes());
-            var clientes = clientController.Get();
+            _clienteRepository.GetAllAsync().Returns(SetupTests.GetClientes());
+            var clientes = await clientController.Get();
 
             Assert.True(clientes.Value.Count() == 1);
 
@@ -31,7 +34,7 @@ namespace devboost.dronedelivery.test.Controller
             var clienteSetup = SetupTests.GetCliente();
             var client = await clientController.Post(clienteSetup);
             Assert.True(client.Value.Equals(clienteSetup));
-            await _clienteRepository.Received().SaveCliente(Arg.Any<Cliente>());
+            await _clienteRepository.Received().AddAsync(Arg.Any<Cliente>());
 
 
         }

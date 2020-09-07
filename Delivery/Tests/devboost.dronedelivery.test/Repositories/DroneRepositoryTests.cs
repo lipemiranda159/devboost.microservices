@@ -1,6 +1,10 @@
-﻿using devboost.dronedelivery.felipe.EF.Data;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
 using NSubstitute;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -15,54 +19,36 @@ namespace devboost.dronedelivery.test.Repositories
 
         public DroneRepositoryTests()
         {
-            _context = Substitute.For<DataContext>();
+            _context = ContextProvider<Drone>.GetContext(SetupTests.GetDrones(1));
             _droneStatusExecutor = Substitute.For<ICommandExecutor<DroneStatusResult>>();
             _statusDroneExecutor = Substitute.For<ICommandExecutor<StatusDroneDto>>();
             _droneRepository = new DroneRepository(_context, _statusDroneExecutor, _droneStatusExecutor);
         }
 
         [Fact]
-        public void GetDroneTests()
+        public async Task GetDroneTests()
         {
-            _droneRepository.GetDrone(1);
-            _context.Received().Find<Drone>(Arg.Any<int>());
-
+            var drone = await _droneRepository.GetByIdAsync(1);
+            Assert.True(drone.Equals(SetupTests.GetDrone(1)));
         }
-
-        [Fact]
-        public void RetornaDroneTests()
-        {
-            var droneTest = SetupTests.GetDrone();
-            var context = ContextProvider<Drone>.GetContext(SetupTests.GetDrones());
-            var droneRepository = new DroneRepository(context, _statusDroneExecutor, _droneStatusExecutor);
-            var drone = droneRepository.RetornaDrone();
-            Assert.True(drone.Equals(droneTest));
-        }
-
         [Fact]
         public void GetDroneStatusTest()
         {
             _statusDroneExecutor.ExcecuteCommand(Arg.Any<string>())
                 .Returns(SetupTests.GetListStatusDroneDto());
-            _droneRepository.GetDroneStatusAsync();
-            _statusDroneExecutor.Received().ExcecuteCommand(Arg.Any<string>());
+            var droneStatus = _droneRepository.GetDroneStatus();
+            Assert.True(droneStatus.Any());
         }
 
         [Fact]
-        public async Task SaveDrone()
+        public async Task SaveDroneTest()
         {
-            await _droneRepository.SaveDroneAsync(SetupTests.GetDrone());
-            _context.Received().Drone.Add(Arg.Any<Drone>());
-            await _context.Received().SaveChangesAsync();
-
-        }
-
-        [Fact]
-        public void RetornaDroneStatusTests()
-        {
-            _droneStatusExecutor.ExcecuteCommand(Arg.Any<string>()).Returns(SetupTests.GetDroneStatusResults());
-            var droneStatus = _droneRepository.RetornaDroneStatus(1);
-            Assert.True(droneStatus != null);
+            var drone = await _droneRepository.GetByIdAsync(1);
+            drone.Velocidade += 10;
+            drone.Autonomia += 80;
+            drone.SetPerformance();
+            var droneResult = await _droneRepository.UpdateAsync(drone);
+            Assert.True(droneResult.Perfomance == 330);
         }
     }
 }

@@ -1,4 +1,10 @@
-﻿using NSubstitute;
+﻿using devboost.dronedelivery.Api.Controllers;
+using devboost.dronedelivery.felipe.Security;
+using devboost.dronedelivery.felipe.Security.Entities;
+using devboost.dronedelivery.security.domain.Entities;
+using devboost.dronedelivery.security.domain.Interfaces;
+using devboost.dronedelivery.security.service;
+using NSubstitute;
 using System.Threading.Tasks;
 using Xunit;
 
