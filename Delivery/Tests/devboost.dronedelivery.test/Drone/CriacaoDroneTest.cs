@@ -4,7 +4,6 @@ using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.Facade;
-using devboost.dronedelivery.Infra.Data;
 using devboost.dronedelivery.Services;
 using devboost.dronedelivery.test.Repositories;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -29,7 +28,7 @@ namespace devboost.dronedelivery.test
             var droneFacade = new DroneFacade(_droneService, _droneRepository);
 
 
-            var drone = new Drone(120,80);
+            var drone = new Drone(120, 80);
             await droneFacade.SaveDroneAsync(drone);
 
             Assert.True(drone.Perfomance == 160);

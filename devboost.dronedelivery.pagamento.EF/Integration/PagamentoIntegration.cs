@@ -1,4 +1,5 @@
-﻿using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace devboost.dronedelivery.pagamento.EF
 {

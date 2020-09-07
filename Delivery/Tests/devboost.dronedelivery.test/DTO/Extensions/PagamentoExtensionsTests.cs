@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO.Extensions;
+﻿using devboost.dronedelivery.domain.Extensions;
 using Xunit;
 
 namespace devboost.dronedelivery.test.DTO.Extensions

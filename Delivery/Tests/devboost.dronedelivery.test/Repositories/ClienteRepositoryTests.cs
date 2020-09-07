@@ -1,8 +1,5 @@
 ﻿using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.felipe.EF.Repositories;
-using devboost.dronedelivery.Infra.Data;
-using Microsoft.EntityFrameworkCore;
-using NSubstitute;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;

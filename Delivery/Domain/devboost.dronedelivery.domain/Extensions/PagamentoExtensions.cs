@@ -1,7 +1,7 @@
 ﻿using devboost.dronedelivery.domain.core;
 using devboost.dronedelivery.domain.core.Entities;
 
-namespace devboost.dronedelivery.felipe.DTO.Extensions
+namespace devboost.dronedelivery.domain.Extensions
 {
     public static class PagamentoExtensions
     {

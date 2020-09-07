@@ -2,7 +2,7 @@
 using devboost.dronedelivery.domain.core.Enums;
 using System.Linq;
 
-namespace devboost.dronedelivery.felipe.DTO.Extensions
+namespace devboost.dronedelivery.domain.Extensions
 {
     public static class PaymentSettingsExtension
     {

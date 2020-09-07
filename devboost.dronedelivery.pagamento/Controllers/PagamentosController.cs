@@ -1,4 +1,6 @@
-﻿using devboost.dronedelivery.pagamento.EF;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.pagamento.EF;
 using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

@@ -1,13 +1,13 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.EF.Repositories.Interfaces;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.Facade;
 using NSubstitute;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace devboost.dronedelivery.test.Pagamento
+namespace devboost.dronedelivery.test
 {
     public class ProcessaPagamentoTest
     {
@@ -29,14 +29,14 @@ namespace devboost.dronedelivery.test.Pagamento
             {
                 Descricao = "Pagamento Teste",
                 IdPagamento = 1,
-                Status = felipe.DTO.Enums.EStatusPagamento.APROVADO
+                Status = EStatusPagamento.APROVADO
             });
 
             _pedidoRepository.PegaPedidoPendenteAsync(Arg.Any<string>()).Returns(SetupTests.GetPedido());
 
             await pagamentoFacade.ProcessaPagamentosAsync(listaPagamentos);
 
-            await _pedidoRepository.Received().OnlySalveContext();
+            await _pedidoRepository.Received().SaveAsync();
 
         }
 

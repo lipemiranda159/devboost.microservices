@@ -1,19 +1,16 @@
-﻿using devboost.dronedelivery.felipe.DTO.Constants;
-using devboost.dronedelivery.felipe.DTO.Extensions;
-using devboost.dronedelivery.felipe.Services;
+﻿using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Extensions;
 using devboost.dronedelivery.felipe.Services.Interfaces;
-using Microsoft.AspNetCore.Http;
 using NSubstitute;
-using System;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using TechTalk.SpecFlow.CommonModels;
 using Xunit;
+using devboost.dronedelivery.Services;
 
-namespace devboost.dronedelivery.test.Pagamento
+namespace devboost.dronedelivery.test
 {
     public class PagamentoCartaoServicoTest
     {

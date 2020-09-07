@@ -1,6 +1,6 @@
 ﻿using devboost.dronedelivery.domain.core.Enums;
 
-namespace devboost.dronedelivery.felipe.DTO.Extensions
+namespace devboost.dronedelivery.domain.Extensions
 {
     public static class StatusPedidoExtensions
     {

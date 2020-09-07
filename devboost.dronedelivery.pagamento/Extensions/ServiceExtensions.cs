@@ -1,4 +1,6 @@
-﻿using devboost.dronedelivery.pagamento.EF;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.pagamento.EF;
 using devboost.dronedelivery.pagamento.EF.Integration;
 using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories;
@@ -16,12 +18,14 @@ namespace devboost.dronedelivery.pagamento.Extensions
 {
     public static class ServiceExtensions
     {
+        private const string DeliverySettingsData = "DeliverySettingsData";
+
         public static void AddServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             services.AddScoped<IPagamentoRepository, PagamentoRepository>();
             services.AddScoped<IPagamentoIntegration, PagamentoIntegration>();
-            var deliverySettings = configuration.GetSection("DeliverySettingsData").Get<DeliverySettingsData>();
+            var deliverySettings = configuration.GetSection(DeliverySettingsData).Get<DeliverySettingsData>();
             services.AddSingleton(deliverySettings);
         }
         public static void ConfigureCors(this IServiceCollection services) =>

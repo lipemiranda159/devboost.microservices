@@ -2,7 +2,6 @@
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.Infra.Data;
 using devboost.dronedelivery.test.Repositories;
-using NSubstitute;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

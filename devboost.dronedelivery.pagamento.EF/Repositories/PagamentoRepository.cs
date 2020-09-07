@@ -1,4 +1,6 @@
-﻿using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
+﻿using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Extensions;
+using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;

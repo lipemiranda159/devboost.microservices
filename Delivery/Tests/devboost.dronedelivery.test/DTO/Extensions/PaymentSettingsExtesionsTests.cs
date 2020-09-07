@@ -1,6 +1,6 @@
 ﻿using Castle.DynamicProxy.Internal;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Extensions;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Extensions;
 using Xunit;
 
 namespace devboost.dronedelivery.test.DTO.Extensions

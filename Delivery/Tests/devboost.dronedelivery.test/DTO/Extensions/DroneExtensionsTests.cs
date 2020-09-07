@@ -1,6 +1,6 @@
-﻿using System;
+﻿using devboost.dronedelivery.domain.Extensions;
+using System;
 using Xunit;
-using devboost.dronedelivery.domain.Extensions;
 
 namespace devboost.dronedelivery.test
 {

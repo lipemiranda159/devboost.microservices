@@ -1,4 +1,7 @@
-﻿using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.EntityFrameworkCore;

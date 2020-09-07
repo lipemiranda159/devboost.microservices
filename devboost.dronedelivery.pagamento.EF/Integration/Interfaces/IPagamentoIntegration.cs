@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using devboost.dronedelivery.domain.core;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.pagamento.EF.Integration.Interfaces

@@ -1,10 +1,11 @@
-﻿using Castle.DynamicProxy.Internal;
-using devboost.dronedelivery.felipe.Facade.Factory;
+﻿using devboost.dronedelivery.domain.core.Enums;
+using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.felipe.Services.Interfaces;
+using devboost.dronedelivery.Services;
 using NSubstitute;
 using Xunit;
 
-namespace devboost.dronedelivery.test.Pagamento
+namespace devboost.dronedelivery.test
 {
     public class PagamentoServiceFactoryTest
     {
@@ -15,7 +16,7 @@ namespace devboost.dronedelivery.test.Pagamento
             var client = Substitute.For<IHttpHandler>();
             var pagamentoServiceFactory = new PagamentoServiceFactory(SetupTests.GetPaymentSettings(), client);
 
-            var service = pagamentoServiceFactory.GetPagamentoServico(felipe.DTO.Enums.ETipoPagamento.CARTAO);
+            var service = pagamentoServiceFactory.GetPagamentoServico(ETipoPagamento.CARTAO);
 
             Assert.NotNull(service);
             Assert.IsAssignableFrom<IPagamentoServico>(service);

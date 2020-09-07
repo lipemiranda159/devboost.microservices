@@ -5,7 +5,6 @@ using devboost.dronedelivery.domain.Entities;
 using devboost.dronedelivery.security.domain.Entites;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace devboost.dronedelivery.test
 {
@@ -58,18 +57,14 @@ namespace devboost.dronedelivery.test
                 ClienteId = 1,
                 Peso = 50,
                 Situacao = (int)StatusPedido.AGUARDANDO,
-                Pagamento = new felipe.DTO.Models.Pagamento()
+                Pagamento = new Pagamento()
                 {
-                    DadosPagamentos = new List<DadosPagamento>(),
+                    DadosPagamentos = new List<DadosPagamento>() {
+                     new DadosPagamento() { Dados = "teste" }},
                     TipoPagamento = ETipoPagamento.CARTAO
                 }
 
             };
-
-            pedido.Pagamento.DadosPagamentos.Add(dadosPagamento);
-
-            return pedido;
-
         }
         public static List<Pedido> GetPedidosList()
         {
@@ -210,9 +205,9 @@ namespace devboost.dronedelivery.test
             return new DroneDto(new DroneStatusDto(GetDrone()), 100);
         }
 
-        public static felipe.DTO.Models.Pagamento GetPagamento()
+        public static Pagamento GetPagamento()
         {
-            return new felipe.DTO.Models.Pagamento()
+            return new Pagamento()
             {
                 TipoPagamento = ETipoPagamento.CARTAO,
                 Descricao = "Teste descrição",
@@ -229,7 +224,7 @@ namespace devboost.dronedelivery.test
             paymentSetting.PaymentsSettings.Add(new PaymentSetting()
             {
                 TipoPagamento = (int)ETipoPagamento.CARTAO,
-                UrlBase  = "http://localhost:5000/api/"
+                UrlBase = "http://localhost:5000/api/"
             });
 
             paymentSetting.PaymentsSettings.Add(new PaymentSetting()
