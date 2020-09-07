@@ -34,7 +34,7 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
         {
             List<PedidoDrone> pedidoDrones = new List<PedidoDrone>();
 
-            var busca = Context.PedidoDrones.Where(FiltroPedidosEmAberto()).ToList();
+            var busca = await Context.PedidoDrones.Where(FiltroPedidosEmAberto()).ToListAsync();
 
             if (busca.Count > 0)
             {

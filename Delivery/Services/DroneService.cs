@@ -1,10 +1,9 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.core.Extensions;
-using devboost.dronedelivery.domain.core.Interfaces;
-using devboost.dronedelivery.domain.core.Models;
-using devboost.dronedelivery.domain.Entites;
-using devboost.dronedelivery.domain.Entities;
 using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -67,9 +66,9 @@ namespace devboost.dronedelivery.felipe.Services
             }
         }
 
-        public List<StatusDroneDto> GetDroneStatusAsync()
+        public List<StatusDroneDto> GetDroneStatus()
         {
-            return _droneRepository.GetDroneStatusAsync().ToList();
+            return _droneRepository.GetDroneStatus().ToList();
         }
 
         public async Task FinalizaPedidosAsync()

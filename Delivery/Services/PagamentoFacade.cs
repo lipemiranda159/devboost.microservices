@@ -1,8 +1,8 @@
 ﻿using devboost.dronedelivery.domain.core;
 using devboost.dronedelivery.domain.core.Enums;
 using devboost.dronedelivery.domain.core.Extensions;
-using devboost.dronedelivery.domain.core.Interfaces;
 using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

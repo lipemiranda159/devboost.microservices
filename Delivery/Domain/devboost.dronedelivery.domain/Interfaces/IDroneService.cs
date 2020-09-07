@@ -8,7 +8,7 @@ namespace devboost.dronedelivery.domain.Interfaces
     public interface IDroneService
     {
         Task<DroneStatusDto> GetAvailiableDroneAsync(double distance, Pedido pedido);
-        List<StatusDroneDto> GetDroneStatusAsync();
+        List<StatusDroneDto> GetDroneStatus();
 
     }
 }

@@ -1,7 +1,6 @@
-﻿using devboost.dronedelivery.domain.core.Interfaces;
-using devboost.dronedelivery.domain.core.Models;
-using devboost.dronedelivery.domain.Entites;
+﻿using devboost.dronedelivery.domain.core.Entities;
 using devboost.dronedelivery.domain.Interfaces;
+using devboost.dronedelivery.domain.Interfaces.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,7 +18,7 @@ namespace devboost.dronedelivery.felipe.Facade
         }
         public List<StatusDroneDto> GetDroneStatus()
         {
-            return _droneService.GetDroneStatusAsync().ToList();
+            return _droneService.GetDroneStatus().ToList();
         }
 
         public async Task<Drone> SaveDroneAsync(Drone drone)
