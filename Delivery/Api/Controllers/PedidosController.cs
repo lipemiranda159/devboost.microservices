@@ -8,7 +8,7 @@ namespace devboost.dronedelivery.Api.Controllers
     /// <summary>
     /// Controller com ações de pedidos
     /// </summary>
-    //[Authorize("Bearer")]
+    [Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PedidosController : ControllerBase

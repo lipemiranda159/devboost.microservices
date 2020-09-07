@@ -1,5 +1,6 @@
 ﻿using devboost.dronedelivery.domain.core;
 using devboost.dronedelivery.domain.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace devboost.dronedelivery.Api.Controllers
     /// <summary>
     /// Pagamento controller
     /// </summary>
-    //[Authorize("Bearer")]
+    [Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
     public class PagamentoController : ControllerBase
