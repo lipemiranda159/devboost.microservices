@@ -1,6 +1,6 @@
-﻿using devboost.dronedelivery.felipe.domain.core.Enums;
+﻿using devboost.dronedelivery.domain.core.Enums;
 
-namespace devboost.dronedelivery.felipe.domain.core.Extensions
+namespace devboost.dronedelivery.domain.core.Extensions
 {
     public static class StatusPedidoExtensions
     {

@@ -1,4 +1,4 @@
-﻿namespace devboost.dronedelivery.felipe.domain.core
+﻿namespace devboost.dronedelivery.domain.core.Entities
 {
     public sealed class StatusDroneDto
     {

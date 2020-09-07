@@ -1,6 +1,6 @@
-﻿using devboost.dronedelivery.felipe.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
 
-namespace devboost.dronedelivery.felipe.domain.core
+namespace devboost.dronedelivery.domain.core
 {
     public sealed class DroneStatusDto
     {

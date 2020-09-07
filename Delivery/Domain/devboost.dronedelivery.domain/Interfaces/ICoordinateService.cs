@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.domain.core;
+﻿using devboost.dronedelivery.domain.core;
 
 namespace devboost.dronedelivery.domain.Interfaces
 {

@@ -1,6 +1,4 @@
 using devboost.dronedelivery.Extensions;
-using devboost.dronedelivery.felipe.EF.Data;
-using devboost.dronedelivery.felipe.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;

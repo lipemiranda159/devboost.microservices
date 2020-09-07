@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace devboost.dronedelivery.felipe.domain.core
+namespace devboost.dronedelivery.domain.core
 {
     public class PaymentSettings
     {

@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.felipe.domain.core;
-using devboost.dronedelivery.felipe.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.core.Entities;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

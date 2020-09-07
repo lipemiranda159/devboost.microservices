@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.felipe.domain.core.Models;
+﻿using devboost.dronedelivery.domain.core.Entities;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.domain.Interfaces

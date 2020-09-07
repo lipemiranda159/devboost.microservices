@@ -1,4 +1,4 @@
-﻿namespace devboost.dronedelivery.felipe.domain.core.Enums
+﻿namespace devboost.dronedelivery.domain.core.Enums
 {
     public enum StatusPedido
     {
