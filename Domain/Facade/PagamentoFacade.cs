@@ -11,10 +11,12 @@ namespace devboost.dronedelivery.felipe.Facade
     public class PagamentoFacade : IPagamentoFacade
     {
         private readonly IPedidoRepository _pedidoRepository;
+
         public PagamentoFacade(IPedidoRepository pedidoRepository)
         {
             _pedidoRepository = pedidoRepository;
         }
+
         public async Task ProcessaPagamentosAsync(List<PagamentoStatusDto> pagamentoStatus)
         {
             foreach (var item in pagamentoStatus)

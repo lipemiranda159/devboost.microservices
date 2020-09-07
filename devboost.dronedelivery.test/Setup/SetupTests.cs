@@ -3,6 +3,7 @@ using devboost.dronedelivery.felipe.DTO.Enums;
 using devboost.dronedelivery.felipe.DTO.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace devboost.dronedelivery.test
 {
@@ -42,7 +43,9 @@ namespace devboost.dronedelivery.test
 
         public static felipe.DTO.Models.Pedido GetPedido()
         {
-            return new felipe.DTO.Models.Pedido()
+            var dadosPagamento = new DadosPagamento() { Dados = "", Id = 1 };
+
+            var pedido = new felipe.DTO.Models.Pedido()
             {
                 Cliente = new felipe.DTO.Models.Cliente()
                 {
@@ -55,9 +58,18 @@ namespace devboost.dronedelivery.test
                 },
                 ClienteId = 1,
                 Peso = 50,
-                Situacao = (int)StatusPedido.AGUARDANDO
+                Situacao = (int)StatusPedido.AGUARDANDO,
+                Pagamento = new felipe.DTO.Models.Pagamento()
+                {
+                    DadosPagamentos = new List<DadosPagamento>(),
+                    TipoPagamento = ETipoPagamento.CARTAO
+                }
 
             };
+
+            pedido.Pagamento.DadosPagamentos.Add(dadosPagamento);
+
+            return pedido;
 
         }
         public static List<felipe.DTO.Models.Pedido> GetPedidosList()
@@ -197,5 +209,37 @@ namespace devboost.dronedelivery.test
         {
             return new DroneDto(new DroneStatusDto(GetDrone()), 100);
         }
+
+        public static felipe.DTO.Models.Pagamento GetPagamento()
+        {
+            return new felipe.DTO.Models.Pagamento()
+            {
+                TipoPagamento = ETipoPagamento.CARTAO,
+                Descricao = "Teste descrição",
+                DadosPagamentos = new List<DadosPagamento>()
+            };
+        }
+
+        public static PaymentSettings GetPaymentSettings()
+        {
+
+            var paymentSetting = new PaymentSettings();
+            paymentSetting.PaymentsSettings = new List<PaymentSetting>();
+
+            paymentSetting.PaymentsSettings.Add(new PaymentSetting()
+            {
+                TipoPagamento = (int)ETipoPagamento.CARTAO,
+                UrlBase  = "http://localhost:5000/api/"
+            });
+
+            paymentSetting.PaymentsSettings.Add(new PaymentSetting()
+            {
+                TipoPagamento = (int)ETipoPagamento.INDEFINIDO,
+                UrlBase = "UrlBasePagamentoIndefinido"
+            });
+
+            return paymentSetting;
+        }
+
     }
 }

@@ -16,21 +16,27 @@ namespace devboost.dronedelivery.felipe.Services
     {
         private const string MEDIA_TYPE = "application/json";
         private readonly string _urlBase;
-        public PagamentoCartaoServico(PaymentSettings paymentSettings)
+        private readonly IHttpHandler _client;
+
+
+        public PagamentoCartaoServico(PaymentSettings paymentSettings, IHttpHandler client)
         {
             _urlBase = paymentSettings.GetUrlBase(ETipoPagamento.CARTAO);
+            _client = client;
+            
         }
 
         public async Task<Pagamento> RequisitaPagamento(Pagamento pagamento)
         {
-            using var client = new HttpClient
-            {
-                BaseAddress = new Uri(_urlBase)
-            };
+            //using var client = new HttpClient
+            //{
+            //    BaseAddress = new Uri(_urlBase)
+            //};
+            _client.SetBaseAddress(_urlBase);
 
             var request = JsonSerializer.Serialize(pagamento.ToPagamentoCreate());
             var httpContent = new StringContent(request, Encoding.UTF8, MEDIA_TYPE);
-            var gatewayResponse = await client.PostAsync(ProjectConsts.PAGAMENTO_URI, httpContent);
+            var gatewayResponse = await _client.PostAsync(ProjectConsts.PAGAMENTO_URI, httpContent);
             if (gatewayResponse.IsSuccessStatusCode)
             {
                 var response = await gatewayResponse.Content.ReadAsStringAsync();

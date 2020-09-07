@@ -19,6 +19,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Net.Http;
 using System.Reflection;
@@ -28,6 +29,7 @@ namespace devboost.dronedelivery.felipe.Extensions
     /// <summary>
     /// Service Collection extensions
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class ServiceCollectionExtensions
     {
         private const string PAYMENT_SETTINGS = "PaymentSettingsData";
@@ -55,6 +57,8 @@ namespace devboost.dronedelivery.felipe.Extensions
             services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
             services.AddScoped<IPagamentoServiceFactory, PagamentoServiceFactory>();
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
+            services.AddScoped<IHttpHandler, HttpService>();
+            
             var pagamentoSettings = configuration.GetSection(PAYMENT_SETTINGS).Get<PaymentSettings>();
             services.AddSingleton(pagamentoSettings);
 
