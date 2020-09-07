@@ -1,7 +1,4 @@
-﻿using devboost.dronedelivery.felipe.DTO;
-using devboost.dronedelivery.felipe.DTO.Enums;
-using devboost.dronedelivery.felipe.DTO.Models;
-using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
+﻿using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using devboost.dronedelivery.pagamento.facade.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -40,7 +37,7 @@ namespace devboost.dronedelivery.pagamento.facade
 
         private EStatusPagamento RandomPagamento()
         {
-            return (EStatusPagamento) new Random().Next(1, 2);
+            return (EStatusPagamento)new Random().Next(1, 2);
         }
 
 
@@ -79,6 +76,6 @@ namespace devboost.dronedelivery.pagamento.facade
             pagamento.StatusPagamento = eStatusPagamento;
             _pagamentoRepository.SetState(pagamento, EntityState.Modified);
         }
-       
+
     }
 }
