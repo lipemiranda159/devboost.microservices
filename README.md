@@ -30,3 +30,8 @@ Grupo 4 - Projeto Itaú (Microservices)
  - Executar o comando: reportgenerator "-reports:coverage.cobertura.xml" "-targetdir:C:\Temp" "-reporttypes:HTML"
  
  - Observação: No comando acima, verificar o local na opção -targetdir:C:\Temp, caso necessário, este local pode ser modificado
+
+## Considerações
+ - Levamos em conta que a Api de pagamentos estaria publicada com bloqueio de qualquer ip que não seja o da api de Pedidos
+ - Deixamos a api utilizando banco em memória para facilitar os testes da mesma
+ - Os dados do cartão são passados em uma string, dessa forma facilitamos alterações para que a api possa aceitar outros tipos de pagamanto
