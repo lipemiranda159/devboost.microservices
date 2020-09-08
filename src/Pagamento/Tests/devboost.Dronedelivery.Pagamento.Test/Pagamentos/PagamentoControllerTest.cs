@@ -1,6 +1,7 @@
 using devboost.dronedelivery.core.domain;
 using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.core.domain.Enums;
+using devboost.dronedelivery.pagamento.domain.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Integration.Interfaces;
 using devboost.dronedelivery.pagamento.EF.Repositories.Interfaces;
 using devboost.dronedelivery.pagamento.services;
@@ -16,6 +17,9 @@ namespace devboost.Dronedelivery.Pagamento.Test
     {
         private readonly IPagamentoRepository _pagamentoRepository;
         private readonly IPagamentoIntegration _pagamentoIntegration;
+        private readonly IPagamentoFacade _pagamentofacade;
+        private PagamentoStatusDto _pagamentoStatusDto;
+        private List<PagamentoStatusDto> _listPagamentoStatusDto;
 
         public PagamentoControllerTest()
         {
@@ -46,6 +50,8 @@ namespace devboost.Dronedelivery.Pagamento.Test
             _pagamentoIntegration = Substitute.For<IPagamentoIntegration>();
             _pagamentoIntegration.ReportarResultadoAnalise(Arg.Is<List<PagamentoStatusDto>>(x => x.First().IdPagamento == 0)).Returns(true);
 
+            _pagamentofacade = new PagamentoFacade(_pagamentoRepository, _pagamentoIntegration);
+
         }
 
         [Fact]
@@ -56,6 +62,30 @@ namespace devboost.Dronedelivery.Pagamento.Test
             var pagamentoStatus = pagamentoFacade.VerificarStatusPagamentos().Result;
 
             Assert.True(pagamentoStatus.First().Status == EStatusPagamento.APROVADO);
+        }
+
+        [Fact]
+        public void CriarPagamento()
+        {
+            PagamentoCreateDto pagamentoDto = new PagamentoCreateDto
+            {
+                Descricao = "Teste Pagamento Dto",
+                DadosPagamentos = new List<DadosPagamento> { new DadosPagamento { Id = 0, Dados = "4220456798763234" } },
+                TipoPagamento = ETipoPagamento.CARTAO
+            };
+
+            var pagamento = _pagamentofacade.CriarPagamento(pagamentoDto).Result;
+
+            Assert.NotNull(pagamento);
+
+        }
+
+        [Fact]
+        public async void PagamentoIntegration()
+        {
+            var resultTest = await _pagamentoIntegration.ReportarResultadoAnalise(_listPagamentoStatusDto);
+
+            Assert.True(resultTest);
         }
     }
 }
