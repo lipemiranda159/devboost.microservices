@@ -48,7 +48,7 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
 
         public async Task SaveAsync()
