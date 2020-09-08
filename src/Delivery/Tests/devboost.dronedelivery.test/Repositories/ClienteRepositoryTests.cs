@@ -1,5 +1,10 @@
-﻿using devboost.dronedelivery.core.domain.Entities;
+﻿using Castle.DynamicProxy.Internal;
+using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using NSubstitute;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -8,6 +13,15 @@ namespace devboost.dronedelivery.test.Repositories
 {
     public class ClienteRepositoryTests
     {
+
+        private ClienteRepository GetRepository()
+        {
+            var data = SetupTests.GetClientes();
+            var context = ContextProvider<core.domain.Entities.Cliente>.GetContext(data);
+            return new ClienteRepository(context);
+
+        }
+
 
         [Fact]
         public async Task TestSaveClient()
@@ -37,15 +51,11 @@ namespace devboost.dronedelivery.test.Repositories
         public async Task GetClientes()
         {
 
-            var context = ContextProvider<Cliente>.GetContext(null);
-            var clienteRepository = new ClienteRepository(context);
-            var cliente = SetupTests.GetCliente(3);
-            await clienteRepository.AddAsync(cliente);
+            var clientes = GetRepository().GetClientes();
 
-            var clientes = await clienteRepository.GetAllAsync();
-
-            Assert.True(clientes.Any());
-
+            Assert.IsType(TypeUtil.GetTypeOrNull(new List<Cliente>()), clientes);
+            Assert.True(clientes != null);
+            
         }
 
     }
