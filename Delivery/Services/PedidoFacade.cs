@@ -85,7 +85,7 @@ namespace devboost.dronedelivery.felipe.Facade
                 var responseGateway = await servicoPagamento.RequisitaPagamento(pedido.Pagamento);
                 pedido.GatewayPagamentoId = responseGateway.Id.ToString();
 
-                await _pedidoRepository.UpdateAsync(pedido);
+                await _pedidoRepository.AddAsync(pedido);
                 return pedido;
             }
             else throw new Exception("Pedido inválido");
