@@ -43,9 +43,9 @@ namespace devboost.dronedelivery.test
             };
         }
 
-        public static core.domain.Entities.Pedido GetPedido()
+        public static Pedido GetPedido()
         {
-            return new core.domain.Entities.Pedido()
+            return new Pedido()
             {
                 Cliente = new Cliente()
                 {
