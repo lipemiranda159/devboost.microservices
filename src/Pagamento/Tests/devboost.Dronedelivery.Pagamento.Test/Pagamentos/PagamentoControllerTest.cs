@@ -45,7 +45,7 @@ namespace devboost.Dronedelivery.Pagamento.Test
                 Descricao = pagamento.Descricao
             };
 
-            var listPagamentoStatusDto = new List<PagamentoStatusDto> { pagamentoStatusDto };
+            _listPagamentoStatusDto = new List<PagamentoStatusDto> { pagamentoStatusDto };
 
             _pagamentoIntegration = Substitute.For<IPagamentoIntegration>();
             _pagamentoIntegration.ReportarResultadoAnalise(Arg.Is<List<PagamentoStatusDto>>(x => x.First().IdPagamento == 0)).Returns(true);

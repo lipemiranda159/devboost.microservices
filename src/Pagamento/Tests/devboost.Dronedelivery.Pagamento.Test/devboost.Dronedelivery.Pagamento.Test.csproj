@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Api\devboost.dronedelivery.pagamento\devboost.dronedelivery.pagamento.Api.csproj" />
     <ProjectReference Include="..\..\Infra\devboost.dronedelivery.pagamento.EF\devboost.dronedelivery.pagamento.EF.csproj" />
     <ProjectReference Include="..\..\Services\devboost.microservices.pagamento.services\devboost.dronedelivery.pagamento.services.csproj" />
   </ItemGroup>
