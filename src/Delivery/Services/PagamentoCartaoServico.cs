@@ -4,7 +4,6 @@ using devboost.dronedelivery.core.domain.Enums;
 using devboost.dronedelivery.core.domain.Extensions;
 using devboost.dronedelivery.domain.Constants;
 using devboost.dronedelivery.domain.Interfaces;
-using devboost.dronedelivery.felipe.Services.Interfaces;
 using Newtonsoft.Json;
 using System;
 using System.Net.Http;

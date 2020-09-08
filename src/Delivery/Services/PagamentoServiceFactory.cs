@@ -1,7 +1,6 @@
 ﻿using devboost.dronedelivery.core.domain;
 using devboost.dronedelivery.core.domain.Enums;
 using devboost.dronedelivery.domain.Interfaces;
-using devboost.dronedelivery.felipe.Services.Interfaces;
 using System;
 
 namespace devboost.dronedelivery.Services

@@ -8,8 +8,6 @@ using devboost.dronedelivery.felipe.EF.Repositories;
 using devboost.dronedelivery.felipe.Facade;
 using devboost.dronedelivery.felipe.Security;
 using devboost.dronedelivery.felipe.Security.Extensions;
-using devboost.dronedelivery.felipe.Services;
-using devboost.dronedelivery.felipe.Services.Interfaces;
 using devboost.dronedelivery.Infra.Data;
 using devboost.dronedelivery.security.domain.Entities;
 using devboost.dronedelivery.security.domain.Interfaces;
