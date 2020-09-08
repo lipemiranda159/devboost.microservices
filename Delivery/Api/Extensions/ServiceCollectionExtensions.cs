@@ -56,6 +56,7 @@ namespace devboost.dronedelivery.Extensions
             services.AddScoped<IValidateDatabase, ValidateDatabse>();
             services.AddScoped<ICommandExecutor<DroneStatusResult>, CommandExecutor<DroneStatusResult>>();
             services.AddScoped<ICommandExecutor<StatusDroneDto>, CommandExecutor<StatusDroneDto>>();
+            services.AddScoped<ICommandExecutor<PedidoDrone>, CommandExecutor<PedidoDrone>>();
             services.AddScoped<IPagamentoServiceFactory, PagamentoServiceFactory>();
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             services.AddScoped<IHttpHandler, HttpService>();
