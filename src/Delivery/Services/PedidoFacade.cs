@@ -88,7 +88,10 @@ namespace devboost.dronedelivery.felipe.Facade
                 await _pedidoRepository.AddAsync(pedido);
                 return pedido;
             }
-            else throw new Exception("Pedido inválido");
+            else
+            {
+                throw new Exception("Pedido inválido");
+            }
         }
     }
 }
