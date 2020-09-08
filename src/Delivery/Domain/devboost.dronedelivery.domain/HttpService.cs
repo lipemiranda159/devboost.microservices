@@ -10,21 +10,6 @@ namespace devboost.dronedelivery.felipe.Services
 
         private HttpClient _client = new HttpClient();
 
-        public HttpResponseMessage Get(string url)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<HttpResponseMessage> GetAsync(string url)
-        {
-            throw new NotImplementedException();
-        }
-
-        public HttpResponseMessage Post(string url, HttpContent content)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<HttpResponseMessage> PostAsync(string url, HttpContent content)
         {
             return await _client.PostAsync(url, content);
