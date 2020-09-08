@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Delivery\Domain\devboost.dronedelivery.domain\devboost.dronedelivery.domain.csproj" />
-    <ProjectReference Include="..\Security\Domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain.csproj" />
+    <ProjectReference Include="..\Security\Domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain.csproj" />
   </ItemGroup>
 
 </Project>

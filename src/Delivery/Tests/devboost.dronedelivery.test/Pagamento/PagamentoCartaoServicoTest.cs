@@ -1,6 +1,5 @@
 ﻿using devboost.dronedelivery.core.domain.Extensions;
 using devboost.dronedelivery.domain.Interfaces;
-using devboost.dronedelivery.felipe.Services.Interfaces;
 using devboost.dronedelivery.Services;
 using NSubstitute;
 using System.Net;

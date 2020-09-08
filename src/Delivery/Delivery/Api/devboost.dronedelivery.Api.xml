@@ -153,25 +153,28 @@
             </summary>
             <param name="pedido"></param>
             <remarks>
+            Exemplo:
+            
                 POST /api/pedido
                 {
                     "clienteId": 1,
                     "peso": 10,
                     "situacao": 0,
                     "pagamento": {
-                    "dadosPagamentos": 
+                    "dadosPagamentos":
                     [
                         {
-                            "dados": "cartao"
+                            "Id":0,
+                            "Dados":"num_cartao:0000000000000000,validade:08/28,Codigo:123,Nome:Joao"
                         }
                     ],
                     "tipoPagamento": 0,
                     "statusPagamento": 0,
                     "descricao": "teste"
                     }
-               }
-            </remarks>        
-            <returns></returns>
+                }
+               
+            </remarks>
         </member>
         <member name="T:devboost.dronedelivery.Extensions.ServiceCollectionExtensions">
             <summary>
