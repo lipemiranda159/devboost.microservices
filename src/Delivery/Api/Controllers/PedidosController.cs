@@ -39,13 +39,15 @@ namespace devboost.dronedelivery.Api.Controllers
         /// </summary>
         /// <param name="pedido"></param>
         /// <remarks>
+        /// Exemplo:
+        /// 
         ///     POST /api/pedido
         ///     {
         ///         "clienteId": 1,
         ///         "peso": 10,
         ///         "situacao": 0,
         ///         "pagamento": {
-        ///         "dadosPagamentos": 
+        ///         "dadosPagamentos":
         ///         [
         ///             {
         ///                 "dados": "cartao"
@@ -56,8 +58,7 @@ namespace devboost.dronedelivery.Api.Controllers
         ///         "descricao": "teste"
         ///         }
         ///    }
-        /// </remarks>        
-        /// <returns></returns>
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Pedido>> PostPedido(Pedido pedido)
         {
