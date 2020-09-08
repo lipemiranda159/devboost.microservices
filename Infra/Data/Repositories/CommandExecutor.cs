@@ -1,5 +1,5 @@
 ﻿using Dapper;
-using devboost.dronedelivery.domain.core;
+using devboost.dronedelivery.domain.Constants;
 using devboost.dronedelivery.domain.Interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;

@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.core.domain.Enums;
 using System.Linq;
 
 namespace devboost.dronedelivery.domain.Extensions

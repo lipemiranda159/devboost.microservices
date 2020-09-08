@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core;
+﻿using devboost.dronedelivery.core.domain;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

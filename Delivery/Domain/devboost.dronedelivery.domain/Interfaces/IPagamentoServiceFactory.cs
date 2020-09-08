@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.core.domain.Enums;
 
 namespace devboost.dronedelivery.domain.Interfaces
 {

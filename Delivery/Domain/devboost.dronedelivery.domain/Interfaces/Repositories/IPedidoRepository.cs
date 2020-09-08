@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
-using devboost.dronedelivery.domain.core.Interfaces;
+﻿using devboost.dronedelivery.core.domain.Entities;
+using devboost.dronedelivery.core.domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;

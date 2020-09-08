@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Interfaces;
+﻿using devboost.dronedelivery.core.domain.Interfaces;
 using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -48,7 +48,7 @@ namespace devboost.dronedelivery.felipe.EF.Repositories
 
         public void Dispose()
         {
-            
+
         }
 
         public async Task SaveAsync()

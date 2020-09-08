@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Extensions;
+﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.domain.Extensions;
 using devboost.dronedelivery.Services;
 using Xunit;
 

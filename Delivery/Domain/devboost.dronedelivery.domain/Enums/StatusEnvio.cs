@@ -1,4 +1,4 @@
-﻿namespace devboost.dronedelivery.domain.DTO.Enums
+﻿namespace devboost.dronedelivery.domain.Enums
 {
     public enum StatusEnvio
     {

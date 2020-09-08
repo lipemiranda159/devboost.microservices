@@ -1,5 +1,5 @@
 ﻿using devboost.dronedelivery.Api.Controllers;
-using devboost.dronedelivery.domain.core.Entities;
+using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using NSubstitute;
 using System.Linq;

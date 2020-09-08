@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
+﻿using devboost.dronedelivery.core.domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace devboost.dronedelivery.Infra.Data

@@ -1,7 +1,7 @@
-﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Entities;
-using devboost.dronedelivery.domain.core.Extensions;
+﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.domain.Extensions;
 using devboost.dronedelivery.domain.Interfaces;
 using System.Threading.Tasks;
 

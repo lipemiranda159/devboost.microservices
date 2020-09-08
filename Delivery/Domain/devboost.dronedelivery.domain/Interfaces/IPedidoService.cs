@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
+﻿using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.domain.Entities;
 using System.Threading.Tasks;
 

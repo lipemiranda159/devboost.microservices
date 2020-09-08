@@ -1,5 +1,4 @@
-﻿
-using devboost.dronedelivery.domain.core.Entities;
+﻿using devboost.dronedelivery.core.domain.Entities;
 using System;
 
 namespace devboost.dronedelivery.domain.Extensions

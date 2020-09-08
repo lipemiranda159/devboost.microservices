@@ -1,4 +1,4 @@
-﻿namespace devboost.dronedelivery.domain.DTO.Constants
+﻿namespace devboost.dronedelivery.domain.Constants
 {
     public static class ProjectConsts
     {

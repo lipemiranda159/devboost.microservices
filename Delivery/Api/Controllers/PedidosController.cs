@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
+﻿using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +38,7 @@ namespace devboost.dronedelivery.Api.Controllers
         /// Cria um novo pedido
         /// </summary>
         /// <param name="pedido"></param>
+        /// <remarks>
         ///     POST /api/pedido
         ///     {
         ///         "clienteId": 1,

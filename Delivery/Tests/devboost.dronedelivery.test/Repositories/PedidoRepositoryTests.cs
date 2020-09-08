@@ -1,5 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
-using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.domain.Enums;
 using devboost.dronedelivery.felipe.EF.Repositories;
 using System.Threading.Tasks;
 using Xunit;
@@ -11,7 +10,7 @@ namespace devboost.dronedelivery.test.Repositories
         private PedidoRepository GetRepository()
         {
             var data = SetupTests.GetPedidosList();
-            var context = ContextProvider<Pedido>.GetContext(data);
+            var context = ContextProvider<core.domain.Entities.Pedido>.GetContext(data);
             return new PedidoRepository(context);
 
         }

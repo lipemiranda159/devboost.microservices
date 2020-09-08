@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.core.domain.Enums;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.Facade;
 using NSubstitute;

@@ -1,5 +1,6 @@
 ﻿using devboost.dronedelivery.Infra.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace devboost.dronedelivery.test.Repositories
@@ -9,7 +10,7 @@ namespace devboost.dronedelivery.test.Repositories
         public static DataContext GetContext(List<T> data)
         {
             var options = new DbContextOptionsBuilder<DataContext>()
-           .UseInMemoryDatabase(databaseName: "Database")
+           .UseInMemoryDatabase(databaseName: $"Database-{DateTime.UtcNow.Ticks}")
            .Options;
 
             // Insert seed data into the database using one instance of the context

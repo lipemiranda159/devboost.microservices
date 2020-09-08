@@ -1,7 +1,8 @@
-﻿using devboost.dronedelivery.domain.core;
-using devboost.dronedelivery.domain.core.Entities;
-using devboost.dronedelivery.domain.core.Enums;
+﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.core.domain.Entities;
+using devboost.dronedelivery.core.domain.Enums;
 using devboost.dronedelivery.domain.Entities;
+using devboost.dronedelivery.domain.Enums;
 using devboost.dronedelivery.security.domain.Entites;
 using System;
 using System.Collections.Generic;
@@ -42,9 +43,9 @@ namespace devboost.dronedelivery.test
             };
         }
 
-        public static Pedido GetPedido()
+        public static core.domain.Entities.Pedido GetPedido()
         {
-            return new Pedido()
+            return new core.domain.Entities.Pedido()
             {
                 Cliente = new Cliente()
                 {
@@ -66,9 +67,9 @@ namespace devboost.dronedelivery.test
 
             };
         }
-        public static List<Pedido> GetPedidosList()
+        public static List<core.domain.Entities.Pedido> GetPedidosList()
         {
-            return new List<Pedido>() {
+            return new List<core.domain.Entities.Pedido>() {
                 GetPedido()
             };
         }

@@ -1,6 +1,7 @@
-﻿using devboost.dronedelivery.domain.Interfaces;
-using devboost.dronedelivery.domain.Extensions;
+﻿using devboost.dronedelivery.core.domain.Extensions;
+using devboost.dronedelivery.domain.Interfaces;
 using devboost.dronedelivery.felipe.Services.Interfaces;
+using devboost.dronedelivery.Services;
 using NSubstitute;
 using System.Net;
 using System.Net.Http;
@@ -8,7 +9,6 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
-using devboost.dronedelivery.Services;
 
 namespace devboost.dronedelivery.test
 {

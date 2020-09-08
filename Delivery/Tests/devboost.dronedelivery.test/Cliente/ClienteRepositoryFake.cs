@@ -1,4 +1,4 @@
-﻿using devboost.dronedelivery.domain.core.Entities;
+﻿using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.domain.Interfaces.Repositories;
 using devboost.dronedelivery.felipe.EF.Repositories;
 using devboost.dronedelivery.Infra.Data;

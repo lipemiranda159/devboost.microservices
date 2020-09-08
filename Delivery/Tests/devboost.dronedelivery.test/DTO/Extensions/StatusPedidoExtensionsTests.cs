@@ -1,5 +1,5 @@
-﻿using devboost.dronedelivery.domain.core.Enums;
-using devboost.dronedelivery.domain.Extensions;
+﻿using devboost.dronedelivery.core.domain.Enums;
+using devboost.dronedelivery.core.domain.Extensions;
 using Xunit;
 
 namespace devboost.dronedelivery.test.DTO.Extensions

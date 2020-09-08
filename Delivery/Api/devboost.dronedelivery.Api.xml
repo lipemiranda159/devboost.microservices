@@ -21,7 +21,7 @@
             </summary>
             <returns>Uma lista de clientes</returns>
         </member>
-        <member name="M:devboost.dronedelivery.Api.Controllers.ClienteController.Post(devboost.dronedelivery.domain.core.Entities.Cliente)">
+        <member name="M:devboost.dronedelivery.Api.Controllers.ClienteController.Post(devboost.dronedelivery.core.domain.Entities.Cliente)">
              <summary>
              Cria um novo cliente
              </summary>
@@ -58,7 +58,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:devboost.dronedelivery.Api.Controllers.DronesController.PostDrone(devboost.dronedelivery.domain.core.Entities.Drone)">
+        <member name="M:devboost.dronedelivery.Api.Controllers.DronesController.PostDrone(devboost.dronedelivery.core.domain.Entities.Drone)">
              <summary>
              Adiciona um novo drone
              </summary>
@@ -113,7 +113,7 @@
             </summary>
             <param name="pagamentoFacade"></param>
         </member>
-        <member name="M:devboost.dronedelivery.Api.Controllers.PagamentoController.AtualizaLista(System.Collections.Generic.List{devboost.dronedelivery.domain.core.PagamentoStatusDto})">
+        <member name="M:devboost.dronedelivery.Api.Controllers.PagamentoController.AtualizaLista(System.Collections.Generic.List{devboost.dronedelivery.core.domain.PagamentoStatusDto})">
             <summary>
             Controller para recebimento de status de pagamento
             </summary>
@@ -147,7 +147,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:devboost.dronedelivery.Api.Controllers.PedidosController.PostPedido(devboost.dronedelivery.domain.core.Entities.Pedido)">
+        <member name="M:devboost.dronedelivery.Api.Controllers.PedidosController.PostPedido(devboost.dronedelivery.core.domain.Entities.Pedido)">
             <summary>
             Cria um novo pedido
             </summary>
