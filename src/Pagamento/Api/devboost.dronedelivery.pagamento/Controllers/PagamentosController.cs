@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.pagamento.Api.Controllers
 {
+    /// <summary>
+    /// Controller com ações de pagamento
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     [ApiExplorerSettings(GroupName = "v1")]
@@ -24,14 +27,22 @@ namespace devboost.dronedelivery.pagamento.Api.Controllers
             _pagamentoRepository = pagamentoRepository;
             _pagamentoFacade = pagamentoFacade;
         }
-
+        /// <summary>
+        /// Retorna Pagamentos cadastrados
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Pagamento>>> GetPagamento()
         {
             var pagamentos = await _pagamentoRepository.GetAllAsync();
             return pagamentos.ToList();
         }
-
+        /// <summary>
+        /// Endpoint para finalização de requisições de pagamento
+        /// Ao ser chamado este endpoint vai gerar um status para o pagamento e chamar a api de drones
+        /// para dizer se o pagamento ocorreu com sucesso ou com falha
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("VerificarStatusPagamentos")]
         public async Task<ActionResult<IEnumerable<PagamentoStatusDto>>> VerificarStatusPagamentos()
@@ -50,7 +61,11 @@ namespace devboost.dronedelivery.pagamento.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Retorna pagamento por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Pagamento>> GetPagamento(int id)
         {
@@ -63,7 +78,12 @@ namespace devboost.dronedelivery.pagamento.Api.Controllers
 
             return pagamento;
         }
-
+        /// <summary>
+        /// Atualiza dados do pagamento
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="pagamento"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPagamento(int id, Pagamento pagamento)
         {
@@ -92,7 +112,28 @@ namespace devboost.dronedelivery.pagamento.Api.Controllers
 
             return NoContent();
         }
-
+        /// <summary>
+        /// Recebe a requecisção de pagamento
+        /// </summary>
+        /// <param name="pagamento"></param>
+        /// <remarks>
+        /// Exemplo:
+        /// 
+        /// POST api/Pagamento
+        /// {
+        ///     "DadosPagamentos":
+        ///         [
+        ///             {
+        ///                 "Id":0,
+        ///                 "Dados":"num_cartao:0000000000000000,validade:08/28,Codigo:123,Nome:Joao"
+        ///             }
+        ///         ],
+        ///     "TipoPagamento":0,
+        ///     "Descricao":"teste"
+        ///}
+        ///
+        /// </remarks>
+        /// <returns></returns>
         [HttpPost]
         public async Task<ActionResult<Pagamento>> PostPagamento(PagamentoCreateDto pagamento)
         {

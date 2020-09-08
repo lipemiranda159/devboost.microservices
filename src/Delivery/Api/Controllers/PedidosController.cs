@@ -50,14 +50,16 @@ namespace devboost.dronedelivery.Api.Controllers
         ///         "dadosPagamentos":
         ///         [
         ///             {
-        ///                 "dados": "cartao"
+        ///                 "Id":0,
+        ///                 "Dados":"num_cartao:0000000000000000,validade:08/28,Codigo:123,Nome:Joao"
         ///             }
         ///         ],
         ///         "tipoPagamento": 0,
         ///         "statusPagamento": 0,
         ///         "descricao": "teste"
         ///         }
-        ///    }
+        ///     }
+        ///    
         /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Pedido>> PostPedido(Pedido pedido)
