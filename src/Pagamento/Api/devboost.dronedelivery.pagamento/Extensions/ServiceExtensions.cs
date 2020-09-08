@@ -12,9 +12,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
+using System.Diagnostics.CodeAnalysis;
 
 namespace devboost.dronedelivery.pagamento.Api.Extensions
 {
+    [ExcludeFromCodeCoverage]
     public static class ServiceExtensions
     {
         private const string DeliverySettingsData = "DeliverySettingsData";
