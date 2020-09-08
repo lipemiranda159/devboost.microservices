@@ -31,7 +31,10 @@
     <ProjectReference Include="..\..\..\Infra\Data\devboost.dronedelivery.Infra.Data.csproj" />
     <ProjectReference Include="..\..\..\Infra\Security\Domain\devboost.dronedelivery.security.domain\devboost.dronedelivery.security.domain.csproj" />
     <ProjectReference Include="..\..\..\Infra\Security\Services\devboost.dronedelivery.security.service.csproj" />
+    <ProjectReference Include="..\..\..\Pagamento\Api\devboost.dronedelivery.pagamento\devboost.dronedelivery.pagamento.Api.csproj" />
+    <ProjectReference Include="..\..\..\Pagamento\Domain\devboost.dronedelivery.pagamento.domain\devboost.dronedelivery.pagamento.domain.csproj" />
     <ProjectReference Include="..\..\..\Pagamento\Infra\devboost.dronedelivery.pagamento.EF\devboost.dronedelivery.pagamento.EF.csproj" />
+    <ProjectReference Include="..\..\..\Pagamento\Services\devboost.microservices.pagamento.services\devboost.dronedelivery.pagamento.services.csproj" />
     <ProjectReference Include="..\..\Api\devboost.dronedelivery.Api.csproj" />
     <ProjectReference Include="..\..\Domain\devboost.dronedelivery.domain\devboost.dronedelivery.domain.csproj" />
   </ItemGroup>
