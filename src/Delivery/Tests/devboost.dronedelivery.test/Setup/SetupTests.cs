@@ -55,6 +55,7 @@ namespace devboost.dronedelivery.test
                     Password = "",
                     UserId = ""
                 },
+                GatewayPagamentoId = "1",
                 ClienteId = 1,
                 Peso = 50,
                 Situacao = (int)StatusPedido.AGUARDANDO,

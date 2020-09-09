@@ -51,6 +51,15 @@ namespace devboost.dronedelivery.test.Repositories
             Assert.True(pedidos.Count == 0);
         }
 
+        [Fact]
+        public async Task UpdatePedidoDroneAsyncTest()
+        {
+            var pedidos = _pedidoDroneRepository.UpdatePedidoDroneAsync(SetupTests.GetDroneStatusDto(), (double)10);
+
+            Assert.True(pedidos.IsCompletedSuccessfully);
+
+
+        }
 
     }
 }

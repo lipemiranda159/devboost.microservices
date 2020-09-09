@@ -1,5 +1,7 @@
 ﻿using devboost.dronedelivery.domain.Enums;
 using devboost.dronedelivery.felipe.EF.Repositories;
+using devboost.dronedelivery.Infra.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -37,6 +39,19 @@ namespace devboost.dronedelivery.test.Repositories
             var pedido = await repository.UpdateAsync(pedidoTests);
             Assert.True(pedido != null);
         }
+
+        [Fact]
+        public void PegaPedidoPendenteTest()
+        {
+            var repository = GetRepository();
+
+
+            var pedido = repository.PegaPedidoPendenteAsync("1");
+
+
+            Assert.True(pedido != null);
+        }
+
 
     }
 }
