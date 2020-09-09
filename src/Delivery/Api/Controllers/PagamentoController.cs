@@ -3,6 +3,7 @@ using devboost.dronedelivery.domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
 namespace devboost.dronedelivery.Api.Controllers
@@ -13,6 +14,7 @@ namespace devboost.dronedelivery.Api.Controllers
     [Authorize("Bearer")]
     [Route("api/[controller]")]
     [ApiController]
+    [ExcludeFromCodeCoverage]
     public class PagamentoController : ControllerBase
     {
         private readonly IPagamentoFacade _pagamentoFacade;
