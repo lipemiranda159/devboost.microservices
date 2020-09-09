@@ -1,4 +1,6 @@
 ﻿using devboost.dronedelivery.core.domain;
+using devboost.dronedelivery.core.domain.Interfaces;
+using devboost.dronedelivery.core.services;
 using devboost.dronedelivery.pagamento.domain.Interfaces;
 using devboost.dronedelivery.pagamento.EF;
 using devboost.dronedelivery.pagamento.EF.Integration;
@@ -26,6 +28,7 @@ namespace devboost.dronedelivery.pagamento.Api.Extensions
             services.AddScoped<IPagamentoFacade, PagamentoFacade>();
             services.AddScoped<IPagamentoRepository, PagamentoRepository>();
             services.AddScoped<IPagamentoIntegration, PagamentoIntegration>();
+            services.AddSingleton(new HttpService(true));
             var deliverySettings = configuration.GetSection(DeliverySettingsData).Get<DeliverySettingsData>();
             services.AddSingleton(deliverySettings);
         }

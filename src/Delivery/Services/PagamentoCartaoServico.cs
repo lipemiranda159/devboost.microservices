@@ -2,6 +2,7 @@
 using devboost.dronedelivery.core.domain.Entities;
 using devboost.dronedelivery.core.domain.Enums;
 using devboost.dronedelivery.core.domain.Extensions;
+using devboost.dronedelivery.core.domain.Interfaces;
 using devboost.dronedelivery.domain.Constants;
 using devboost.dronedelivery.domain.Interfaces;
 using Newtonsoft.Json;
