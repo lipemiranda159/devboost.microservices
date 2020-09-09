@@ -5,6 +5,8 @@ using devboost.dronedelivery.Infra.Data;
 using devboost.dronedelivery.Services;
 using NSubstitute;
 using Xunit;
+using devboost.dronedelivery.core.domain.Extensions;
+using System;
 
 namespace devboost.dronedelivery.test
 {
@@ -75,6 +77,20 @@ namespace devboost.dronedelivery.test
 
 
             Assert.NotNull(statusDroneDto);
+        }
+
+        [Fact]
+        public void TempoGasto()
+        {
+            devboost.dronedelivery.core.domain.Entities.Drone drone = new devboost.dronedelivery.core.domain.Entities.Drone
+            {
+                Velocidade = 60
+            };
+
+            var result = drone.ToTempoGasto(120);
+            
+            Assert.Equal(DateTime.Now.AddHours(3).Hour, result.Hour);
+
         }
 
     }

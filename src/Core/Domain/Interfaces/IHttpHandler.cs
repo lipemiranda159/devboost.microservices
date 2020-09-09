@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace devboost.dronedelivery.domain.Interfaces
+namespace devboost.dronedelivery.core.domain.Interfaces
 {
     public interface IHttpHandler
     {

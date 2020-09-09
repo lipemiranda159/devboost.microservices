@@ -17,10 +17,11 @@ namespace devboost.dronedelivery.test.Repositories
         private readonly ICommandExecutor<DroneStatusResult> _droneStatusExecutor;
         private readonly ICommandExecutor<StatusDroneDto> _statusDroneExecutor;
 
+
         public DroneRepositoryTests()
         {
             _context = ContextProvider<Drone>.GetContext(SetupTests.GetDrones(1));
-            _droneStatusExecutor = Substitute.For<ICommandExecutor<DroneStatusResult>>();
+            _droneStatusExecutor = new CommandExecutorTest<DroneStatusResult>();
             _statusDroneExecutor = Substitute.For<ICommandExecutor<StatusDroneDto>>();
             _droneRepository = new DroneRepository(_context, _statusDroneExecutor, _droneStatusExecutor);
         }
@@ -49,6 +50,23 @@ namespace devboost.dronedelivery.test.Repositories
             drone.SetPerformance();
             var droneResult = await _droneRepository.UpdateAsync(drone);
             Assert.True(droneResult.Perfomance == 330);
+        }
+
+        [Fact]
+        public void RetornaDroneTest()
+        {
+            var drone = _droneRepository.RetornaDrone();
+
+            Assert.True(drone != null);
+        }
+
+        [Fact]
+        public void RetornaDroneStatusTest()
+        {
+            var status = _droneRepository.RetornaDroneStatus(1);
+
+            Assert.True(status != null);
+
         }
     }
 }
